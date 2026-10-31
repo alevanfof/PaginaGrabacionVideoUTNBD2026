@@ -5,7 +5,15 @@ _shots/
 _whisper.log
 temporal.html
 
-# Scripts temporales de verificación
-_verificar.py
-_metricas.py
-_capturas.py
+# Scripts Python (no funcionan en Vercel, solo desarrollo local)
+*.py
+audio_timing.json
+transcripcion.json
+
+# Documentos de trabajo (no necesarios para la página web estática)
+README.md
+ScriptConTimestamp.md
+texto_video.txt
+
+# Plantilla fallida
+plantilla.html
