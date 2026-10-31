@@ -16,6 +16,7 @@
   --sans:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
+#audio-track{display:none}
 html,body{margin:0;height:100%;overflow:hidden;background:#080a12;font-family:var(--sans);color:var(--ink)}
 button{font-family:inherit}
 
@@ -265,6 +266,7 @@ button{font-family:inherit}
 </head>
 <body>
 
+<audio id="audio-track" preload="auto"></audio>
 <div id="stage">
   <div id="inicio">
     <div class="inicio-inner">
@@ -349,7 +351,7 @@ button{font-family:inherit}
   }
 
   /* ---------- reproductor HTML5 ---------- */
-  const audio = new Audio();
+  const audio = $('#audio-track');
   audio.preload = 'auto';
   audio.preservesPitch = true;
   audio.webkitPreservesPitch = true;
@@ -619,7 +621,6 @@ button{font-family:inherit}
     pausado = false;
     audio.src = `audio/${clave}.mp3`;
     aplicarVelocidad();
-    audio.load();
 
     try {
       await new Promise((resolve, reject) => {
@@ -632,6 +633,7 @@ button{font-family:inherit}
         };
         audio.addEventListener('loadedmetadata', ok, { once: true });
         audio.addEventListener('error', fail, { once: true });
+        audio.load();
       });
       audio.currentTime = 0;
       sincronizar(0);
