@@ -1,0 +1,6277 @@
+{
+ "alejandro": {
+  "archivo": "audio/alejandro.mp3",
+  "total": 183.767,
+  "escenas": [
+   {
+    "id": "a1",
+    "start": 7.836,
+    "end": 66.48
+   },
+   {
+    "id": "a2",
+    "start": 67.38,
+    "end": 144.432
+   },
+   {
+    "id": "a3",
+    "start": 145.332,
+    "end": 183.768
+   }
+  ],
+  "segments": [
+   {
+    "start": 0.0,
+    "end": 5.96,
+    "text": "Hola, soy Alejandro Fernández, y en este bloque presento el sistema y el modelo de datos del trabajo final.",
+    "words": [
+     {
+      "word": " Hola,",
+      "start": 0.0,
+      "end": 0.38
+     },
+     {
+      "word": " soy",
+      "start": 0.74,
+      "end": 1.0
+     },
+     {
+      "word": " Alejandro",
+      "start": 1.0,
+      "end": 1.48
+     },
+     {
+      "word": " Fernández,",
+      "start": 1.48,
+      "end": 2.14
+     },
+     {
+      "word": " y",
+      "start": 2.34,
+      "end": 2.42
+     },
+     {
+      "word": " en",
+      "start": 2.42,
+      "end": 2.52
+     },
+     {
+      "word": " este",
+      "start": 2.52,
+      "end": 2.74
+     },
+     {
+      "word": " bloque",
+      "start": 2.74,
+      "end": 2.94
+     },
+     {
+      "word": " presento",
+      "start": 2.94,
+      "end": 3.54
+     },
+     {
+      "word": " el",
+      "start": 3.54,
+      "end": 3.64
+     },
+     {
+      "word": " sistema",
+      "start": 3.64,
+      "end": 3.92
+     },
+     {
+      "word": " y",
+      "start": 3.92,
+      "end": 4.18
+     },
+     {
+      "word": " el",
+      "start": 4.18,
+      "end": 4.3
+     },
+     {
+      "word": " modelo",
+      "start": 4.3,
+      "end": 4.54
+     },
+     {
+      "word": " de",
+      "start": 4.54,
+      "end": 4.78
+     },
+     {
+      "word": " datos",
+      "start": 4.78,
+      "end": 5.02
+     },
+     {
+      "word": " del",
+      "start": 5.02,
+      "end": 5.24
+     },
+     {
+      "word": " trabajo",
+      "start": 5.24,
+      "end": 5.52
+     },
+     {
+      "word": " final.",
+      "start": 5.52,
+      "end": 5.96
+     }
+    ]
+   },
+   {
+    "start": 8.0,
+    "end": 16.26,
+    "text": "El sistema representa un comercio electrónico con 5 entidades principales, cliente, pedido, detalle de pedido, producto y categoría.",
+    "words": [
+     {
+      "word": " El",
+      "start": 7.8,
+      "end": 8.12
+     },
+     {
+      "word": " sistema",
+      "start": 8.12,
+      "end": 8.42
+     },
+     {
+      "word": " representa",
+      "start": 8.42,
+      "end": 8.94
+     },
+     {
+      "word": " un",
+      "start": 8.94,
+      "end": 9.22
+     },
+     {
+      "word": " comercio",
+      "start": 9.22,
+      "end": 9.62
+     },
+     {
+      "word": " electrónico",
+      "start": 9.62,
+      "end": 10.18
+     },
+     {
+      "word": " con",
+      "start": 10.18,
+      "end": 10.44
+     },
+     {
+      "word": " 5",
+      "start": 10.44,
+      "end": 10.68
+     },
+     {
+      "word": " entidades",
+      "start": 10.68,
+      "end": 11.18
+     },
+     {
+      "word": " principales,",
+      "start": 11.18,
+      "end": 11.92
+     },
+     {
+      "word": " cliente,",
+      "start": 12.28,
+      "end": 12.8
+     },
+     {
+      "word": " pedido,",
+      "start": 13.08,
+      "end": 13.46
+     },
+     {
+      "word": " detalle",
+      "start": 13.88,
+      "end": 14.22
+     },
+     {
+      "word": " de",
+      "start": 14.22,
+      "end": 14.38
+     },
+     {
+      "word": " pedido,",
+      "start": 14.38,
+      "end": 14.82
+     },
+     {
+      "word": " producto",
+      "start": 15.12,
+      "end": 15.38
+     },
+     {
+      "word": " y",
+      "start": 15.38,
+      "end": 15.62
+     },
+     {
+      "word": " categoría.",
+      "start": 15.62,
+      "end": 16.26
+     }
+    ]
+   },
+   {
+    "start": 16.98,
+    "end": 22.5,
+    "text": "El recorrido principal es cliente, pedido, detalle del pedido, producto y categoría.",
+    "words": [
+     {
+      "word": " El",
+      "start": 16.98,
+      "end": 17.4
+     },
+     {
+      "word": " recorrido",
+      "start": 17.4,
+      "end": 17.88
+     },
+     {
+      "word": " principal",
+      "start": 17.88,
+      "end": 18.3
+     },
+     {
+      "word": " es",
+      "start": 18.3,
+      "end": 18.62
+     },
+     {
+      "word": " cliente,",
+      "start": 18.62,
+      "end": 19.14
+     },
+     {
+      "word": " pedido,",
+      "start": 19.38,
+      "end": 19.76
+     },
+     {
+      "word": " detalle",
+      "start": 20.08,
+      "end": 20.44
+     },
+     {
+      "word": " del",
+      "start": 20.44,
+      "end": 20.64
+     },
+     {
+      "word": " pedido,",
+      "start": 20.64,
+      "end": 21.06
+     },
+     {
+      "word": " producto",
+      "start": 21.34,
+      "end": 21.56
+     },
+     {
+      "word": " y",
+      "start": 21.56,
+      "end": 21.88
+     },
+     {
+      "word": " categoría.",
+      "start": 21.88,
+      "end": 22.5
+     }
+    ]
+   },
+   {
+    "start": 23.76,
+    "end": 37.5,
+    "text": "Aplicamos 11 correcciones al DER original para reforzar la integridad, agregamos restricciones check para validar rangos, y uniquen los nombres de categoría, valores por defecto para fechas y un campo de estoque en producto para controlar el inventario.",
+    "words": [
+     {
+      "word": " Aplicamos",
+      "start": 23.76,
+      "end": 24.44
+     },
+     {
+      "word": " 11",
+      "start": 24.44,
+      "end": 24.72
+     },
+     {
+      "word": " correcciones",
+      "start": 24.72,
+      "end": 25.3
+     },
+     {
+      "word": " al",
+      "start": 25.3,
+      "end": 25.64
+     },
+     {
+      "word": " DER",
+      "start": 25.64,
+      "end": 25.98
+     },
+     {
+      "word": " original",
+      "start": 25.98,
+      "end": 26.46
+     },
+     {
+      "word": " para",
+      "start": 26.46,
+      "end": 26.78
+     },
+     {
+      "word": " reforzar",
+      "start": 26.78,
+      "end": 27.24
+     },
+     {
+      "word": " la",
+      "start": 27.24,
+      "end": 27.4
+     },
+     {
+      "word": " integridad,",
+      "start": 27.4,
+      "end": 27.92
+     },
+     {
+      "word": " agregamos",
+      "start": 28.26,
+      "end": 28.66
+     },
+     {
+      "word": " restricciones",
+      "start": 28.66,
+      "end": 29.28
+     },
+     {
+      "word": " check",
+      "start": 29.28,
+      "end": 29.54
+     },
+     {
+      "word": " para",
+      "start": 29.54,
+      "end": 29.8
+     },
+     {
+      "word": " validar",
+      "start": 29.8,
+      "end": 30.22
+     },
+     {
+      "word": " rangos,",
+      "start": 30.22,
+      "end": 30.7
+     },
+     {
+      "word": " y",
+      "start": 30.98,
+      "end": 31.14
+     },
+     {
+      "word": " uniquen",
+      "start": 31.14,
+      "end": 31.42
+     },
+     {
+      "word": " los",
+      "start": 31.42,
+      "end": 31.6
+     },
+     {
+      "word": " nombres",
+      "start": 31.6,
+      "end": 31.86
+     },
+     {
+      "word": " de",
+      "start": 31.86,
+      "end": 32.02
+     },
+     {
+      "word": " categoría,",
+      "start": 32.02,
+      "end": 32.64
+     },
+     {
+      "word": " valores",
+      "start": 33.04,
+      "end": 33.26
+     },
+     {
+      "word": " por",
+      "start": 33.26,
+      "end": 33.52
+     },
+     {
+      "word": " defecto",
+      "start": 33.52,
+      "end": 33.96
+     },
+     {
+      "word": " para",
+      "start": 33.96,
+      "end": 34.14
+     },
+     {
+      "word": " fechas",
+      "start": 34.14,
+      "end": 34.5
+     },
+     {
+      "word": " y",
+      "start": 34.5,
+      "end": 34.74
+     },
+     {
+      "word": " un",
+      "start": 34.74,
+      "end": 34.88
+     },
+     {
+      "word": " campo",
+      "start": 34.88,
+      "end": 35.12
+     },
+     {
+      "word": " de",
+      "start": 35.12,
+      "end": 35.28
+     },
+     {
+      "word": " estoque",
+      "start": 35.28,
+      "end": 35.58
+     },
+     {
+      "word": " en",
+      "start": 35.58,
+      "end": 35.7
+     },
+     {
+      "word": " producto",
+      "start": 35.7,
+      "end": 35.92
+     },
+     {
+      "word": " para",
+      "start": 35.92,
+      "end": 36.26
+     },
+     {
+      "word": " controlar",
+      "start": 36.26,
+      "end": 36.7
+     },
+     {
+      "word": " el",
+      "start": 36.7,
+      "end": 36.88
+     },
+     {
+      "word": " inventario.",
+      "start": 36.88,
+      "end": 37.5
+     }
+    ]
+   },
+   {
+    "start": 38.2,
+    "end": 42.32,
+    "text": "Una decisión importante fue guardar el precio unitario en detalle de pedido.",
+    "words": [
+     {
+      "word": " Una",
+      "start": 38.2,
+      "end": 38.72
+     },
+     {
+      "word": " decisión",
+      "start": 38.72,
+      "end": 39.14
+     },
+     {
+      "word": " importante",
+      "start": 39.14,
+      "end": 39.72
+     },
+     {
+      "word": " fue",
+      "start": 39.72,
+      "end": 39.94
+     },
+     {
+      "word": " guardar",
+      "start": 39.94,
+      "end": 40.3
+     },
+     {
+      "word": " el",
+      "start": 40.3,
+      "end": 40.48
+     },
+     {
+      "word": " precio",
+      "start": 40.48,
+      "end": 40.72
+     },
+     {
+      "word": " unitario",
+      "start": 40.72,
+      "end": 41.26
+     },
+     {
+      "word": " en",
+      "start": 41.26,
+      "end": 41.36
+     },
+     {
+      "word": " detalle",
+      "start": 41.36,
+      "end": 41.72
+     },
+     {
+      "word": " de",
+      "start": 41.72,
+      "end": 41.9
+     },
+     {
+      "word": " pedido.",
+      "start": 41.9,
+      "end": 42.32
+     }
+    ]
+   },
+   {
+    "start": 43.32,
+    "end": 47.92,
+    "text": "Así conservamos el precio histórico de cada venta aunque después cambia el precio del producto.",
+    "words": [
+     {
+      "word": " Así",
+      "start": 43.22,
+      "end": 43.6
+     },
+     {
+      "word": " conservamos",
+      "start": 43.6,
+      "end": 44.2
+     },
+     {
+      "word": " el",
+      "start": 44.2,
+      "end": 44.4
+     },
+     {
+      "word": " precio",
+      "start": 44.4,
+      "end": 44.62
+     },
+     {
+      "word": " histórico",
+      "start": 44.62,
+      "end": 45.08
+     },
+     {
+      "word": " de",
+      "start": 45.08,
+      "end": 45.26
+     },
+     {
+      "word": " cada",
+      "start": 45.26,
+      "end": 45.46
+     },
+     {
+      "word": " venta",
+      "start": 45.46,
+      "end": 45.9
+     },
+     {
+      "word": " aunque",
+      "start": 45.9,
+      "end": 46.1
+     },
+     {
+      "word": " después",
+      "start": 46.1,
+      "end": 46.46
+     },
+     {
+      "word": " cambia",
+      "start": 46.46,
+      "end": 46.86
+     },
+     {
+      "word": " el",
+      "start": 46.86,
+      "end": 47.0
+     },
+     {
+      "word": " precio",
+      "start": 47.0,
+      "end": 47.28
+     },
+     {
+      "word": " del",
+      "start": 47.28,
+      "end": 47.46
+     },
+     {
+      "word": " producto.",
+      "start": 47.46,
+      "end": 47.92
+     }
+    ]
+   },
+   {
+    "start": 48.62,
+    "end": 53.82,
+    "text": "No agregamos una columna total a pedido porque el total se calcula dinámicamente en una vista.",
+    "words": [
+     {
+      "word": " No",
+      "start": 48.62,
+      "end": 49.16
+     },
+     {
+      "word": " agregamos",
+      "start": 49.16,
+      "end": 49.6
+     },
+     {
+      "word": " una",
+      "start": 49.6,
+      "end": 49.88
+     },
+     {
+      "word": " columna",
+      "start": 49.88,
+      "end": 50.3
+     },
+     {
+      "word": " total",
+      "start": 50.3,
+      "end": 50.62
+     },
+     {
+      "word": " a",
+      "start": 50.62,
+      "end": 50.7
+     },
+     {
+      "word": " pedido",
+      "start": 50.7,
+      "end": 51.08
+     },
+     {
+      "word": " porque",
+      "start": 51.08,
+      "end": 51.42
+     },
+     {
+      "word": " el",
+      "start": 51.42,
+      "end": 51.56
+     },
+     {
+      "word": " total",
+      "start": 51.56,
+      "end": 51.8
+     },
+     {
+      "word": " se",
+      "start": 51.8,
+      "end": 52.02
+     },
+     {
+      "word": " calcula",
+      "start": 52.02,
+      "end": 52.5
+     },
+     {
+      "word": " dinámicamente",
+      "start": 52.5,
+      "end": 52.96
+     },
+     {
+      "word": " en",
+      "start": 52.96,
+      "end": 53.38
+     },
+     {
+      "word": " una",
+      "start": 53.38,
+      "end": 53.52
+     },
+     {
+      "word": " vista.",
+      "start": 53.52,
+      "end": 53.82
+     }
+    ]
+   },
+   {
+    "start": 54.92,
+    "end": 65.5,
+    "text": "Usamos MySQL 8.0.42, en una instancia portable, en el porto 3.307, con inodebí y codificación UTF8MV4.",
+    "words": [
+     {
+      "word": " Usamos",
+      "start": 54.92,
+      "end": 55.3
+     },
+     {
+      "word": " MySQL",
+      "start": 55.3,
+      "end": 55.86
+     },
+     {
+      "word": " 8",
+      "start": 55.86,
+      "end": 56.52
+     },
+     {
+      "word": ".0",
+      "start": 56.52,
+      "end": 57.1
+     },
+     {
+      "word": ".42,",
+      "start": 57.1,
+      "end": 58.14
+     },
+     {
+      "word": " en",
+      "start": 58.66,
+      "end": 58.8
+     },
+     {
+      "word": " una",
+      "start": 58.8,
+      "end": 58.98
+     },
+     {
+      "word": " instancia",
+      "start": 58.98,
+      "end": 59.42
+     },
+     {
+      "word": " portable,",
+      "start": 59.42,
+      "end": 59.96
+     },
+     {
+      "word": " en",
+      "start": 60.2,
+      "end": 60.3
+     },
+     {
+      "word": " el",
+      "start": 60.3,
+      "end": 60.42
+     },
+     {
+      "word": " porto",
+      "start": 60.42,
+      "end": 60.74
+     },
+     {
+      "word": " 3",
+      "start": 60.74,
+      "end": 61.02
+     },
+     {
+      "word": ".307,",
+      "start": 61.02,
+      "end": 62.04
+     },
+     {
+      "word": " con",
+      "start": 62.5,
+      "end": 62.58
+     },
+     {
+      "word": " inodebí",
+      "start": 62.58,
+      "end": 63.12
+     },
+     {
+      "word": " y",
+      "start": 63.12,
+      "end": 63.28
+     },
+     {
+      "word": " codificación",
+      "start": 63.28,
+      "end": 63.84
+     },
+     {
+      "word": " UTF8MV4.",
+      "start": 63.84,
+      "end": 65.5
+     }
+    ]
+   },
+   {
+    "start": 67.0,
+    "end": 71.9,
+    "text": "El script 0.1, esquema, crea las 5 tablas y sus restricciones.",
+    "words": [
+     {
+      "word": " El",
+      "start": 67.0,
+      "end": 67.68
+     },
+     {
+      "word": " script",
+      "start": 67.68,
+      "end": 68.0
+     },
+     {
+      "word": " 0",
+      "start": 68.0,
+      "end": 68.38
+     },
+     {
+      "word": ".1,",
+      "start": 68.38,
+      "end": 68.66
+     },
+     {
+      "word": " esquema,",
+      "start": 69.04,
+      "end": 69.48
+     },
+     {
+      "word": " crea",
+      "start": 69.84,
+      "end": 70.06
+     },
+     {
+      "word": " las",
+      "start": 70.06,
+      "end": 70.22
+     },
+     {
+      "word": " 5",
+      "start": 70.22,
+      "end": 70.46
+     },
+     {
+      "word": " tablas",
+      "start": 70.46,
+      "end": 70.86
+     },
+     {
+      "word": " y",
+      "start": 70.86,
+      "end": 71.06
+     },
+     {
+      "word": " sus",
+      "start": 71.06,
+      "end": 71.2
+     },
+     {
+      "word": " restricciones.",
+      "start": 71.2,
+      "end": 71.9
+     }
+    ]
+   },
+   {
+    "start": 73.02,
+    "end": 81.86,
+    "text": "Nombramos explicitamente las claves y restricciones con prefijos como PC, FK, UCU y CHECA para facilitar su identificación y mantenimiento.",
+    "words": [
+     {
+      "word": " Nombramos",
+      "start": 73.02,
+      "end": 73.7
+     },
+     {
+      "word": " explicitamente",
+      "start": 73.7,
+      "end": 74.38
+     },
+     {
+      "word": " las",
+      "start": 74.38,
+      "end": 74.66
+     },
+     {
+      "word": " claves",
+      "start": 74.66,
+      "end": 75.0
+     },
+     {
+      "word": " y",
+      "start": 75.0,
+      "end": 75.26
+     },
+     {
+      "word": " restricciones",
+      "start": 75.26,
+      "end": 75.88
+     },
+     {
+      "word": " con",
+      "start": 75.88,
+      "end": 76.1
+     },
+     {
+      "word": " prefijos",
+      "start": 76.1,
+      "end": 76.58
+     },
+     {
+      "word": " como",
+      "start": 76.58,
+      "end": 76.82
+     },
+     {
+      "word": " PC,",
+      "start": 76.82,
+      "end": 77.04
+     },
+     {
+      "word": " FK,",
+      "start": 77.42,
+      "end": 77.8
+     },
+     {
+      "word": " UCU",
+      "start": 78.12,
+      "end": 78.46
+     },
+     {
+      "word": " y",
+      "start": 78.46,
+      "end": 78.72
+     },
+     {
+      "word": " CHECA",
+      "start": 78.72,
+      "end": 79.18
+     },
+     {
+      "word": " para",
+      "start": 79.18,
+      "end": 79.56
+     },
+     {
+      "word": " facilitar",
+      "start": 79.56,
+      "end": 80.08
+     },
+     {
+      "word": " su",
+      "start": 80.08,
+      "end": 80.28
+     },
+     {
+      "word": " identificación",
+      "start": 80.28,
+      "end": 80.96
+     },
+     {
+      "word": " y",
+      "start": 80.96,
+      "end": 81.18
+     },
+     {
+      "word": " mantenimiento.",
+      "start": 81.18,
+      "end": 81.86
+     }
+    ]
+   },
+   {
+    "start": 82.48,
+    "end": 88.9,
+    "text": "En cliente, por ejemplo, usamos y de cliente como clave primaria y una restricción unique para el DNI.",
+    "words": [
+     {
+      "word": " En",
+      "start": 82.48,
+      "end": 83.08
+     },
+     {
+      "word": " cliente,",
+      "start": 83.08,
+      "end": 83.68
+     },
+     {
+      "word": " por",
+      "start": 83.86,
+      "end": 84.0
+     },
+     {
+      "word": " ejemplo,",
+      "start": 84.0,
+      "end": 84.42
+     },
+     {
+      "word": " usamos",
+      "start": 84.7,
+      "end": 85.04
+     },
+     {
+      "word": " y",
+      "start": 85.04,
+      "end": 85.22
+     },
+     {
+      "word": " de",
+      "start": 85.22,
+      "end": 85.32
+     },
+     {
+      "word": " cliente",
+      "start": 85.32,
+      "end": 85.78
+     },
+     {
+      "word": " como",
+      "start": 85.78,
+      "end": 86.0
+     },
+     {
+      "word": " clave",
+      "start": 86.0,
+      "end": 86.32
+     },
+     {
+      "word": " primaria",
+      "start": 86.32,
+      "end": 86.78
+     },
+     {
+      "word": " y",
+      "start": 86.78,
+      "end": 86.96
+     },
+     {
+      "word": " una",
+      "start": 86.96,
+      "end": 87.1
+     },
+     {
+      "word": " restricción",
+      "start": 87.1,
+      "end": 87.66
+     },
+     {
+      "word": " unique",
+      "start": 87.66,
+      "end": 87.94
+     },
+     {
+      "word": " para",
+      "start": 87.94,
+      "end": 88.24
+     },
+     {
+      "word": " el",
+      "start": 88.24,
+      "end": 88.4
+     },
+     {
+      "word": " DNI.",
+      "start": 88.4,
+      "end": 88.9
+     }
+    ]
+   },
+   {
+    "start": 90.24,
+    "end": 92.76,
+    "text": "También validamos el formato del email con check.",
+    "words": [
+     {
+      "word": " También",
+      "start": 90.24,
+      "end": 90.64
+     },
+     {
+      "word": " validamos",
+      "start": 90.64,
+      "end": 91.12
+     },
+     {
+      "word": " el",
+      "start": 91.12,
+      "end": 91.34
+     },
+     {
+      "word": " formato",
+      "start": 91.34,
+      "end": 91.76
+     },
+     {
+      "word": " del",
+      "start": 91.76,
+      "end": 91.96
+     },
+     {
+      "word": " email",
+      "start": 91.96,
+      "end": 92.18
+     },
+     {
+      "word": " con",
+      "start": 92.18,
+      "end": 92.48
+     },
+     {
+      "word": " check.",
+      "start": 92.48,
+      "end": 92.76
+     }
+    ]
+   },
+   {
+    "start": 93.76,
+    "end": 99.32,
+    "text": "Las claves foráneas usan ondelit restrict para evitar borrar registros que tienen información relacionada.",
+    "words": [
+     {
+      "word": " Las",
+      "start": 93.66,
+      "end": 94.02
+     },
+     {
+      "word": " claves",
+      "start": 94.02,
+      "end": 94.34
+     },
+     {
+      "word": " foráneas",
+      "start": 94.34,
+      "end": 94.9
+     },
+     {
+      "word": " usan",
+      "start": 94.9,
+      "end": 95.2
+     },
+     {
+      "word": " ondelit",
+      "start": 95.2,
+      "end": 95.58
+     },
+     {
+      "word": " restrict",
+      "start": 95.58,
+      "end": 95.98
+     },
+     {
+      "word": " para",
+      "start": 95.98,
+      "end": 96.34
+     },
+     {
+      "word": " evitar",
+      "start": 96.34,
+      "end": 96.6
+     },
+     {
+      "word": " borrar",
+      "start": 96.6,
+      "end": 96.94
+     },
+     {
+      "word": " registros",
+      "start": 96.94,
+      "end": 97.5
+     },
+     {
+      "word": " que",
+      "start": 97.5,
+      "end": 97.66
+     },
+     {
+      "word": " tienen",
+      "start": 97.66,
+      "end": 97.9
+     },
+     {
+      "word": " información",
+      "start": 97.9,
+      "end": 98.46
+     },
+     {
+      "word": " relacionada.",
+      "start": 98.46,
+      "end": 99.32
+     }
+    ]
+   },
+   {
+    "start": 100.64,
+    "end": 105.0,
+    "text": "Consultamos expertos sobre la implementación de check in MySQL 8.0.3.",
+    "words": [
+     {
+      "word": " Consultamos",
+      "start": 100.64,
+      "end": 101.36
+     },
+     {
+      "word": " expertos",
+      "start": 101.36,
+      "end": 102.0
+     },
+     {
+      "word": " sobre",
+      "start": 102.0,
+      "end": 102.2
+     },
+     {
+      "word": " la",
+      "start": 102.2,
+      "end": 102.34
+     },
+     {
+      "word": " implementación",
+      "start": 102.34,
+      "end": 102.98
+     },
+     {
+      "word": " de",
+      "start": 102.98,
+      "end": 103.18
+     },
+     {
+      "word": " check",
+      "start": 103.18,
+      "end": 103.32
+     },
+     {
+      "word": " in",
+      "start": 103.32,
+      "end": 103.54
+     },
+     {
+      "word": " MySQL",
+      "start": 103.54,
+      "end": 103.98
+     },
+     {
+      "word": " 8",
+      "start": 103.98,
+      "end": 104.6
+     },
+     {
+      "word": ".0",
+      "start": 104.6,
+      "end": 104.72
+     },
+     {
+      "word": ".3.",
+      "start": 104.72,
+      "end": 105.0
+     }
+    ]
+   },
+   {
+    "start": 105.76,
+    "end": 109.9,
+    "text": "Y confirmamos que los check nativos son más eficientes y seguros bajo concurrencia.",
+    "words": [
+     {
+      "word": " Y",
+      "start": 105.44,
+      "end": 105.8
+     },
+     {
+      "word": " confirmamos",
+      "start": 105.8,
+      "end": 106.36
+     },
+     {
+      "word": " que",
+      "start": 106.36,
+      "end": 106.54
+     },
+     {
+      "word": " los",
+      "start": 106.54,
+      "end": 106.68
+     },
+     {
+      "word": " check",
+      "start": 106.68,
+      "end": 106.82
+     },
+     {
+      "word": " nativos",
+      "start": 106.82,
+      "end": 107.24
+     },
+     {
+      "word": " son",
+      "start": 107.24,
+      "end": 107.46
+     },
+     {
+      "word": " más",
+      "start": 107.46,
+      "end": 107.64
+     },
+     {
+      "word": " eficientes",
+      "start": 107.64,
+      "end": 108.22
+     },
+     {
+      "word": " y",
+      "start": 108.22,
+      "end": 108.48
+     },
+     {
+      "word": " seguros",
+      "start": 108.48,
+      "end": 108.82
+     },
+     {
+      "word": " bajo",
+      "start": 108.82,
+      "end": 109.1
+     },
+     {
+      "word": " concurrencia.",
+      "start": 109.1,
+      "end": 109.9
+     }
+    ]
+   },
+   {
+    "start": 110.82,
+    "end": 118.7,
+    "text": "También validamos que ondelit restrict sea su primera trigger tradicionales, ya que inodebí maneja los lax internamente evitando risk and distance.",
+    "words": [
+     {
+      "word": " También",
+      "start": 110.82,
+      "end": 111.2
+     },
+     {
+      "word": " validamos",
+      "start": 111.2,
+      "end": 111.72
+     },
+     {
+      "word": " que",
+      "start": 111.72,
+      "end": 111.94
+     },
+     {
+      "word": " ondelit",
+      "start": 111.94,
+      "end": 112.32
+     },
+     {
+      "word": " restrict",
+      "start": 112.32,
+      "end": 112.74
+     },
+     {
+      "word": " sea",
+      "start": 112.74,
+      "end": 113.1
+     },
+     {
+      "word": " su",
+      "start": 113.1,
+      "end": 113.32
+     },
+     {
+      "word": " primera",
+      "start": 113.32,
+      "end": 113.56
+     },
+     {
+      "word": " trigger",
+      "start": 113.56,
+      "end": 113.98
+     },
+     {
+      "word": " tradicionales,",
+      "start": 113.98,
+      "end": 114.94
+     },
+     {
+      "word": " ya",
+      "start": 115.1,
+      "end": 115.28
+     },
+     {
+      "word": " que",
+      "start": 115.28,
+      "end": 115.44
+     },
+     {
+      "word": " inodebí",
+      "start": 115.44,
+      "end": 115.86
+     },
+     {
+      "word": " maneja",
+      "start": 115.86,
+      "end": 116.26
+     },
+     {
+      "word": " los",
+      "start": 116.26,
+      "end": 116.44
+     },
+     {
+      "word": " lax",
+      "start": 116.44,
+      "end": 116.68
+     },
+     {
+      "word": " internamente",
+      "start": 116.68,
+      "end": 117.22
+     },
+     {
+      "word": " evitando",
+      "start": 117.22,
+      "end": 117.8
+     },
+     {
+      "word": " risk",
+      "start": 117.8,
+      "end": 118.04
+     },
+     {
+      "word": " and",
+      "start": 118.04,
+      "end": 118.22
+     },
+     {
+      "word": " distance.",
+      "start": 118.22,
+      "end": 118.7
+     }
+    ]
+   },
+   {
+    "start": 119.62,
+    "end": 130.96,
+    "text": "En las evidencias vemos incertiones válidas y tres casos rechazados, una categoría duplicada por UNIC, un stock negativo por check y una referencia a un cliente inexistente por clave foránea.",
+    "words": [
+     {
+      "word": " En",
+      "start": 119.62,
+      "end": 120.38
+     },
+     {
+      "word": " las",
+      "start": 120.38,
+      "end": 120.52
+     },
+     {
+      "word": " evidencias",
+      "start": 120.52,
+      "end": 121.12
+     },
+     {
+      "word": " vemos",
+      "start": 121.12,
+      "end": 121.42
+     },
+     {
+      "word": " incertiones",
+      "start": 121.42,
+      "end": 122.12
+     },
+     {
+      "word": " válidas",
+      "start": 122.12,
+      "end": 122.56
+     },
+     {
+      "word": " y",
+      "start": 122.56,
+      "end": 122.8
+     },
+     {
+      "word": " tres",
+      "start": 122.8,
+      "end": 123.0
+     },
+     {
+      "word": " casos",
+      "start": 123.0,
+      "end": 123.28
+     },
+     {
+      "word": " rechazados,",
+      "start": 123.28,
+      "end": 124.06
+     },
+     {
+      "word": " una",
+      "start": 124.32,
+      "end": 124.48
+     },
+     {
+      "word": " categoría",
+      "start": 124.48,
+      "end": 125.06
+     },
+     {
+      "word": " duplicada",
+      "start": 125.06,
+      "end": 125.52
+     },
+     {
+      "word": " por",
+      "start": 125.52,
+      "end": 125.76
+     },
+     {
+      "word": " UNIC,",
+      "start": 125.76,
+      "end": 126.14
+     },
+     {
+      "word": " un",
+      "start": 126.32,
+      "end": 126.44
+     },
+     {
+      "word": " stock",
+      "start": 126.44,
+      "end": 126.66
+     },
+     {
+      "word": " negativo",
+      "start": 126.66,
+      "end": 127.14
+     },
+     {
+      "word": " por",
+      "start": 127.14,
+      "end": 127.44
+     },
+     {
+      "word": " check",
+      "start": 127.44,
+      "end": 127.64
+     },
+     {
+      "word": " y",
+      "start": 127.64,
+      "end": 127.9
+     },
+     {
+      "word": " una",
+      "start": 127.9,
+      "end": 128.08
+     },
+     {
+      "word": " referencia",
+      "start": 128.08,
+      "end": 128.64
+     },
+     {
+      "word": " a",
+      "start": 128.64,
+      "end": 128.8
+     },
+     {
+      "word": " un",
+      "start": 128.8,
+      "end": 128.88
+     },
+     {
+      "word": " cliente",
+      "start": 128.88,
+      "end": 129.28
+     },
+     {
+      "word": " inexistente",
+      "start": 129.28,
+      "end": 129.88
+     },
+     {
+      "word": " por",
+      "start": 129.88,
+      "end": 130.18
+     },
+     {
+      "word": " clave",
+      "start": 130.18,
+      "end": 130.44
+     },
+     {
+      "word": " foránea.",
+      "start": 130.44,
+      "end": 130.96
+     }
+    ]
+   },
+   {
+    "start": 131.74,
+    "end": 134.5,
+    "text": "Los errores aparecen documentados en los scripts.",
+    "words": [
+     {
+      "word": " Los",
+      "start": 131.74,
+      "end": 132.14
+     },
+     {
+      "word": " errores",
+      "start": 132.14,
+      "end": 132.58
+     },
+     {
+      "word": " aparecen",
+      "start": 132.58,
+      "end": 133.1
+     },
+     {
+      "word": " documentados",
+      "start": 133.1,
+      "end": 133.74
+     },
+     {
+      "word": " en",
+      "start": 133.74,
+      "end": 133.92
+     },
+     {
+      "word": " los",
+      "start": 133.92,
+      "end": 134.04
+     },
+     {
+      "word": " scripts.",
+      "start": 134.04,
+      "end": 134.5
+     }
+    ]
+   },
+   {
+    "start": 135.58,
+    "end": 143.42,
+    "text": "La decisión de usar ondelit restrict sin trigger se valido consultando confuentes especializadas sobre manejo de integridad referencial en InodeV.",
+    "words": [
+     {
+      "word": " La",
+      "start": 135.58,
+      "end": 135.84
+     },
+     {
+      "word": " decisión",
+      "start": 135.84,
+      "end": 136.3
+     },
+     {
+      "word": " de",
+      "start": 136.3,
+      "end": 136.44
+     },
+     {
+      "word": " usar",
+      "start": 136.44,
+      "end": 136.64
+     },
+     {
+      "word": " ondelit",
+      "start": 136.64,
+      "end": 137.1
+     },
+     {
+      "word": " restrict",
+      "start": 137.1,
+      "end": 137.48
+     },
+     {
+      "word": " sin",
+      "start": 137.48,
+      "end": 137.88
+     },
+     {
+      "word": " trigger",
+      "start": 137.88,
+      "end": 138.22
+     },
+     {
+      "word": " se",
+      "start": 138.22,
+      "end": 138.46
+     },
+     {
+      "word": " valido",
+      "start": 138.46,
+      "end": 138.78
+     },
+     {
+      "word": " consultando",
+      "start": 138.78,
+      "end": 139.4
+     },
+     {
+      "word": " confuentes",
+      "start": 139.4,
+      "end": 139.96
+     },
+     {
+      "word": " especializadas",
+      "start": 139.96,
+      "end": 140.74
+     },
+     {
+      "word": " sobre",
+      "start": 140.74,
+      "end": 141.0
+     },
+     {
+      "word": " manejo",
+      "start": 141.0,
+      "end": 141.4
+     },
+     {
+      "word": " de",
+      "start": 141.4,
+      "end": 141.5
+     },
+     {
+      "word": " integridad",
+      "start": 141.5,
+      "end": 141.98
+     },
+     {
+      "word": " referencial",
+      "start": 141.98,
+      "end": 142.8
+     },
+     {
+      "word": " en",
+      "start": 142.8,
+      "end": 142.98
+     },
+     {
+      "word": " InodeV.",
+      "start": 142.98,
+      "end": 143.42
+     }
+    ]
+   },
+   {
+    "start": 144.96,
+    "end": 155.98,
+    "text": "Para optimizar las consultas creamos cinco índices, uno compuesto sobre pedido por estado y fecha, otro por fecha, uno por id de cliente para lo SHOIN y dos índices en detalle de pedido y producto.",
+    "words": [
+     {
+      "word": " Para",
+      "start": 144.96,
+      "end": 145.62
+     },
+     {
+      "word": " optimizar",
+      "start": 145.62,
+      "end": 146.12
+     },
+     {
+      "word": " las",
+      "start": 146.12,
+      "end": 146.28
+     },
+     {
+      "word": " consultas",
+      "start": 146.28,
+      "end": 146.78
+     },
+     {
+      "word": " creamos",
+      "start": 146.78,
+      "end": 147.16
+     },
+     {
+      "word": " cinco",
+      "start": 147.16,
+      "end": 147.58
+     },
+     {
+      "word": " índices,",
+      "start": 147.58,
+      "end": 147.96
+     },
+     {
+      "word": " uno",
+      "start": 148.34,
+      "end": 148.48
+     },
+     {
+      "word": " compuesto",
+      "start": 148.48,
+      "end": 148.96
+     },
+     {
+      "word": " sobre",
+      "start": 148.96,
+      "end": 149.24
+     },
+     {
+      "word": " pedido",
+      "start": 149.24,
+      "end": 149.62
+     },
+     {
+      "word": " por",
+      "start": 149.62,
+      "end": 149.82
+     },
+     {
+      "word": " estado",
+      "start": 149.82,
+      "end": 150.1
+     },
+     {
+      "word": " y",
+      "start": 150.1,
+      "end": 150.36
+     },
+     {
+      "word": " fecha,",
+      "start": 150.36,
+      "end": 150.72
+     },
+     {
+      "word": " otro",
+      "start": 150.96,
+      "end": 151.16
+     },
+     {
+      "word": " por",
+      "start": 151.16,
+      "end": 151.34
+     },
+     {
+      "word": " fecha,",
+      "start": 151.34,
+      "end": 151.72
+     },
+     {
+      "word": " uno",
+      "start": 151.92,
+      "end": 152.08
+     },
+     {
+      "word": " por",
+      "start": 152.08,
+      "end": 152.26
+     },
+     {
+      "word": " id",
+      "start": 152.26,
+      "end": 152.4
+     },
+     {
+      "word": " de",
+      "start": 152.4,
+      "end": 152.52
+     },
+     {
+      "word": " cliente",
+      "start": 152.52,
+      "end": 152.9
+     },
+     {
+      "word": " para",
+      "start": 152.9,
+      "end": 153.08
+     },
+     {
+      "word": " lo",
+      "start": 153.08,
+      "end": 153.22
+     },
+     {
+      "word": " SHOIN",
+      "start": 153.22,
+      "end": 153.52
+     },
+     {
+      "word": " y",
+      "start": 153.52,
+      "end": 153.78
+     },
+     {
+      "word": " dos",
+      "start": 153.78,
+      "end": 153.98
+     },
+     {
+      "word": " índices",
+      "start": 153.98,
+      "end": 154.32
+     },
+     {
+      "word": " en",
+      "start": 154.32,
+      "end": 154.56
+     },
+     {
+      "word": " detalle",
+      "start": 154.56,
+      "end": 154.9
+     },
+     {
+      "word": " de",
+      "start": 154.9,
+      "end": 155.04
+     },
+     {
+      "word": " pedido",
+      "start": 155.04,
+      "end": 155.42
+     },
+     {
+      "word": " y",
+      "start": 155.42,
+      "end": 155.54
+     },
+     {
+      "word": " producto.",
+      "start": 155.54,
+      "end": 155.98
+     }
+    ]
+   },
+   {
+    "start": 157.3,
+    "end": 163.54,
+    "text": "Medimos tres consultas con ICN índices, realizando 13 ejecuciones de cada una y comparando las medianas.",
+    "words": [
+     {
+      "word": " Medimos",
+      "start": 157.3,
+      "end": 157.86
+     },
+     {
+      "word": " tres",
+      "start": 157.86,
+      "end": 158.12
+     },
+     {
+      "word": " consultas",
+      "start": 158.12,
+      "end": 158.76
+     },
+     {
+      "word": " con",
+      "start": 158.76,
+      "end": 158.96
+     },
+     {
+      "word": " ICN",
+      "start": 158.96,
+      "end": 159.28
+     },
+     {
+      "word": " índices,",
+      "start": 159.28,
+      "end": 159.66
+     },
+     {
+      "word": " realizando",
+      "start": 160.08,
+      "end": 160.6
+     },
+     {
+      "word": " 13",
+      "start": 160.6,
+      "end": 160.9
+     },
+     {
+      "word": " ejecuciones",
+      "start": 160.9,
+      "end": 161.46
+     },
+     {
+      "word": " de",
+      "start": 161.46,
+      "end": 161.64
+     },
+     {
+      "word": " cada",
+      "start": 161.64,
+      "end": 161.84
+     },
+     {
+      "word": " una",
+      "start": 161.84,
+      "end": 162.12
+     },
+     {
+      "word": " y",
+      "start": 162.12,
+      "end": 162.26
+     },
+     {
+      "word": " comparando",
+      "start": 162.26,
+      "end": 162.76
+     },
+     {
+      "word": " las",
+      "start": 162.76,
+      "end": 162.92
+     },
+     {
+      "word": " medianas.",
+      "start": 162.92,
+      "end": 163.54
+     }
+    ]
+   },
+   {
+    "start": 164.94,
+    "end": 171.82,
+    "text": "La consulta de igualdad mejoró 1,5 veces, la derrango 2,2 veces y el SHOIN 4,4 veces.",
+    "words": [
+     {
+      "word": " La",
+      "start": 164.94,
+      "end": 165.2
+     },
+     {
+      "word": " consulta",
+      "start": 165.2,
+      "end": 165.72
+     },
+     {
+      "word": " de",
+      "start": 165.72,
+      "end": 165.82
+     },
+     {
+      "word": " igualdad",
+      "start": 165.82,
+      "end": 166.18
+     },
+     {
+      "word": " mejoró",
+      "start": 166.18,
+      "end": 166.6
+     },
+     {
+      "word": " 1",
+      "start": 166.6,
+      "end": 166.76
+     },
+     {
+      "word": ",5",
+      "start": 166.76,
+      "end": 167.28
+     },
+     {
+      "word": " veces,",
+      "start": 167.28,
+      "end": 167.7
+     },
+     {
+      "word": " la",
+      "start": 168.2,
+      "end": 168.32
+     },
+     {
+      "word": " derrango",
+      "start": 168.32,
+      "end": 168.7
+     },
+     {
+      "word": " 2",
+      "start": 168.7,
+      "end": 169.02
+     },
+     {
+      "word": ",2",
+      "start": 169.02,
+      "end": 169.48
+     },
+     {
+      "word": " veces",
+      "start": 169.48,
+      "end": 169.84
+     },
+     {
+      "word": " y",
+      "start": 169.84,
+      "end": 170.16
+     },
+     {
+      "word": " el",
+      "start": 170.16,
+      "end": 170.28
+     },
+     {
+      "word": " SHOIN",
+      "start": 170.28,
+      "end": 170.54
+     },
+     {
+      "word": " 4",
+      "start": 170.54,
+      "end": 170.9
+     },
+     {
+      "word": ",4",
+      "start": 170.9,
+      "end": 171.4
+     },
+     {
+      "word": " veces.",
+      "start": 171.4,
+      "end": 171.82
+     }
+    ]
+   },
+   {
+    "start": 173.42,
+    "end": 182.8,
+    "text": "El explain permite ver la diferencia, con índices se accede directamente a las filas correspondientes, sin índice, se recorren las 80.000 filas de la tabla pedido.",
+    "words": [
+     {
+      "word": " El",
+      "start": 173.42,
+      "end": 173.64
+     },
+     {
+      "word": " explain",
+      "start": 173.64,
+      "end": 173.98
+     },
+     {
+      "word": " permite",
+      "start": 173.98,
+      "end": 174.48
+     },
+     {
+      "word": " ver",
+      "start": 174.48,
+      "end": 174.72
+     },
+     {
+      "word": " la",
+      "start": 174.72,
+      "end": 174.86
+     },
+     {
+      "word": " diferencia,",
+      "start": 174.86,
+      "end": 175.38
+     },
+     {
+      "word": " con",
+      "start": 175.82,
+      "end": 176.0
+     },
+     {
+      "word": " índices",
+      "start": 176.0,
+      "end": 176.34
+     },
+     {
+      "word": " se",
+      "start": 176.34,
+      "end": 176.5
+     },
+     {
+      "word": " accede",
+      "start": 176.5,
+      "end": 176.76
+     },
+     {
+      "word": " directamente",
+      "start": 176.76,
+      "end": 177.24
+     },
+     {
+      "word": " a",
+      "start": 177.24,
+      "end": 177.6
+     },
+     {
+      "word": " las",
+      "start": 177.6,
+      "end": 177.74
+     },
+     {
+      "word": " filas",
+      "start": 177.74,
+      "end": 178.0
+     },
+     {
+      "word": " correspondientes,",
+      "start": 178.0,
+      "end": 178.86
+     },
+     {
+      "word": " sin",
+      "start": 179.22,
+      "end": 179.4
+     },
+     {
+      "word": " índice,",
+      "start": 179.4,
+      "end": 179.9
+     },
+     {
+      "word": " se",
+      "start": 180.22,
+      "end": 180.36
+     },
+     {
+      "word": " recorren",
+      "start": 180.36,
+      "end": 180.78
+     },
+     {
+      "word": " las",
+      "start": 180.78,
+      "end": 180.94
+     },
+     {
+      "word": " 80",
+      "start": 180.94,
+      "end": 181.26
+     },
+     {
+      "word": ".000",
+      "start": 181.26,
+      "end": 181.56
+     },
+     {
+      "word": " filas",
+      "start": 181.56,
+      "end": 181.9
+     },
+     {
+      "word": " de",
+      "start": 181.9,
+      "end": 182.0
+     },
+     {
+      "word": " la",
+      "start": 182.0,
+      "end": 182.1
+     },
+     {
+      "word": " tabla",
+      "start": 182.1,
+      "end": 182.38
+     },
+     {
+      "word": " pedido.",
+      "start": 182.38,
+      "end": 182.8
+     }
+    ]
+   }
+  ]
+ },
+ "gabriel": {
+  "archivo": "audio/gabriel.mp3",
+  "total": 145.595,
+  "escenas": [
+   {
+    "id": "g1",
+    "start": 8.652,
+    "end": 73.836
+   },
+   {
+    "id": "g2",
+    "start": 74.736,
+    "end": 114.732
+   },
+   {
+    "id": "g3",
+    "start": 115.632,
+    "end": 145.596
+   }
+  ],
+  "segments": [
+   {
+    "start": 0.0,
+    "end": 5.76,
+    "text": "Hola, soy Gabriel D. Lorenzo, y en este bloque presento la carga masiva de datos, las consultas",
+    "words": [
+     {
+      "word": " Hola,",
+      "start": 0.0,
+      "end": 0.34
+     },
+     {
+      "word": " soy",
+      "start": 0.7,
+      "end": 0.9
+     },
+     {
+      "word": " Gabriel",
+      "start": 0.9,
+      "end": 1.12
+     },
+     {
+      "word": " D.",
+      "start": 1.12,
+      "end": 1.34
+     },
+     {
+      "word": " Lorenzo,",
+      "start": 1.34,
+      "end": 1.82
+     },
+     {
+      "word": " y",
+      "start": 2.06,
+      "end": 2.22
+     },
+     {
+      "word": " en",
+      "start": 2.22,
+      "end": 2.3
+     },
+     {
+      "word": " este",
+      "start": 2.3,
+      "end": 2.5
+     },
+     {
+      "word": " bloque",
+      "start": 2.5,
+      "end": 2.7
+     },
+     {
+      "word": " presento",
+      "start": 2.7,
+      "end": 3.3
+     },
+     {
+      "word": " la",
+      "start": 3.3,
+      "end": 3.42
+     },
+     {
+      "word": " carga",
+      "start": 3.42,
+      "end": 3.6
+     },
+     {
+      "word": " masiva",
+      "start": 3.6,
+      "end": 4.04
+     },
+     {
+      "word": " de",
+      "start": 4.04,
+      "end": 4.22
+     },
+     {
+      "word": " datos,",
+      "start": 4.22,
+      "end": 4.46
+     },
+     {
+      "word": " las",
+      "start": 4.96,
+      "end": 5.12
+     },
+     {
+      "word": " consultas",
+      "start": 5.12,
+      "end": 5.76
+     }
+    ]
+   },
+   {
+    "start": 5.76,
+    "end": 6.8,
+    "text": "y los roles de acceso.",
+    "words": [
+     {
+      "word": " y",
+      "start": 5.76,
+      "end": 5.9
+     },
+     {
+      "word": " los",
+      "start": 5.9,
+      "end": 6.0
+     },
+     {
+      "word": " roles",
+      "start": 6.0,
+      "end": 6.2
+     },
+     {
+      "word": " de",
+      "start": 6.2,
+      "end": 6.4
+     },
+     {
+      "word": " acceso.",
+      "start": 6.4,
+      "end": 6.8
+     }
+    ]
+   },
+   {
+    "start": 8.42,
+    "end": 12.14,
+    "text": "Para la carga masiva usamos S.S.E.U.L., sin procedimientos.",
+    "words": [
+     {
+      "word": " Para",
+      "start": 8.42,
+      "end": 8.94
+     },
+     {
+      "word": " la",
+      "start": 8.94,
+      "end": 9.1
+     },
+     {
+      "word": " carga",
+      "start": 9.1,
+      "end": 9.34
+     },
+     {
+      "word": " masiva",
+      "start": 9.34,
+      "end": 9.7
+     },
+     {
+      "word": " usamos",
+      "start": 9.7,
+      "end": 10.04
+     },
+     {
+      "word": " S",
+      "start": 10.04,
+      "end": 10.28
+     },
+     {
+      "word": ".S",
+      "start": 10.28,
+      "end": 10.44
+     },
+     {
+      "word": ".E",
+      "start": 10.44,
+      "end": 10.58
+     },
+     {
+      "word": ".U",
+      "start": 10.58,
+      "end": 10.68
+     },
+     {
+      "word": ".L.,",
+      "start": 10.68,
+      "end": 11.1
+     },
+     {
+      "word": " sin",
+      "start": 11.1,
+      "end": 11.34
+     },
+     {
+      "word": " procedimientos.",
+      "start": 11.34,
+      "end": 12.14
+     }
+    ]
+   },
+   {
+    "start": 13.08,
+    "end": 18.86,
+    "text": "Una C.E.E., con montable express chain, recurse a generar los digitos del 0 al 9 y los combinamos",
+    "words": [
+     {
+      "word": " Una",
+      "start": 13.08,
+      "end": 13.48
+     },
+     {
+      "word": " C",
+      "start": 13.48,
+      "end": 13.68
+     },
+     {
+      "word": ".E",
+      "start": 13.68,
+      "end": 13.98
+     },
+     {
+      "word": ".E.,",
+      "start": 13.98,
+      "end": 14.36
+     },
+     {
+      "word": " con",
+      "start": 14.36,
+      "end": 14.46
+     },
+     {
+      "word": " montable",
+      "start": 14.46,
+      "end": 14.84
+     },
+     {
+      "word": " express",
+      "start": 14.84,
+      "end": 15.16
+     },
+     {
+      "word": " chain,",
+      "start": 15.16,
+      "end": 15.5
+     },
+     {
+      "word": " recurse",
+      "start": 15.9,
+      "end": 16.26
+     },
+     {
+      "word": " a",
+      "start": 16.26,
+      "end": 16.38
+     },
+     {
+      "word": " generar",
+      "start": 16.38,
+      "end": 16.72
+     },
+     {
+      "word": " los",
+      "start": 16.72,
+      "end": 16.9
+     },
+     {
+      "word": " digitos",
+      "start": 16.9,
+      "end": 17.26
+     },
+     {
+      "word": " del",
+      "start": 17.26,
+      "end": 17.48
+     },
+     {
+      "word": " 0",
+      "start": 17.48,
+      "end": 17.68
+     },
+     {
+      "word": " al",
+      "start": 17.68,
+      "end": 17.82
+     },
+     {
+      "word": " 9",
+      "start": 17.82,
+      "end": 18.02
+     },
+     {
+      "word": " y",
+      "start": 18.02,
+      "end": 18.28
+     },
+     {
+      "word": " los",
+      "start": 18.28,
+      "end": 18.38
+     },
+     {
+      "word": " combinamos",
+      "start": 18.38,
+      "end": 18.86
+     }
+    ]
+   },
+   {
+    "start": 18.86,
+    "end": 21.84,
+    "text": "con croncroyo en para producir hasta 10.000 combinaciones.",
+    "words": [
+     {
+      "word": " con",
+      "start": 18.86,
+      "end": 19.1
+     },
+     {
+      "word": " croncroyo",
+      "start": 19.1,
+      "end": 19.46
+     },
+     {
+      "word": " en",
+      "start": 19.46,
+      "end": 19.6
+     },
+     {
+      "word": " para",
+      "start": 19.6,
+      "end": 19.82
+     },
+     {
+      "word": " producir",
+      "start": 19.82,
+      "end": 20.26
+     },
+     {
+      "word": " hasta",
+      "start": 20.26,
+      "end": 20.48
+     },
+     {
+      "word": " 10",
+      "start": 20.48,
+      "end": 20.78
+     },
+     {
+      "word": ".000",
+      "start": 20.78,
+      "end": 20.96
+     },
+     {
+      "word": " combinaciones.",
+      "start": 20.96,
+      "end": 21.84
+     }
+    ]
+   },
+   {
+    "start": 23.14,
+    "end": 29.3,
+    "text": "Con esta estrategia generamos 345.000 filas manteniendo el rendimiento, tal como se recomendon",
+    "words": [
+     {
+      "word": " Con",
+      "start": 23.14,
+      "end": 23.54
+     },
+     {
+      "word": " esta",
+      "start": 23.54,
+      "end": 23.8
+     },
+     {
+      "word": " estrategia",
+      "start": 23.8,
+      "end": 24.3
+     },
+     {
+      "word": " generamos",
+      "start": 24.3,
+      "end": 24.7
+     },
+     {
+      "word": " 345",
+      "start": 24.7,
+      "end": 25.96
+     },
+     {
+      "word": ".000",
+      "start": 25.96,
+      "end": 26.32
+     },
+     {
+      "word": " filas",
+      "start": 26.32,
+      "end": 26.62
+     },
+     {
+      "word": " manteniendo",
+      "start": 26.62,
+      "end": 27.14
+     },
+     {
+      "word": " el",
+      "start": 27.14,
+      "end": 27.26
+     },
+     {
+      "word": " rendimiento,",
+      "start": 27.26,
+      "end": 27.76
+     },
+     {
+      "word": " tal",
+      "start": 28.24,
+      "end": 28.4
+     },
+     {
+      "word": " como",
+      "start": 28.4,
+      "end": 28.6
+     },
+     {
+      "word": " se",
+      "start": 28.6,
+      "end": 28.76
+     },
+     {
+      "word": " recomendon",
+      "start": 28.76,
+      "end": 29.3
+     }
+    ]
+   },
+   {
+    "start": 29.3,
+    "end": 33.62,
+    "text": "consultas técnicas sobre optimización de setes recursivos en maillases se huele 8.",
+    "words": [
+     {
+      "word": " consultas",
+      "start": 29.3,
+      "end": 29.86
+     },
+     {
+      "word": " técnicas",
+      "start": 29.86,
+      "end": 30.34
+     },
+     {
+      "word": " sobre",
+      "start": 30.34,
+      "end": 30.56
+     },
+     {
+      "word": " optimización",
+      "start": 30.56,
+      "end": 31.16
+     },
+     {
+      "word": " de",
+      "start": 31.16,
+      "end": 31.38
+     },
+     {
+      "word": " setes",
+      "start": 31.38,
+      "end": 31.76
+     },
+     {
+      "word": " recursivos",
+      "start": 31.76,
+      "end": 32.3
+     },
+     {
+      "word": " en",
+      "start": 32.3,
+      "end": 32.52
+     },
+     {
+      "word": " maillases",
+      "start": 32.52,
+      "end": 32.84
+     },
+     {
+      "word": " se",
+      "start": 32.84,
+      "end": 33.1
+     },
+     {
+      "word": " huele",
+      "start": 33.1,
+      "end": 33.3
+     },
+     {
+      "word": " 8.",
+      "start": 33.3,
+      "end": 33.62
+     }
+    ]
+   },
+   {
+    "start": 34.58,
+    "end": 41.52,
+    "text": "Con esa técnica generamos 20.000 clientes, 5.000 productos, 80.000 pedidos y 240.000 detalles,",
+    "words": [
+     {
+      "word": " Con",
+      "start": 34.58,
+      "end": 34.8
+     },
+     {
+      "word": " esa",
+      "start": 34.8,
+      "end": 35.0
+     },
+     {
+      "word": " técnica",
+      "start": 35.0,
+      "end": 35.3
+     },
+     {
+      "word": " generamos",
+      "start": 35.3,
+      "end": 35.88
+     },
+     {
+      "word": " 20",
+      "start": 35.88,
+      "end": 36.28
+     },
+     {
+      "word": ".000",
+      "start": 36.28,
+      "end": 36.46
+     },
+     {
+      "word": " clientes,",
+      "start": 36.46,
+      "end": 37.08
+     },
+     {
+      "word": " 5",
+      "start": 37.36,
+      "end": 37.72
+     },
+     {
+      "word": ".000",
+      "start": 37.72,
+      "end": 37.9
+     },
+     {
+      "word": " productos,",
+      "start": 37.9,
+      "end": 38.36
+     },
+     {
+      "word": " 80",
+      "start": 38.8,
+      "end": 39.12
+     },
+     {
+      "word": ".000",
+      "start": 39.12,
+      "end": 39.38
+     },
+     {
+      "word": " pedidos",
+      "start": 39.38,
+      "end": 39.76
+     },
+     {
+      "word": " y",
+      "start": 39.76,
+      "end": 39.94
+     },
+     {
+      "word": " 240",
+      "start": 39.94,
+      "end": 40.5
+     },
+     {
+      "word": ".000",
+      "start": 40.5,
+      "end": 41.06
+     },
+     {
+      "word": " detalles,",
+      "start": 41.06,
+      "end": 41.52
+     }
+    ]
+   },
+   {
+    "start": 42.0,
+    "end": 45.1,
+    "text": "en total, 345.000.000 filas.",
+    "words": [
+     {
+      "word": " en",
+      "start": 42.0,
+      "end": 42.18
+     },
+     {
+      "word": " total,",
+      "start": 42.18,
+      "end": 42.56
+     },
+     {
+      "word": " 345",
+      "start": 42.96,
+      "end": 44.22
+     },
+     {
+      "word": ".000",
+      "start": 44.22,
+      "end": 44.44
+     },
+     {
+      "word": ".000",
+      "start": 44.44,
+      "end": 44.62
+     },
+     {
+      "word": " filas.",
+      "start": 44.62,
+      "end": 45.1
+     }
+    ]
+   },
+   {
+    "start": 46.02,
+    "end": 51.52,
+    "text": "Usamos funciones como Maddy case para definir distribuciones, por ejemplo, asignar más productos",
+    "words": [
+     {
+      "word": " Usamos",
+      "start": 46.02,
+      "end": 46.48
+     },
+     {
+      "word": " funciones",
+      "start": 46.48,
+      "end": 46.92
+     },
+     {
+      "word": " como",
+      "start": 46.92,
+      "end": 47.2
+     },
+     {
+      "word": " Maddy",
+      "start": 47.2,
+      "end": 47.58
+     },
+     {
+      "word": " case",
+      "start": 47.58,
+      "end": 47.72
+     },
+     {
+      "word": " para",
+      "start": 47.72,
+      "end": 48.02
+     },
+     {
+      "word": " definir",
+      "start": 48.02,
+      "end": 48.38
+     },
+     {
+      "word": " distribuciones,",
+      "start": 48.38,
+      "end": 49.16
+     },
+     {
+      "word": " por",
+      "start": 49.64,
+      "end": 49.76
+     },
+     {
+      "word": " ejemplo,",
+      "start": 49.76,
+      "end": 50.14
+     },
+     {
+      "word": " asignar",
+      "start": 50.56,
+      "end": 50.94
+     },
+     {
+      "word": " más",
+      "start": 50.94,
+      "end": 51.14
+     },
+     {
+      "word": " productos",
+      "start": 51.14,
+      "end": 51.52
+     }
+    ]
+   },
+   {
+    "start": 51.52,
+    "end": 52.88,
+    "text": "a ciertas categorías.",
+    "words": [
+     {
+      "word": " a",
+      "start": 51.52,
+      "end": 51.76
+     },
+     {
+      "word": " ciertas",
+      "start": 51.76,
+      "end": 52.16
+     },
+     {
+      "word": " categorías.",
+      "start": 52.16,
+      "end": 52.88
+     }
+    ]
+   },
+   {
+    "start": 53.9,
+    "end": 58.78,
+    "text": "En las verificaciones compróbamos que cada tabla tenga la cantidad esperada, que no existan",
+    "words": [
+     {
+      "word": " En",
+      "start": 53.9,
+      "end": 54.5
+     },
+     {
+      "word": " las",
+      "start": 54.5,
+      "end": 54.64
+     },
+     {
+      "word": " verificaciones",
+      "start": 54.64,
+      "end": 55.32
+     },
+     {
+      "word": " compróbamos",
+      "start": 55.32,
+      "end": 55.92
+     },
+     {
+      "word": " que",
+      "start": 55.92,
+      "end": 56.1
+     },
+     {
+      "word": " cada",
+      "start": 56.1,
+      "end": 56.28
+     },
+     {
+      "word": " tabla",
+      "start": 56.28,
+      "end": 56.58
+     },
+     {
+      "word": " tenga",
+      "start": 56.58,
+      "end": 56.82
+     },
+     {
+      "word": " la",
+      "start": 56.82,
+      "end": 56.98
+     },
+     {
+      "word": " cantidad",
+      "start": 56.98,
+      "end": 57.24
+     },
+     {
+      "word": " esperada,",
+      "start": 57.24,
+      "end": 57.76
+     },
+     {
+      "word": " que",
+      "start": 58.12,
+      "end": 58.3
+     },
+     {
+      "word": " no",
+      "start": 58.3,
+      "end": 58.38
+     },
+     {
+      "word": " existan",
+      "start": 58.38,
+      "end": 58.78
+     }
+    ]
+   },
+   {
+    "start": 58.78,
+    "end": 63.88,
+    "text": "claves foranias huérfanas y que las fechas estén dentro del rango 2020 a 2026.",
+    "words": [
+     {
+      "word": " claves",
+      "start": 58.78,
+      "end": 59.1
+     },
+     {
+      "word": " foranias",
+      "start": 59.1,
+      "end": 59.58
+     },
+     {
+      "word": " huérfanas",
+      "start": 59.58,
+      "end": 60.08
+     },
+     {
+      "word": " y",
+      "start": 60.08,
+      "end": 60.22
+     },
+     {
+      "word": " que",
+      "start": 60.22,
+      "end": 60.36
+     },
+     {
+      "word": " las",
+      "start": 60.36,
+      "end": 60.54
+     },
+     {
+      "word": " fechas",
+      "start": 60.54,
+      "end": 60.82
+     },
+     {
+      "word": " estén",
+      "start": 60.82,
+      "end": 61.2
+     },
+     {
+      "word": " dentro",
+      "start": 61.2,
+      "end": 61.5
+     },
+     {
+      "word": " del",
+      "start": 61.5,
+      "end": 61.7
+     },
+     {
+      "word": " rango",
+      "start": 61.7,
+      "end": 61.94
+     },
+     {
+      "word": " 2020",
+      "start": 61.94,
+      "end": 62.48
+     },
+     {
+      "word": " a",
+      "start": 62.48,
+      "end": 62.84
+     },
+     {
+      "word": " 2026.",
+      "start": 62.84,
+      "end": 63.88
+     }
+    ]
+   },
+   {
+    "start": 64.84,
+    "end": 66.84,
+    "text": "También revisamos la distribución de estados.",
+    "words": [
+     {
+      "word": " También",
+      "start": 64.84,
+      "end": 65.08
+     },
+     {
+      "word": " revisamos",
+      "start": 65.08,
+      "end": 65.54
+     },
+     {
+      "word": " la",
+      "start": 65.54,
+      "end": 65.68
+     },
+     {
+      "word": " distribución",
+      "start": 65.68,
+      "end": 66.24
+     },
+     {
+      "word": " de",
+      "start": 66.24,
+      "end": 66.42
+     },
+     {
+      "word": " estados.",
+      "start": 66.42,
+      "end": 66.84
+     }
+    ]
+   },
+   {
+    "start": 67.9,
+    "end": 72.94,
+    "text": "Los 240.000 detalles para 80.000 pedidos dan un promedio de 3 productos por pedido.",
+    "words": [
+     {
+      "word": " Los",
+      "start": 67.9,
+      "end": 68.1
+     },
+     {
+      "word": " 240",
+      "start": 68.1,
+      "end": 68.82
+     },
+     {
+      "word": ".000",
+      "start": 68.82,
+      "end": 69.2
+     },
+     {
+      "word": " detalles",
+      "start": 69.2,
+      "end": 69.64
+     },
+     {
+      "word": " para",
+      "start": 69.64,
+      "end": 69.9
+     },
+     {
+      "word": " 80",
+      "start": 69.9,
+      "end": 70.12
+     },
+     {
+      "word": ".000",
+      "start": 70.12,
+      "end": 70.5
+     },
+     {
+      "word": " pedidos",
+      "start": 70.5,
+      "end": 70.86
+     },
+     {
+      "word": " dan",
+      "start": 70.86,
+      "end": 71.02
+     },
+     {
+      "word": " un",
+      "start": 71.02,
+      "end": 71.16
+     },
+     {
+      "word": " promedio",
+      "start": 71.16,
+      "end": 71.52
+     },
+     {
+      "word": " de",
+      "start": 71.52,
+      "end": 71.6
+     },
+     {
+      "word": " 3",
+      "start": 71.6,
+      "end": 71.84
+     },
+     {
+      "word": " productos",
+      "start": 71.84,
+      "end": 72.22
+     },
+     {
+      "word": " por",
+      "start": 72.22,
+      "end": 72.52
+     },
+     {
+      "word": " pedido.",
+      "start": 72.52,
+      "end": 72.94
+     }
+    ]
+   },
+   {
+    "start": 74.94,
+    "end": 80.14,
+    "text": "Implementamos 6 consultas de negocio, 4 requerías, 2 con Join, una con Group",
+    "words": [
+     {
+      "word": " Implementamos",
+      "start": 74.94,
+      "end": 75.54
+     },
+     {
+      "word": " 6",
+      "start": 75.54,
+      "end": 75.8
+     },
+     {
+      "word": " consultas",
+      "start": 75.8,
+      "end": 76.38
+     },
+     {
+      "word": " de",
+      "start": 76.38,
+      "end": 76.5
+     },
+     {
+      "word": " negocio,",
+      "start": 76.5,
+      "end": 76.98
+     },
+     {
+      "word": " 4",
+      "start": 77.38,
+      "end": 77.62
+     },
+     {
+      "word": " requerías,",
+      "start": 77.62,
+      "end": 78.18
+     },
+     {
+      "word": " 2",
+      "start": 78.68,
+      "end": 78.8
+     },
+     {
+      "word": " con",
+      "start": 78.8,
+      "end": 79.08
+     },
+     {
+      "word": " Join,",
+      "start": 79.08,
+      "end": 79.34
+     },
+     {
+      "word": " una",
+      "start": 79.64,
+      "end": 79.8
+     },
+     {
+      "word": " con",
+      "start": 79.8,
+      "end": 79.98
+     },
+     {
+      "word": " Group",
+      "start": 79.98,
+      "end": 80.14
+     }
+    ]
+   },
+   {
+    "start": 80.14,
+    "end": 83.68,
+    "text": "Byhaving, y una subconsulta, más dos adicionales.",
+    "words": [
+     {
+      "word": " Byhaving,",
+      "start": 80.14,
+      "end": 80.8
+     },
+     {
+      "word": " y",
+      "start": 81.08,
+      "end": 81.18
+     },
+     {
+      "word": " una",
+      "start": 81.18,
+      "end": 81.32
+     },
+     {
+      "word": " subconsulta,",
+      "start": 81.32,
+      "end": 82.16
+     },
+     {
+      "word": " más",
+      "start": 82.36,
+      "end": 82.54
+     },
+     {
+      "word": " dos",
+      "start": 82.54,
+      "end": 82.74
+     },
+     {
+      "word": " adicionales.",
+      "start": 82.74,
+      "end": 83.68
+     }
+    ]
+   },
+   {
+    "start": 84.96,
+    "end": 90.34,
+    "text": "Entre ellas, mostramos los 10 pedidos de mayor monto, las ventas por categoría y los clientes",
+    "words": [
+     {
+      "word": " Entre",
+      "start": 84.96,
+      "end": 85.22
+     },
+     {
+      "word": " ellas,",
+      "start": 85.22,
+      "end": 85.54
+     },
+     {
+      "word": " mostramos",
+      "start": 86.04,
+      "end": 86.34
+     },
+     {
+      "word": " los",
+      "start": 86.34,
+      "end": 86.58
+     },
+     {
+      "word": " 10",
+      "start": 86.58,
+      "end": 86.72
+     },
+     {
+      "word": " pedidos",
+      "start": 86.72,
+      "end": 87.08
+     },
+     {
+      "word": " de",
+      "start": 87.08,
+      "end": 87.2
+     },
+     {
+      "word": " mayor",
+      "start": 87.2,
+      "end": 87.46
+     },
+     {
+      "word": " monto,",
+      "start": 87.46,
+      "end": 87.94
+     },
+     {
+      "word": " las",
+      "start": 88.32,
+      "end": 88.48
+     },
+     {
+      "word": " ventas",
+      "start": 88.48,
+      "end": 88.82
+     },
+     {
+      "word": " por",
+      "start": 88.82,
+      "end": 89.02
+     },
+     {
+      "word": " categoría",
+      "start": 89.02,
+      "end": 89.62
+     },
+     {
+      "word": " y",
+      "start": 89.62,
+      "end": 89.72
+     },
+     {
+      "word": " los",
+      "start": 89.72,
+      "end": 89.9
+     },
+     {
+      "word": " clientes",
+      "start": 89.9,
+      "end": 90.34
+     }
+    ]
+   },
+   {
+    "start": 90.34,
+    "end": 92.74,
+    "text": "vi a hípico más de 10.000 pesos en compras.",
+    "words": [
+     {
+      "word": " vi",
+      "start": 90.34,
+      "end": 90.56
+     },
+     {
+      "word": " a",
+      "start": 90.56,
+      "end": 90.6
+     },
+     {
+      "word": " hípico",
+      "start": 90.6,
+      "end": 91.0
+     },
+     {
+      "word": " más",
+      "start": 91.0,
+      "end": 91.18
+     },
+     {
+      "word": " de",
+      "start": 91.18,
+      "end": 91.34
+     },
+     {
+      "word": " 10",
+      "start": 91.34,
+      "end": 91.54
+     },
+     {
+      "word": ".000",
+      "start": 91.54,
+      "end": 91.8
+     },
+     {
+      "word": " pesos",
+      "start": 91.8,
+      "end": 92.08
+     },
+     {
+      "word": " en",
+      "start": 92.08,
+      "end": 92.3
+     },
+     {
+      "word": " compras.",
+      "start": 92.3,
+      "end": 92.74
+     }
+    ]
+   },
+   {
+    "start": 94.2,
+    "end": 98.82,
+    "text": "También creamos cuatro vistas, un resumen de pedidos que calcula el total, una vista",
+    "words": [
+     {
+      "word": " También",
+      "start": 94.2,
+      "end": 94.54
+     },
+     {
+      "word": " creamos",
+      "start": 94.54,
+      "end": 94.92
+     },
+     {
+      "word": " cuatro",
+      "start": 94.92,
+      "end": 95.3
+     },
+     {
+      "word": " vistas,",
+      "start": 95.3,
+      "end": 95.68
+     },
+     {
+      "word": " un",
+      "start": 96.16,
+      "end": 96.26
+     },
+     {
+      "word": " resumen",
+      "start": 96.26,
+      "end": 96.58
+     },
+     {
+      "word": " de",
+      "start": 96.58,
+      "end": 96.74
+     },
+     {
+      "word": " pedidos",
+      "start": 96.74,
+      "end": 97.06
+     },
+     {
+      "word": " que",
+      "start": 97.06,
+      "end": 97.24
+     },
+     {
+      "word": " calcula",
+      "start": 97.24,
+      "end": 97.64
+     },
+     {
+      "word": " el",
+      "start": 97.64,
+      "end": 97.74
+     },
+     {
+      "word": " total,",
+      "start": 97.74,
+      "end": 98.06
+     },
+     {
+      "word": " una",
+      "start": 98.46,
+      "end": 98.6
+     },
+     {
+      "word": " vista",
+      "start": 98.6,
+      "end": 98.82
+     }
+    ]
+   },
+   {
+    "start": 98.82,
+    "end": 102.64,
+    "text": "de ventas por categoría y dos vistas orientadas al enmascaramiento de datos.",
+    "words": [
+     {
+      "word": " de",
+      "start": 98.82,
+      "end": 99.0
+     },
+     {
+      "word": " ventas",
+      "start": 99.0,
+      "end": 99.26
+     },
+     {
+      "word": " por",
+      "start": 99.26,
+      "end": 99.46
+     },
+     {
+      "word": " categoría",
+      "start": 99.46,
+      "end": 100.08
+     },
+     {
+      "word": " y",
+      "start": 100.08,
+      "end": 100.22
+     },
+     {
+      "word": " dos",
+      "start": 100.22,
+      "end": 100.36
+     },
+     {
+      "word": " vistas",
+      "start": 100.36,
+      "end": 100.74
+     },
+     {
+      "word": " orientadas",
+      "start": 100.74,
+      "end": 101.26
+     },
+     {
+      "word": " al",
+      "start": 101.26,
+      "end": 101.5
+     },
+     {
+      "word": " enmascaramiento",
+      "start": 101.5,
+      "end": 102.08
+     },
+     {
+      "word": " de",
+      "start": 102.08,
+      "end": 102.4
+     },
+     {
+      "word": " datos.",
+      "start": 102.4,
+      "end": 102.64
+     }
+    ]
+   },
+   {
+    "start": 104.12,
+    "end": 108.76,
+    "text": "En esta evidencia se ve la vista de cliente público, presenta el nombre de forma parcial,",
+    "words": [
+     {
+      "word": " En",
+      "start": 104.12,
+      "end": 104.36
+     },
+     {
+      "word": " esta",
+      "start": 104.36,
+      "end": 104.62
+     },
+     {
+      "word": " evidencia",
+      "start": 104.62,
+      "end": 105.08
+     },
+     {
+      "word": " se",
+      "start": 105.08,
+      "end": 105.28
+     },
+     {
+      "word": " ve",
+      "start": 105.28,
+      "end": 105.34
+     },
+     {
+      "word": " la",
+      "start": 105.34,
+      "end": 105.48
+     },
+     {
+      "word": " vista",
+      "start": 105.48,
+      "end": 105.74
+     },
+     {
+      "word": " de",
+      "start": 105.74,
+      "end": 105.88
+     },
+     {
+      "word": " cliente",
+      "start": 105.88,
+      "end": 106.3
+     },
+     {
+      "word": " público,",
+      "start": 106.3,
+      "end": 106.76
+     },
+     {
+      "word": " presenta",
+      "start": 107.14,
+      "end": 107.56
+     },
+     {
+      "word": " el",
+      "start": 107.56,
+      "end": 107.66
+     },
+     {
+      "word": " nombre",
+      "start": 107.66,
+      "end": 107.86
+     },
+     {
+      "word": " de",
+      "start": 107.86,
+      "end": 108.06
+     },
+     {
+      "word": " forma",
+      "start": 108.06,
+      "end": 108.28
+     },
+     {
+      "word": " parcial,",
+      "start": 108.28,
+      "end": 108.76
+     }
+    ]
+   },
+   {
+    "start": 108.76,
+    "end": 114.56,
+    "text": "oculta parte del email y oculta el teléfono para limitar la exposición de datos personales.",
+    "words": [
+     {
+      "word": " oculta",
+      "start": 108.76,
+      "end": 109.52
+     },
+     {
+      "word": " parte",
+      "start": 109.52,
+      "end": 109.8
+     },
+     {
+      "word": " del",
+      "start": 109.8,
+      "end": 109.94
+     },
+     {
+      "word": " email",
+      "start": 109.94,
+      "end": 110.12
+     },
+     {
+      "word": " y",
+      "start": 110.12,
+      "end": 110.42
+     },
+     {
+      "word": " oculta",
+      "start": 110.42,
+      "end": 110.82
+     },
+     {
+      "word": " el",
+      "start": 110.82,
+      "end": 110.94
+     },
+     {
+      "word": " teléfono",
+      "start": 110.94,
+      "end": 111.3
+     },
+     {
+      "word": " para",
+      "start": 111.3,
+      "end": 111.56
+     },
+     {
+      "word": " limitar",
+      "start": 111.56,
+      "end": 111.96
+     },
+     {
+      "word": " la",
+      "start": 111.96,
+      "end": 112.14
+     },
+     {
+      "word": " exposición",
+      "start": 112.14,
+      "end": 112.68
+     },
+     {
+      "word": " de",
+      "start": 112.68,
+      "end": 112.86
+     },
+     {
+      "word": " datos",
+      "start": 112.86,
+      "end": 113.06
+     },
+     {
+      "word": " personales.",
+      "start": 113.06,
+      "end": 114.56
+     }
+    ]
+   },
+   {
+    "start": 115.32,
+    "end": 117.78,
+    "text": "Para controlar el acceso creamos dos roles.",
+    "words": [
+     {
+      "word": " Para",
+      "start": 115.32,
+      "end": 115.92
+     },
+     {
+      "word": " controlar",
+      "start": 115.92,
+      "end": 116.38
+     },
+     {
+      "word": " el",
+      "start": 116.38,
+      "end": 116.6
+     },
+     {
+      "word": " acceso",
+      "start": 116.6,
+      "end": 116.88
+     },
+     {
+      "word": " creamos",
+      "start": 116.88,
+      "end": 117.3
+     },
+     {
+      "word": " dos",
+      "start": 117.3,
+      "end": 117.48
+     },
+     {
+      "word": " roles.",
+      "start": 117.48,
+      "end": 117.78
+     }
+    ]
+   },
+   {
+    "start": 118.84,
+    "end": 122.14,
+    "text": "El rol analista tiene selectunicamente sobrevistas de reporting.",
+    "words": [
+     {
+      "word": " El",
+      "start": 118.84,
+      "end": 119.1
+     },
+     {
+      "word": " rol",
+      "start": 119.1,
+      "end": 119.24
+     },
+     {
+      "word": " analista",
+      "start": 119.24,
+      "end": 119.7
+     },
+     {
+      "word": " tiene",
+      "start": 119.7,
+      "end": 119.98
+     },
+     {
+      "word": " selectunicamente",
+      "start": 119.98,
+      "end": 120.78
+     },
+     {
+      "word": " sobrevistas",
+      "start": 120.78,
+      "end": 121.52
+     },
+     {
+      "word": " de",
+      "start": 121.52,
+      "end": 121.7
+     },
+     {
+      "word": " reporting.",
+      "start": 121.7,
+      "end": 122.14
+     }
+    ]
+   },
+   {
+    "start": 123.18,
+    "end": 128.26,
+    "text": "El rol bendedor puede consultar incertar pedidos y detalles, pero no tiene acceso a las tablas",
+    "words": [
+     {
+      "word": " El",
+      "start": 123.18,
+      "end": 123.44
+     },
+     {
+      "word": " rol",
+      "start": 123.44,
+      "end": 123.58
+     },
+     {
+      "word": " bendedor",
+      "start": 123.58,
+      "end": 124.02
+     },
+     {
+      "word": " puede",
+      "start": 124.02,
+      "end": 124.28
+     },
+     {
+      "word": " consultar",
+      "start": 124.28,
+      "end": 124.86
+     },
+     {
+      "word": " incertar",
+      "start": 124.86,
+      "end": 125.34
+     },
+     {
+      "word": " pedidos",
+      "start": 125.34,
+      "end": 125.72
+     },
+     {
+      "word": " y",
+      "start": 125.72,
+      "end": 125.92
+     },
+     {
+      "word": " detalles,",
+      "start": 125.92,
+      "end": 126.34
+     },
+     {
+      "word": " pero",
+      "start": 126.86,
+      "end": 127.02
+     },
+     {
+      "word": " no",
+      "start": 127.02,
+      "end": 127.16
+     },
+     {
+      "word": " tiene",
+      "start": 127.16,
+      "end": 127.42
+     },
+     {
+      "word": " acceso",
+      "start": 127.42,
+      "end": 127.7
+     },
+     {
+      "word": " a",
+      "start": 127.7,
+      "end": 127.84
+     },
+     {
+      "word": " las",
+      "start": 127.84,
+      "end": 127.98
+     },
+     {
+      "word": " tablas",
+      "start": 127.98,
+      "end": 128.26
+     }
+    ]
+   },
+   {
+    "start": 128.26,
+    "end": 128.82,
+    "text": "maestras.",
+    "words": [
+     {
+      "word": " maestras.",
+      "start": 128.26,
+      "end": 128.82
+     }
+    ]
+   },
+   {
+    "start": 130.24,
+    "end": 135.44,
+    "text": "Los permiso del usuario TFI analistamos que puede consultar tres vistas, pero no las",
+    "words": [
+     {
+      "word": " Los",
+      "start": 130.24,
+      "end": 130.56
+     },
+     {
+      "word": " permiso",
+      "start": 130.56,
+      "end": 130.96
+     },
+     {
+      "word": " del",
+      "start": 130.96,
+      "end": 131.16
+     },
+     {
+      "word": " usuario",
+      "start": 131.16,
+      "end": 131.54
+     },
+     {
+      "word": " TFI",
+      "start": 131.54,
+      "end": 131.9
+     },
+     {
+      "word": " analistamos",
+      "start": 131.9,
+      "end": 132.52
+     },
+     {
+      "word": " que",
+      "start": 132.52,
+      "end": 132.94
+     },
+     {
+      "word": " puede",
+      "start": 132.94,
+      "end": 133.2
+     },
+     {
+      "word": " consultar",
+      "start": 133.2,
+      "end": 133.78
+     },
+     {
+      "word": " tres",
+      "start": 133.78,
+      "end": 134.06
+     },
+     {
+      "word": " vistas,",
+      "start": 134.06,
+      "end": 134.5
+     },
+     {
+      "word": " pero",
+      "start": 134.88,
+      "end": 135.08
+     },
+     {
+      "word": " no",
+      "start": 135.08,
+      "end": 135.24
+     },
+     {
+      "word": " las",
+      "start": 135.24,
+      "end": 135.44
+     }
+    ]
+   },
+   {
+    "start": 135.44,
+    "end": 136.08,
+    "text": "tablas base.",
+    "words": [
+     {
+      "word": " tablas",
+      "start": 135.44,
+      "end": 135.7
+     },
+     {
+      "word": " base.",
+      "start": 135.7,
+      "end": 136.08
+     }
+    ]
+   },
+   {
+    "start": 136.7,
+    "end": 141.54,
+    "text": "Al intentar consultar directamente la tabla que interrecie un error de acceso enigado,",
+    "words": [
+     {
+      "word": " Al",
+      "start": 136.7,
+      "end": 137.26
+     },
+     {
+      "word": " intentar",
+      "start": 137.26,
+      "end": 137.6
+     },
+     {
+      "word": " consultar",
+      "start": 137.6,
+      "end": 138.24
+     },
+     {
+      "word": " directamente",
+      "start": 138.24,
+      "end": 138.52
+     },
+     {
+      "word": " la",
+      "start": 138.52,
+      "end": 139.04
+     },
+     {
+      "word": " tabla",
+      "start": 139.04,
+      "end": 139.32
+     },
+     {
+      "word": " que",
+      "start": 139.32,
+      "end": 139.5
+     },
+     {
+      "word": " interrecie",
+      "start": 139.5,
+      "end": 140.16
+     },
+     {
+      "word": " un",
+      "start": 140.16,
+      "end": 140.28
+     },
+     {
+      "word": " error",
+      "start": 140.28,
+      "end": 140.48
+     },
+     {
+      "word": " de",
+      "start": 140.48,
+      "end": 140.68
+     },
+     {
+      "word": " acceso",
+      "start": 140.68,
+      "end": 140.96
+     },
+     {
+      "word": " enigado,",
+      "start": 140.96,
+      "end": 141.54
+     }
+    ]
+   },
+   {
+    "start": 141.94,
+    "end": 144.54,
+    "text": "al hacer la consulta través de la vista, funciona.",
+    "words": [
+     {
+      "word": " al",
+      "start": 141.94,
+      "end": 142.08
+     },
+     {
+      "word": " hacer",
+      "start": 142.08,
+      "end": 142.28
+     },
+     {
+      "word": " la",
+      "start": 142.28,
+      "end": 142.44
+     },
+     {
+      "word": " consulta",
+      "start": 142.44,
+      "end": 142.94
+     },
+     {
+      "word": " través",
+      "start": 142.94,
+      "end": 143.22
+     },
+     {
+      "word": " de",
+      "start": 143.22,
+      "end": 143.38
+     },
+     {
+      "word": " la",
+      "start": 143.38,
+      "end": 143.5
+     },
+     {
+      "word": " vista,",
+      "start": 143.5,
+      "end": 143.76
+     },
+     {
+      "word": " funciona.",
+      "start": 144.1,
+      "end": 144.54
+     }
+    ]
+   }
+  ]
+ },
+ "josue": {
+  "archivo": "audio/josue.mp3",
+  "total": 172.859,
+  "escenas": [
+   {
+    "id": "j1",
+    "start": 8.34,
+    "end": 52.872
+   },
+   {
+    "id": "j2",
+    "start": 53.772,
+    "end": 101.136
+   },
+   {
+    "id": "j3",
+    "start": 102.036,
+    "end": 172.86
+   }
+  ],
+  "segments": [
+   {
+    "start": 0.0,
+    "end": 6.5,
+    "text": "Hola, soy José Gallardo, y en este bloque presento la seguridad, las transacciones y la concurrencia.",
+    "words": [
+     {
+      "word": " Hola,",
+      "start": 0.0,
+      "end": 0.38
+     },
+     {
+      "word": " soy",
+      "start": 0.8,
+      "end": 0.98
+     },
+     {
+      "word": " José",
+      "start": 0.98,
+      "end": 1.26
+     },
+     {
+      "word": " Gallardo,",
+      "start": 1.26,
+      "end": 1.78
+     },
+     {
+      "word": " y",
+      "start": 2.26,
+      "end": 2.28
+     },
+     {
+      "word": " en",
+      "start": 2.28,
+      "end": 2.42
+     },
+     {
+      "word": " este",
+      "start": 2.42,
+      "end": 2.66
+     },
+     {
+      "word": " bloque",
+      "start": 2.66,
+      "end": 2.9
+     },
+     {
+      "word": " presento",
+      "start": 2.9,
+      "end": 3.54
+     },
+     {
+      "word": " la",
+      "start": 3.54,
+      "end": 3.64
+     },
+     {
+      "word": " seguridad,",
+      "start": 3.64,
+      "end": 4.12
+     },
+     {
+      "word": " las",
+      "start": 4.54,
+      "end": 4.68
+     },
+     {
+      "word": " transacciones",
+      "start": 4.68,
+      "end": 5.42
+     },
+     {
+      "word": " y",
+      "start": 5.42,
+      "end": 5.62
+     },
+     {
+      "word": " la",
+      "start": 5.62,
+      "end": 5.74
+     },
+     {
+      "word": " concurrencia.",
+      "start": 5.74,
+      "end": 6.5
+     }
+    ]
+   },
+   {
+    "start": 7.9,
+    "end": 13.84,
+    "text": "Para evitar inyección SSIUL, creamos un procedimiento almacenado parametrizado.",
+    "words": [
+     {
+      "word": " Para",
+      "start": 7.9,
+      "end": 8.68
+     },
+     {
+      "word": " evitar",
+      "start": 8.68,
+      "end": 9.02
+     },
+     {
+      "word": " inyección",
+      "start": 9.02,
+      "end": 9.58
+     },
+     {
+      "word": " SSIUL,",
+      "start": 9.58,
+      "end": 10.48
+     },
+     {
+      "word": " creamos",
+      "start": 11.08,
+      "end": 11.32
+     },
+     {
+      "word": " un",
+      "start": 11.32,
+      "end": 11.56
+     },
+     {
+      "word": " procedimiento",
+      "start": 11.56,
+      "end": 12.14
+     },
+     {
+      "word": " almacenado",
+      "start": 12.14,
+      "end": 12.92
+     },
+     {
+      "word": " parametrizado.",
+      "start": 12.92,
+      "end": 13.84
+     }
+    ]
+   },
+   {
+    "start": 14.72,
+    "end": 23.32,
+    "text": "El parámetro tiene tipo barcar y se usa como valor, no concatenamos SSIUL ni ejecutamos consultas dinámicas con PRIPF.",
+    "words": [
+     {
+      "word": " El",
+      "start": 14.72,
+      "end": 15.0
+     },
+     {
+      "word": " parámetro",
+      "start": 15.0,
+      "end": 15.46
+     },
+     {
+      "word": " tiene",
+      "start": 15.46,
+      "end": 15.8
+     },
+     {
+      "word": " tipo",
+      "start": 15.8,
+      "end": 16.14
+     },
+     {
+      "word": " barcar",
+      "start": 16.14,
+      "end": 16.52
+     },
+     {
+      "word": " y",
+      "start": 16.52,
+      "end": 16.68
+     },
+     {
+      "word": " se",
+      "start": 16.68,
+      "end": 16.84
+     },
+     {
+      "word": " usa",
+      "start": 16.84,
+      "end": 17.08
+     },
+     {
+      "word": " como",
+      "start": 17.08,
+      "end": 17.36
+     },
+     {
+      "word": " valor,",
+      "start": 17.36,
+      "end": 17.7
+     },
+     {
+      "word": " no",
+      "start": 18.08,
+      "end": 18.24
+     },
+     {
+      "word": " concatenamos",
+      "start": 18.24,
+      "end": 18.94
+     },
+     {
+      "word": " SSIUL",
+      "start": 18.94,
+      "end": 19.84
+     },
+     {
+      "word": " ni",
+      "start": 19.84,
+      "end": 20.14
+     },
+     {
+      "word": " ejecutamos",
+      "start": 20.14,
+      "end": 20.74
+     },
+     {
+      "word": " consultas",
+      "start": 20.74,
+      "end": 21.42
+     },
+     {
+      "word": " dinámicas",
+      "start": 21.42,
+      "end": 21.96
+     },
+     {
+      "word": " con",
+      "start": 21.96,
+      "end": 22.36
+     },
+     {
+      "word": " PRIPF.",
+      "start": 22.36,
+      "end": 23.32
+     }
+    ]
+   },
+   {
+    "start": 24.16,
+    "end": 33.52,
+    "text": "Al probar la cadena comilla simple, or, comilla simple, uno, comilla simple, igual, comilla simple, uno, comilla simple,",
+    "words": [
+     {
+      "word": " Al",
+      "start": 24.16,
+      "end": 24.88
+     },
+     {
+      "word": " probar",
+      "start": 24.88,
+      "end": 25.24
+     },
+     {
+      "word": " la",
+      "start": 25.24,
+      "end": 25.42
+     },
+     {
+      "word": " cadena",
+      "start": 25.42,
+      "end": 25.74
+     },
+     {
+      "word": " comilla",
+      "start": 25.74,
+      "end": 26.18
+     },
+     {
+      "word": " simple,",
+      "start": 26.18,
+      "end": 26.6
+     },
+     {
+      "word": " or,",
+      "start": 26.96,
+      "end": 27.12
+     },
+     {
+      "word": " comilla",
+      "start": 27.46,
+      "end": 27.82
+     },
+     {
+      "word": " simple,",
+      "start": 27.82,
+      "end": 28.22
+     },
+     {
+      "word": " uno,",
+      "start": 28.58,
+      "end": 28.82
+     },
+     {
+      "word": " comilla",
+      "start": 29.18,
+      "end": 29.54
+     },
+     {
+      "word": " simple,",
+      "start": 29.54,
+      "end": 29.96
+     },
+     {
+      "word": " igual,",
+      "start": 30.28,
+      "end": 30.54
+     },
+     {
+      "word": " comilla",
+      "start": 31.02,
+      "end": 31.34
+     },
+     {
+      "word": " simple,",
+      "start": 31.34,
+      "end": 31.76
+     },
+     {
+      "word": " uno,",
+      "start": 32.12,
+      "end": 32.38
+     },
+     {
+      "word": " comilla",
+      "start": 32.74,
+      "end": 33.08
+     },
+     {
+      "word": " simple,",
+      "start": 33.08,
+      "end": 33.52
+     }
+    ]
+   },
+   {
+    "start": 33.9,
+    "end": 40.48,
+    "text": "el procedimiento la trata como un dato literal y devuelve cero filas, en lugar de devolver todos los clientes.",
+    "words": [
+     {
+      "word": " el",
+      "start": 33.9,
+      "end": 34.04
+     },
+     {
+      "word": " procedimiento",
+      "start": 34.04,
+      "end": 34.6
+     },
+     {
+      "word": " la",
+      "start": 34.6,
+      "end": 34.92
+     },
+     {
+      "word": " trata",
+      "start": 34.92,
+      "end": 35.14
+     },
+     {
+      "word": " como",
+      "start": 35.14,
+      "end": 35.52
+     },
+     {
+      "word": " un",
+      "start": 35.52,
+      "end": 35.74
+     },
+     {
+      "word": " dato",
+      "start": 35.74,
+      "end": 35.9
+     },
+     {
+      "word": " literal",
+      "start": 35.9,
+      "end": 36.36
+     },
+     {
+      "word": " y",
+      "start": 36.36,
+      "end": 36.62
+     },
+     {
+      "word": " devuelve",
+      "start": 36.62,
+      "end": 37.0
+     },
+     {
+      "word": " cero",
+      "start": 37.0,
+      "end": 37.32
+     },
+     {
+      "word": " filas,",
+      "start": 37.32,
+      "end": 37.78
+     },
+     {
+      "word": " en",
+      "start": 38.16,
+      "end": 38.28
+     },
+     {
+      "word": " lugar",
+      "start": 38.28,
+      "end": 38.5
+     },
+     {
+      "word": " de",
+      "start": 38.5,
+      "end": 38.74
+     },
+     {
+      "word": " devolver",
+      "start": 38.74,
+      "end": 39.14
+     },
+     {
+      "word": " todos",
+      "start": 39.14,
+      "end": 39.52
+     },
+     {
+      "word": " los",
+      "start": 39.52,
+      "end": 39.88
+     },
+     {
+      "word": " clientes.",
+      "start": 39.88,
+      "end": 40.48
+     }
+    ]
+   },
+   {
+    "start": 41.42,
+    "end": 51.82,
+    "text": "También verificamos las restricciones de integridad, cheque rechaza estados inválidos, la clave foranea impide referencias a clientes inexistentes y unique evita duplicados.",
+    "words": [
+     {
+      "word": " También",
+      "start": 41.42,
+      "end": 41.84
+     },
+     {
+      "word": " verificamos",
+      "start": 41.84,
+      "end": 42.5
+     },
+     {
+      "word": " las",
+      "start": 42.5,
+      "end": 42.74
+     },
+     {
+      "word": " restricciones",
+      "start": 42.74,
+      "end": 43.36
+     },
+     {
+      "word": " de",
+      "start": 43.36,
+      "end": 43.62
+     },
+     {
+      "word": " integridad,",
+      "start": 43.62,
+      "end": 44.16
+     },
+     {
+      "word": " cheque",
+      "start": 44.6,
+      "end": 44.8
+     },
+     {
+      "word": " rechaza",
+      "start": 44.8,
+      "end": 45.22
+     },
+     {
+      "word": " estados",
+      "start": 45.22,
+      "end": 45.68
+     },
+     {
+      "word": " inválidos,",
+      "start": 45.68,
+      "end": 46.24
+     },
+     {
+      "word": " la",
+      "start": 46.72,
+      "end": 46.8
+     },
+     {
+      "word": " clave",
+      "start": 46.8,
+      "end": 47.08
+     },
+     {
+      "word": " foranea",
+      "start": 47.08,
+      "end": 47.6
+     },
+     {
+      "word": " impide",
+      "start": 47.6,
+      "end": 48.02
+     },
+     {
+      "word": " referencias",
+      "start": 48.02,
+      "end": 48.62
+     },
+     {
+      "word": " a",
+      "start": 48.62,
+      "end": 48.84
+     },
+     {
+      "word": " clientes",
+      "start": 48.84,
+      "end": 49.32
+     },
+     {
+      "word": " inexistentes",
+      "start": 49.32,
+      "end": 50.14
+     },
+     {
+      "word": " y",
+      "start": 50.14,
+      "end": 50.38
+     },
+     {
+      "word": " unique",
+      "start": 50.38,
+      "end": 50.64
+     },
+     {
+      "word": " evita",
+      "start": 50.64,
+      "end": 51.14
+     },
+     {
+      "word": " duplicados.",
+      "start": 51.14,
+      "end": 51.82
+     }
+    ]
+   },
+   {
+    "start": 53.4,
+    "end": 58.52,
+    "text": "Para registrar una venta completa implementamos el procedimiento registrar venta.",
+    "words": [
+     {
+      "word": " Para",
+      "start": 53.4,
+      "end": 54.08
+     },
+     {
+      "word": " registrar",
+      "start": 54.08,
+      "end": 54.68
+     },
+     {
+      "word": " una",
+      "start": 54.68,
+      "end": 54.9
+     },
+     {
+      "word": " venta",
+      "start": 54.9,
+      "end": 55.24
+     },
+     {
+      "word": " completa",
+      "start": 55.24,
+      "end": 55.6
+     },
+     {
+      "word": " implementamos",
+      "start": 55.6,
+      "end": 56.44
+     },
+     {
+      "word": " el",
+      "start": 56.44,
+      "end": 56.68
+     },
+     {
+      "word": " procedimiento",
+      "start": 56.68,
+      "end": 57.24
+     },
+     {
+      "word": " registrar",
+      "start": 57.24,
+      "end": 57.96
+     },
+     {
+      "word": " venta.",
+      "start": 57.96,
+      "end": 58.52
+     }
+    ]
+   },
+   {
+    "start": 59.32,
+    "end": 70.1,
+    "text": "El procedimiento controla el stock con una transacción, bloquea la fila del producto consolact for update, valida las condiciones de negocio y confirma con comito revierte con rollback.",
+    "words": [
+     {
+      "word": " El",
+      "start": 59.32,
+      "end": 59.56
+     },
+     {
+      "word": " procedimiento",
+      "start": 59.56,
+      "end": 60.18
+     },
+     {
+      "word": " controla",
+      "start": 60.18,
+      "end": 60.86
+     },
+     {
+      "word": " el",
+      "start": 60.86,
+      "end": 61.0
+     },
+     {
+      "word": " stock",
+      "start": 61.0,
+      "end": 61.26
+     },
+     {
+      "word": " con",
+      "start": 61.26,
+      "end": 61.58
+     },
+     {
+      "word": " una",
+      "start": 61.58,
+      "end": 61.78
+     },
+     {
+      "word": " transacción,",
+      "start": 61.78,
+      "end": 62.4
+     },
+     {
+      "word": " bloquea",
+      "start": 62.9,
+      "end": 63.24
+     },
+     {
+      "word": " la",
+      "start": 63.24,
+      "end": 63.36
+     },
+     {
+      "word": " fila",
+      "start": 63.36,
+      "end": 63.66
+     },
+     {
+      "word": " del",
+      "start": 63.66,
+      "end": 63.84
+     },
+     {
+      "word": " producto",
+      "start": 63.84,
+      "end": 64.16
+     },
+     {
+      "word": " consolact",
+      "start": 64.16,
+      "end": 64.88
+     },
+     {
+      "word": " for",
+      "start": 64.88,
+      "end": 65.06
+     },
+     {
+      "word": " update,",
+      "start": 65.06,
+      "end": 65.4
+     },
+     {
+      "word": " valida",
+      "start": 65.88,
+      "end": 66.16
+     },
+     {
+      "word": " las",
+      "start": 66.16,
+      "end": 66.4
+     },
+     {
+      "word": " condiciones",
+      "start": 66.4,
+      "end": 66.86
+     },
+     {
+      "word": " de",
+      "start": 66.86,
+      "end": 67.16
+     },
+     {
+      "word": " negocio",
+      "start": 67.16,
+      "end": 67.6
+     },
+     {
+      "word": " y",
+      "start": 67.6,
+      "end": 67.72
+     },
+     {
+      "word": " confirma",
+      "start": 67.72,
+      "end": 68.26
+     },
+     {
+      "word": " con",
+      "start": 68.26,
+      "end": 68.5
+     },
+     {
+      "word": " comito",
+      "start": 68.5,
+      "end": 68.94
+     },
+     {
+      "word": " revierte",
+      "start": 68.94,
+      "end": 69.48
+     },
+     {
+      "word": " con",
+      "start": 69.48,
+      "end": 69.68
+     },
+     {
+      "word": " rollback.",
+      "start": 69.68,
+      "end": 70.1
+     }
+    ]
+   },
+   {
+    "start": 71.32,
+    "end": 75.26,
+    "text": "En el caso exitoso, el stock pasa de 50 a 45.",
+    "words": [
+     {
+      "word": " En",
+      "start": 71.04,
+      "end": 71.38
+     },
+     {
+      "word": " el",
+      "start": 71.38,
+      "end": 71.54
+     },
+     {
+      "word": " caso",
+      "start": 71.54,
+      "end": 71.78
+     },
+     {
+      "word": " exitoso,",
+      "start": 71.78,
+      "end": 72.44
+     },
+     {
+      "word": " el",
+      "start": 72.84,
+      "end": 72.96
+     },
+     {
+      "word": " stock",
+      "start": 72.96,
+      "end": 73.28
+     },
+     {
+      "word": " pasa",
+      "start": 73.28,
+      "end": 73.56
+     },
+     {
+      "word": " de",
+      "start": 73.56,
+      "end": 73.78
+     },
+     {
+      "word": " 50",
+      "start": 73.78,
+      "end": 74.12
+     },
+     {
+      "word": " a",
+      "start": 74.12,
+      "end": 74.5
+     },
+     {
+      "word": " 45.",
+      "start": 74.5,
+      "end": 75.26
+     }
+    ]
+   },
+   {
+    "start": 76.76,
+    "end": 81.72,
+    "text": "Si no hay stock suficiente, se ejecuta el rollback y el stock queda sin cambios.",
+    "words": [
+     {
+      "word": " Si",
+      "start": 76.76,
+      "end": 77.06
+     },
+     {
+      "word": " no",
+      "start": 77.06,
+      "end": 77.24
+     },
+     {
+      "word": " hay",
+      "start": 77.24,
+      "end": 77.42
+     },
+     {
+      "word": " stock",
+      "start": 77.42,
+      "end": 77.72
+     },
+     {
+      "word": " suficiente,",
+      "start": 77.72,
+      "end": 78.22
+     },
+     {
+      "word": " se",
+      "start": 78.84,
+      "end": 78.92
+     },
+     {
+      "word": " ejecuta",
+      "start": 78.92,
+      "end": 79.4
+     },
+     {
+      "word": " el",
+      "start": 79.4,
+      "end": 79.56
+     },
+     {
+      "word": " rollback",
+      "start": 79.56,
+      "end": 79.96
+     },
+     {
+      "word": " y",
+      "start": 79.96,
+      "end": 80.16
+     },
+     {
+      "word": " el",
+      "start": 80.16,
+      "end": 80.28
+     },
+     {
+      "word": " stock",
+      "start": 80.28,
+      "end": 80.62
+     },
+     {
+      "word": " queda",
+      "start": 80.62,
+      "end": 80.92
+     },
+     {
+      "word": " sin",
+      "start": 80.92,
+      "end": 81.18
+     },
+     {
+      "word": " cambios.",
+      "start": 81.18,
+      "end": 81.72
+     }
+    ]
+   },
+   {
+    "start": 82.72,
+    "end": 89.7,
+    "text": "También se valida que el cliente esté activo y que el producto exista, si una condición falla, no se persiste la venta.",
+    "words": [
+     {
+      "word": " También",
+      "start": 82.71,
+      "end": 83.06
+     },
+     {
+      "word": " se",
+      "start": 83.06,
+      "end": 83.28
+     },
+     {
+      "word": " valida",
+      "start": 83.28,
+      "end": 83.62
+     },
+     {
+      "word": " que",
+      "start": 83.62,
+      "end": 83.82
+     },
+     {
+      "word": " el",
+      "start": 83.82,
+      "end": 84.0
+     },
+     {
+      "word": " cliente",
+      "start": 84.0,
+      "end": 84.36
+     },
+     {
+      "word": " esté",
+      "start": 84.36,
+      "end": 84.62
+     },
+     {
+      "word": " activo",
+      "start": 84.62,
+      "end": 85.06
+     },
+     {
+      "word": " y",
+      "start": 85.06,
+      "end": 85.24
+     },
+     {
+      "word": " que",
+      "start": 85.24,
+      "end": 85.4
+     },
+     {
+      "word": " el",
+      "start": 85.4,
+      "end": 85.54
+     },
+     {
+      "word": " producto",
+      "start": 85.54,
+      "end": 85.8
+     },
+     {
+      "word": " exista,",
+      "start": 85.8,
+      "end": 86.44
+     },
+     {
+      "word": " si",
+      "start": 86.76,
+      "end": 86.88
+     },
+     {
+      "word": " una",
+      "start": 86.88,
+      "end": 87.08
+     },
+     {
+      "word": " condición",
+      "start": 87.08,
+      "end": 87.54
+     },
+     {
+      "word": " falla,",
+      "start": 87.54,
+      "end": 88.04
+     },
+     {
+      "word": " no",
+      "start": 88.34,
+      "end": 88.48
+     },
+     {
+      "word": " se",
+      "start": 88.48,
+      "end": 88.66
+     },
+     {
+      "word": " persiste",
+      "start": 88.66,
+      "end": 89.14
+     },
+     {
+      "word": " la",
+      "start": 89.14,
+      "end": 89.3
+     },
+     {
+      "word": " venta.",
+      "start": 89.3,
+      "end": 89.7
+     }
+    ]
+   },
+   {
+    "start": 90.62,
+    "end": 100.08,
+    "text": "La estrategia de mantenibilidad transaccional para cargas masivas también se valido con consultas técnicas sobre métodos robustos de bulkensor en Maya CCUL.",
+    "words": [
+     {
+      "word": " La",
+      "start": 90.62,
+      "end": 90.84
+     },
+     {
+      "word": " estrategia",
+      "start": 90.84,
+      "end": 91.46
+     },
+     {
+      "word": " de",
+      "start": 91.46,
+      "end": 91.6
+     },
+     {
+      "word": " mantenibilidad",
+      "start": 91.6,
+      "end": 92.28
+     },
+     {
+      "word": " transaccional",
+      "start": 92.28,
+      "end": 93.1
+     },
+     {
+      "word": " para",
+      "start": 93.1,
+      "end": 93.42
+     },
+     {
+      "word": " cargas",
+      "start": 93.42,
+      "end": 93.82
+     },
+     {
+      "word": " masivas",
+      "start": 93.82,
+      "end": 94.3
+     },
+     {
+      "word": " también",
+      "start": 94.3,
+      "end": 94.72
+     },
+     {
+      "word": " se",
+      "start": 94.72,
+      "end": 94.96
+     },
+     {
+      "word": " valido",
+      "start": 94.96,
+      "end": 95.3
+     },
+     {
+      "word": " con",
+      "start": 95.3,
+      "end": 95.52
+     },
+     {
+      "word": " consultas",
+      "start": 95.52,
+      "end": 96.08
+     },
+     {
+      "word": " técnicas",
+      "start": 96.08,
+      "end": 96.6
+     },
+     {
+      "word": " sobre",
+      "start": 96.6,
+      "end": 96.92
+     },
+     {
+      "word": " métodos",
+      "start": 96.92,
+      "end": 97.44
+     },
+     {
+      "word": " robustos",
+      "start": 97.44,
+      "end": 97.94
+     },
+     {
+      "word": " de",
+      "start": 97.94,
+      "end": 98.08
+     },
+     {
+      "word": " bulkensor",
+      "start": 98.08,
+      "end": 98.7
+     },
+     {
+      "word": " en",
+      "start": 98.7,
+      "end": 98.94
+     },
+     {
+      "word": " Maya",
+      "start": 98.94,
+      "end": 99.18
+     },
+     {
+      "word": " CCUL.",
+      "start": 99.18,
+      "end": 100.08
+     }
+    ]
+   },
+   {
+    "start": 101.62,
+    "end": 105.62,
+    "text": "Para probar concurrencia simulamos un dedlack con dos sesiones.",
+    "words": [
+     {
+      "word": " Para",
+      "start": 101.62,
+      "end": 102.32
+     },
+     {
+      "word": " probar",
+      "start": 102.32,
+      "end": 102.72
+     },
+     {
+      "word": " concurrencia",
+      "start": 102.72,
+      "end": 103.4
+     },
+     {
+      "word": " simulamos",
+      "start": 103.4,
+      "end": 103.94
+     },
+     {
+      "word": " un",
+      "start": 103.94,
+      "end": 104.22
+     },
+     {
+      "word": " dedlack",
+      "start": 104.22,
+      "end": 104.66
+     },
+     {
+      "word": " con",
+      "start": 104.66,
+      "end": 104.92
+     },
+     {
+      "word": " dos",
+      "start": 104.92,
+      "end": 105.14
+     },
+     {
+      "word": " sesiones.",
+      "start": 105.14,
+      "end": 105.62
+     }
+    ]
+   },
+   {
+    "start": 106.34,
+    "end": 110.98,
+    "text": "La sesión ha bloqueado el producto 1 y la sesión ve bloquea el producto 2.",
+    "words": [
+     {
+      "word": " La",
+      "start": 106.34,
+      "end": 106.94
+     },
+     {
+      "word": " sesión",
+      "start": 106.94,
+      "end": 107.32
+     },
+     {
+      "word": " ha",
+      "start": 107.32,
+      "end": 107.42
+     },
+     {
+      "word": " bloqueado",
+      "start": 107.42,
+      "end": 107.56
+     },
+     {
+      "word": " el",
+      "start": 107.56,
+      "end": 107.9
+     },
+     {
+      "word": " producto",
+      "start": 107.9,
+      "end": 108.2
+     },
+     {
+      "word": " 1",
+      "start": 108.2,
+      "end": 108.66
+     },
+     {
+      "word": " y",
+      "start": 108.66,
+      "end": 108.88
+     },
+     {
+      "word": " la",
+      "start": 108.88,
+      "end": 109.0
+     },
+     {
+      "word": " sesión",
+      "start": 109.0,
+      "end": 109.4
+     },
+     {
+      "word": " ve",
+      "start": 109.4,
+      "end": 109.6
+     },
+     {
+      "word": " bloquea",
+      "start": 109.6,
+      "end": 110.02
+     },
+     {
+      "word": " el",
+      "start": 110.02,
+      "end": 110.16
+     },
+     {
+      "word": " producto",
+      "start": 110.16,
+      "end": 110.44
+     },
+     {
+      "word": " 2.",
+      "start": 110.44,
+      "end": 110.98
+     }
+    ]
+   },
+   {
+    "start": 111.96,
+    "end": 115.74,
+    "text": "Después cada una intenta actualizar el producto bloqueado por la otra.",
+    "words": [
+     {
+      "word": " Después",
+      "start": 111.96,
+      "end": 112.38
+     },
+     {
+      "word": " cada",
+      "start": 112.38,
+      "end": 112.68
+     },
+     {
+      "word": " una",
+      "start": 112.68,
+      "end": 112.96
+     },
+     {
+      "word": " intenta",
+      "start": 112.96,
+      "end": 113.42
+     },
+     {
+      "word": " actualizar",
+      "start": 113.42,
+      "end": 113.9
+     },
+     {
+      "word": " el",
+      "start": 113.9,
+      "end": 114.08
+     },
+     {
+      "word": " producto",
+      "start": 114.08,
+      "end": 114.46
+     },
+     {
+      "word": " bloqueado",
+      "start": 114.46,
+      "end": 115.04
+     },
+     {
+      "word": " por",
+      "start": 115.04,
+      "end": 115.28
+     },
+     {
+      "word": " la",
+      "start": 115.28,
+      "end": 115.42
+     },
+     {
+      "word": " otra.",
+      "start": 115.42,
+      "end": 115.74
+     }
+    ]
+   },
+   {
+    "start": 117.14,
+    "end": 122.04,
+    "text": "Y no debí detectar el ciclo y aborta una transacción con el error 1213.",
+    "words": [
+     {
+      "word": " Y",
+      "start": 117.14,
+      "end": 117.34
+     },
+     {
+      "word": " no",
+      "start": 117.34,
+      "end": 117.46
+     },
+     {
+      "word": " debí",
+      "start": 117.46,
+      "end": 117.74
+     },
+     {
+      "word": " detectar",
+      "start": 117.74,
+      "end": 118.2
+     },
+     {
+      "word": " el",
+      "start": 118.2,
+      "end": 118.38
+     },
+     {
+      "word": " ciclo",
+      "start": 118.38,
+      "end": 118.68
+     },
+     {
+      "word": " y",
+      "start": 118.68,
+      "end": 118.84
+     },
+     {
+      "word": " aborta",
+      "start": 118.84,
+      "end": 119.16
+     },
+     {
+      "word": " una",
+      "start": 119.16,
+      "end": 119.46
+     },
+     {
+      "word": " transacción",
+      "start": 119.46,
+      "end": 120.1
+     },
+     {
+      "word": " con",
+      "start": 120.1,
+      "end": 120.36
+     },
+     {
+      "word": " el",
+      "start": 120.36,
+      "end": 120.52
+     },
+     {
+      "word": " error",
+      "start": 120.52,
+      "end": 120.7
+     },
+     {
+      "word": " 1213.",
+      "start": 120.7,
+      "end": 122.04
+     }
+    ]
+   },
+   {
+    "start": 123.0,
+    "end": 127.62,
+    "text": "El procedimiento contempla este error y reintenta hasta 3 veces con una espera incremental.",
+    "words": [
+     {
+      "word": " El",
+      "start": 123.0,
+      "end": 123.24
+     },
+     {
+      "word": " procedimiento",
+      "start": 123.24,
+      "end": 123.84
+     },
+     {
+      "word": " contempla",
+      "start": 123.84,
+      "end": 124.56
+     },
+     {
+      "word": " este",
+      "start": 124.56,
+      "end": 124.84
+     },
+     {
+      "word": " error",
+      "start": 124.84,
+      "end": 125.08
+     },
+     {
+      "word": " y",
+      "start": 125.08,
+      "end": 125.26
+     },
+     {
+      "word": " reintenta",
+      "start": 125.26,
+      "end": 125.66
+     },
+     {
+      "word": " hasta",
+      "start": 125.66,
+      "end": 126.14
+     },
+     {
+      "word": " 3",
+      "start": 126.14,
+      "end": 126.52
+     },
+     {
+      "word": " veces",
+      "start": 126.52,
+      "end": 126.8
+     },
+     {
+      "word": " con",
+      "start": 126.8,
+      "end": 127.08
+     },
+     {
+      "word": " una",
+      "start": 127.08,
+      "end": 127.3
+     },
+     {
+      "word": " espera",
+      "start": 127.3,
+      "end": 127.58
+     },
+     {
+      "word": " incremental.",
+      "start": 127.58,
+      "end": 127.88
+     }
+    ]
+   },
+   {
+    "start": 129.32,
+    "end": 132.62,
+    "text": "También comparamos los niveles reprobor ready red comat.",
+    "words": [
+     {
+      "word": " También",
+      "start": 129.32,
+      "end": 129.74
+     },
+     {
+      "word": " comparamos",
+      "start": 129.74,
+      "end": 130.36
+     },
+     {
+      "word": " los",
+      "start": 130.36,
+      "end": 130.56
+     },
+     {
+      "word": " niveles",
+      "start": 130.56,
+      "end": 130.96
+     },
+     {
+      "word": " reprobor",
+      "start": 130.96,
+      "end": 131.6
+     },
+     {
+      "word": " ready",
+      "start": 131.6,
+      "end": 131.9
+     },
+     {
+      "word": " red",
+      "start": 131.9,
+      "end": 132.12
+     },
+     {
+      "word": " comat.",
+      "start": 132.12,
+      "end": 132.62
+     }
+    ]
+   },
+   {
+    "start": 133.52,
+    "end": 141.32,
+    "text": "En repitabol, RID, una segunda lectura dentro de la misma transacción conserva la primera imagen de los datos.",
+    "words": [
+     {
+      "word": " En",
+      "start": 133.52,
+      "end": 134.28
+     },
+     {
+      "word": " repitabol,",
+      "start": 134.28,
+      "end": 134.94
+     },
+     {
+      "word": " RID,",
+      "start": 135.32,
+      "end": 135.82
+     },
+     {
+      "word": " una",
+      "start": 136.28,
+      "end": 136.46
+     },
+     {
+      "word": " segunda",
+      "start": 136.46,
+      "end": 136.8
+     },
+     {
+      "word": " lectura",
+      "start": 136.8,
+      "end": 137.36
+     },
+     {
+      "word": " dentro",
+      "start": 137.36,
+      "end": 137.7
+     },
+     {
+      "word": " de",
+      "start": 137.7,
+      "end": 137.9
+     },
+     {
+      "word": " la",
+      "start": 137.9,
+      "end": 138.02
+     },
+     {
+      "word": " misma",
+      "start": 138.02,
+      "end": 138.34
+     },
+     {
+      "word": " transacción",
+      "start": 138.34,
+      "end": 139.0
+     },
+     {
+      "word": " conserva",
+      "start": 139.0,
+      "end": 139.66
+     },
+     {
+      "word": " la",
+      "start": 139.66,
+      "end": 139.8
+     },
+     {
+      "word": " primera",
+      "start": 139.8,
+      "end": 140.1
+     },
+     {
+      "word": " imagen",
+      "start": 140.1,
+      "end": 140.52
+     },
+     {
+      "word": " de",
+      "start": 140.52,
+      "end": 140.8
+     },
+     {
+      "word": " los",
+      "start": 140.8,
+      "end": 140.98
+     },
+     {
+      "word": " datos.",
+      "start": 140.98,
+      "end": 141.32
+     }
+    ]
+   },
+   {
+    "start": 142.32,
+    "end": 147.62,
+    "text": "En red comat, la segunda lectura puede ver los cambios confirmados por otra transacción.",
+    "words": [
+     {
+      "word": " En",
+      "start": 142.32,
+      "end": 142.64
+     },
+     {
+      "word": " red",
+      "start": 142.64,
+      "end": 142.82
+     },
+     {
+      "word": " comat,",
+      "start": 142.82,
+      "end": 143.22
+     },
+     {
+      "word": " la",
+      "start": 143.62,
+      "end": 143.76
+     },
+     {
+      "word": " segunda",
+      "start": 143.76,
+      "end": 144.08
+     },
+     {
+      "word": " lectura",
+      "start": 144.08,
+      "end": 144.62
+     },
+     {
+      "word": " puede",
+      "start": 144.62,
+      "end": 144.94
+     },
+     {
+      "word": " ver",
+      "start": 144.94,
+      "end": 145.16
+     },
+     {
+      "word": " los",
+      "start": 145.16,
+      "end": 145.38
+     },
+     {
+      "word": " cambios",
+      "start": 145.38,
+      "end": 145.76
+     },
+     {
+      "word": " confirmados",
+      "start": 145.76,
+      "end": 146.44
+     },
+     {
+      "word": " por",
+      "start": 146.44,
+      "end": 146.7
+     },
+     {
+      "word": " otra",
+      "start": 146.7,
+      "end": 146.96
+     },
+     {
+      "word": " transacción.",
+      "start": 146.96,
+      "end": 147.62
+     }
+    ]
+   },
+   {
+    "start": 148.32,
+    "end": 158.2,
+    "text": "En conclusión, implementamos las etapas del trabajo con 345.10 registros, consultas optimizadas, vistas y roles de seguridad.",
+    "words": [
+     {
+      "word": " En",
+      "start": 148.32,
+      "end": 148.86
+     },
+     {
+      "word": " conclusión,",
+      "start": 148.86,
+      "end": 149.5
+     },
+     {
+      "word": " implementamos",
+      "start": 149.88,
+      "end": 150.54
+     },
+     {
+      "word": " las",
+      "start": 150.54,
+      "end": 150.78
+     },
+     {
+      "word": " etapas",
+      "start": 150.78,
+      "end": 151.28
+     },
+     {
+      "word": " del",
+      "start": 151.28,
+      "end": 151.42
+     },
+     {
+      "word": " trabajo",
+      "start": 151.42,
+      "end": 151.76
+     },
+     {
+      "word": " con",
+      "start": 151.76,
+      "end": 152.1
+     },
+     {
+      "word": " 345",
+      "start": 152.1,
+      "end": 153.32
+     },
+     {
+      "word": ".10",
+      "start": 153.32,
+      "end": 153.94
+     },
+     {
+      "word": " registros,",
+      "start": 153.94,
+      "end": 154.64
+     },
+     {
+      "word": " consultas",
+      "start": 155.02,
+      "end": 155.56
+     },
+     {
+      "word": " optimizadas,",
+      "start": 155.56,
+      "end": 156.32
+     },
+     {
+      "word": " vistas",
+      "start": 156.78,
+      "end": 157.02
+     },
+     {
+      "word": " y",
+      "start": 157.02,
+      "end": 157.24
+     },
+     {
+      "word": " roles",
+      "start": 157.24,
+      "end": 157.46
+     },
+     {
+      "word": " de",
+      "start": 157.46,
+      "end": 157.7
+     },
+     {
+      "word": " seguridad.",
+      "start": 157.7,
+      "end": 158.2
+     }
+    ]
+   },
+   {
+    "start": 158.2,
+    "end": 163.18,
+    "text": "Validaciones contra inyección y manejo transaccional del stock y la concurrencia.",
+    "words": [
+     {
+      "word": " Validaciones",
+      "start": 158.2,
+      "end": 159.24
+     },
+     {
+      "word": " contra",
+      "start": 159.24,
+      "end": 159.68
+     },
+     {
+      "word": " inyección",
+      "start": 159.68,
+      "end": 160.18
+     },
+     {
+      "word": " y",
+      "start": 160.18,
+      "end": 160.36
+     },
+     {
+      "word": " manejo",
+      "start": 160.36,
+      "end": 160.76
+     },
+     {
+      "word": " transaccional",
+      "start": 160.76,
+      "end": 161.5
+     },
+     {
+      "word": " del",
+      "start": 161.5,
+      "end": 161.74
+     },
+     {
+      "word": " stock",
+      "start": 161.74,
+      "end": 162.08
+     },
+     {
+      "word": " y",
+      "start": 162.08,
+      "end": 162.28
+     },
+     {
+      "word": " la",
+      "start": 162.28,
+      "end": 162.4
+     },
+     {
+      "word": " concurrencia.",
+      "start": 162.4,
+      "end": 163.18
+     }
+    ]
+   },
+   {
+    "start": 163.9,
+    "end": 168.96,
+    "text": "Los scripts permiten reproducir las pruebas y las capturas documentan sus resultados.",
+    "words": [
+     {
+      "word": " Los",
+      "start": 163.9,
+      "end": 164.34
+     },
+     {
+      "word": " scripts",
+      "start": 164.34,
+      "end": 164.72
+     },
+     {
+      "word": " permiten",
+      "start": 164.72,
+      "end": 165.44
+     },
+     {
+      "word": " reproducir",
+      "start": 165.44,
+      "end": 166.02
+     },
+     {
+      "word": " las",
+      "start": 166.02,
+      "end": 166.24
+     },
+     {
+      "word": " pruebas",
+      "start": 166.24,
+      "end": 166.68
+     },
+     {
+      "word": " y",
+      "start": 166.68,
+      "end": 166.86
+     },
+     {
+      "word": " las",
+      "start": 166.86,
+      "end": 167.04
+     },
+     {
+      "word": " capturas",
+      "start": 167.04,
+      "end": 167.52
+     },
+     {
+      "word": " documentan",
+      "start": 167.52,
+      "end": 168.2
+     },
+     {
+      "word": " sus",
+      "start": 168.2,
+      "end": 168.42
+     },
+     {
+      "word": " resultados.",
+      "start": 168.42,
+      "end": 168.96
+     }
+    ]
+   },
+   {
+    "start": 170.14,
+    "end": 171.8,
+    "text": "Muchas gracias por su atención.",
+    "words": [
+     {
+      "word": " Muchas",
+      "start": 170.14,
+      "end": 170.56
+     },
+     {
+      "word": " gracias",
+      "start": 170.56,
+      "end": 171.0
+     },
+     {
+      "word": " por",
+      "start": 171.0,
+      "end": 171.24
+     },
+     {
+      "word": " su",
+      "start": 171.24,
+      "end": 171.38
+     },
+     {
+      "word": " atención.",
+      "start": 171.38,
+      "end": 171.8
+     }
+    ]
+   }
+  ]
+ }
+}

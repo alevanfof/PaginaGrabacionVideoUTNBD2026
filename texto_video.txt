@@ -1,0 +1,86 @@
+[alejandro_intro]
+Hola, soy Alejandro Fernández, y en este bloque presento el sistema y el modelo de datos del trabajo final.
+
+[alejandro_a1_p1]
+El sistema representa un comercio electrónico con cinco entidades principales: cliente, pedido, detalle de pedido, producto y categoría. El recorrido principal es cliente, pedido, detalle del pedido, producto y categoría.
+
+[alejandro_a1_p2]
+Aplicamos once correcciones al de e erre original para reforzar la integridad: agregamos restricciones chec para validar rangos, iunik en los nombres de categoría, valores por defecto para fechas y un campo de stock en producto para controlar el inventario. Una decisión importante fue guardar el precio unitario en detalle de pedido. Así conservamos el precio histórico de cada venta aunque después cambie el precio del producto. No agregamos una columna total a pedido porque el total se calcula dinámicamente en una vista. Usamos mai ese cu ele ocho punto cero punto cuarenta y dos, en una instancia portable, en el puerto tres mil trescientos siete, con ino de be y codificación UTF ocho EME BE cuatro.
+
+[alejandro_a2_p1]
+El script cero uno, esquema, crea las cinco tablas y sus restricciones. Nombramos explícitamente las claves y restricciones con prefijos como pe ka, efe ka, u cu y che ka, para facilitar su identificación y mantenimiento. En cliente, por ejemplo, usamos id cliente como clave primaria y una restricción iunik para el DNI.
+
+[alejandro_a2_p2]
+También validamos el formato del email con chec. Las claves foráneas usan on delít ristrict para evitar borrar registros que tienen información relacionada.
+
+[alejandro_a2_p3]
+Consultamos a expertos sobre la implementación de chec en mai ese cu ele ocho versus triggers, y confirmamos que los chec nativos son más eficientes y seguros bajo concurrencia. También validamos que on delít ristrict sea superior a triggers tradicionales, ya que ino de be maneja los locks internamente evitando race conditions.
+
+[alejandro_a2_p4]
+En las evidencias vemos inserciones válidas y tres casos rechazados: una categoría duplicada por iunik, un stock negativo por chec y una referencia a un cliente inexistente por clave foránea. Los errores aparecen documentados en los scripts. La decisión de usar on delít ristrict sin triggers se validó consultando con fuentes especializadas sobre manejo de integridad referencial en ino de be.
+
+[alejandro_a3_p1]
+Para optimizar las consultas creamos cinco índices: uno compuesto sobre pedido por estado y fecha, otro por fecha, uno por id cliente para los yoin, y dos índices en detalle de pedido y producto.
+
+[alejandro_a3_p2]
+Medimos tres consultas con y sin índices, realizando tres ejecuciones de cada una y comparando las medianas.
+
+[alejandro_a3_p3]
+La consulta de igualdad mejoró una coma cinco veces, la de rango dos coma dos veces y el yoin cuatro coma cuatro veces.
+
+[alejandro_a3_p4]
+El expléin permite ver la diferencia: con índice se accede directamente a las filas correspondientes; sin índice, se recorren las ochenta mil filas de la tabla pedido.
+
+[gabriel_intro]
+Hola, soy Gabriel Di Lorenzo, y en este bloque presento la carga masiva de datos, las consultas y los roles de acceso.
+
+[gabriel_g1_p1]
+Para la carga masiva usamos ese cu ele, sin procedimientos. Una ce te e, Common Table Expression, recursiva genera los dígitos del cero al nueve y los combinamos con cros yoin para producir hasta diez mil combinaciones.
+
+[gabriel_g1_p2]
+Con esta estrategia generamos trescientas cuarenta y cinco mil filas manteniendo el rendimiento, tal como se recomendó en consultas técnicas sobre optimización de CTEs recursivos en mai ese cu ele ocho. Con esa técnica generamos veinte mil clientes, cinco mil productos, ochenta mil pedidos y doscientos cuarenta mil detalles; en total, trescientas cuarenta y cinco mil diez filas. Usamos funciones como mod y queis para definir distribuciones, por ejemplo, asignar más productos a ciertas categorías.
+
+[gabriel_g1_p3]
+En las verificaciones comprobamos que cada tabla tenga la cantidad esperada, que no existan claves foráneas huérfanas y que las fechas estén dentro del rango dos mil veinte a dos mil veintiséis. También revisamos la distribución de estados. Los doscientos cuarenta mil detalles para ochenta mil pedidos dan un promedio de tres productos por pedido.
+
+[gabriel_g2_p1]
+Implementamos seis consultas de negocio: cuatro requeridas, dos con yoin, una con grup bai y jeiving, y una subconsulta, más dos adicionales.
+
+[gabriel_g2_p2]
+Entre ellas, mostramos los diez pedidos de mayor monto, las ventas por categoría y los clientes vi ai pi con más de diez mil pesos en compras.
+
+[gabriel_g2_p3]
+También creamos cuatro vistas: un resumen de pedidos que calcula el total, una vista de ventas por categoría y dos vistas orientadas al enmascaramiento de datos.
+
+[gabriel_g2_p4]
+En esta evidencia se ve la vista de cliente público: presenta el nombre de forma parcial, oculta parte del email y oculta el teléfono para limitar la exposición de datos personales.
+
+[gabriel_g3_p1]
+Para controlar el acceso creamos dos roles. El rol analista tiene select únicamente sobre vistas de reporting. El rol vendedor puede consultar e insertar pedidos y detalles, pero no tiene acceso a las tablas maestras.
+
+[gabriel_g3_p2]
+Los permisos del usuario TFI analista muestran que puede consultar tres vistas, pero no las tablas base. Al intentar consultar directamente la tabla cliente recibe un error de acceso denegado; al hacer la consulta a través de la vista, funciona.
+
+[josue_intro]
+Hola, soy Josue Gallardo, y en este bloque presento la seguridad, las transacciones y la concurrencia.
+
+[josue_j1_p1]
+Para evitar inyección ese cu ele, creamos un procedimiento almacenado parametrizado. El parámetro tiene tipo varcar y se usa como valor; no concatenamos ese cu ele ni ejecutamos consultas dinámicas con pri peir.
+
+[josue_j1_p2]
+Al probar la cadena comilla simple, OR, comilla simple, uno, comilla simple, igual, comilla simple, uno, comilla simple, el procedimiento la trata como un dato literal y devuelve cero filas, en lugar de devolver todos los clientes. También verificamos las restricciones de integridad: chec rechaza estados inválidos, la clave foránea impide referencias a clientes inexistentes y iunik evita duplicados.
+
+[josue_j2_p1]
+Para registrar una venta completa implementamos el procedimiento registrar venta. El procedimiento controla el stock con una transacción, bloquea la fila del producto con select for update, valida las condiciones de negocio y confirma con comit o revierte con rolbac. En el caso exitoso, el stock pasa de cincuenta a cuarenta y cinco.
+
+[josue_j2_p2]
+Si no hay stock suficiente, se ejecuta el rollback y el stock queda sin cambios. También se valida que el cliente esté activo y que el producto exista; si una condición falla, no se persiste la venta. La estrategia de mantenibilidad transaccional para cargas masivas también se validó con consultas técnicas sobre métodos robustos de bulk insert en mai ese cu ele.
+
+[josue_j3_p1]
+Para probar concurrencia simulamos un deadlock con dos sesiones. La sesión A bloquea el producto uno y la sesión B bloquea el producto dos. Después cada una intenta actualizar el producto bloqueado por la otra.
+
+[josue_j3_p2]
+ino de be detecta el ciclo y aborta una transacción con el error mil doscientos trece. El procedimiento contempla este error y reintenta hasta tres veces con una espera incremental. También comparamos los niveles ripitabol, rid y rid comited.
+
+[josue_j3_p3]
+En ripitabol, rid, una segunda lectura dentro de la misma transacción conserva la primera imagen de los datos. En rid comited, la segunda lectura puede ver los cambios confirmados por otra transacción. En conclusión, implementamos las etapas del trabajo con trescientas cuarenta y cinco mil diez registros, consultas optimizadas, vistas y roles de seguridad, validaciones contra inyección y manejo transaccional del stock y la concurrencia. Los scripts permiten reproducir las pruebas y las capturas documentan sus resultados. Muchas gracias por su atención.

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+_audio/
+_shots/
+_whisper.log
+temporal.html
+
+# Scripts temporales de verificación
+_verificar.py
+_metricas.py
+_capturas.py

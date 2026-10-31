@@ -1,0 +1,243 @@
+{
+ "rate": "-5%",
+ "alumnos": {
+  "alejandro": {
+   "archivo": "audio/alejandro.mp3",
+   "total": 183.767,
+   "intro": {
+    "start": 0.0,
+    "end": 6.936
+   },
+   "escenas": [
+    {
+     "id": "a1",
+     "start": 7.836,
+     "end": 66.48,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 7.836,
+       "end": 23.412
+      },
+      {
+       "captura": 1,
+       "start": 23.832,
+       "end": 66.48
+      }
+     ]
+    },
+    {
+     "id": "a2",
+     "start": 67.38,
+     "end": 144.432,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 67.38,
+       "end": 89.796
+      },
+      {
+       "captura": 1,
+       "start": 90.216,
+       "end": 100.224
+      },
+      {
+       "captura": 2,
+       "start": 100.644,
+       "end": 119.7
+      },
+      {
+       "captura": 3,
+       "start": 120.12,
+       "end": 144.432
+      }
+     ]
+    },
+    {
+     "id": "a3",
+     "start": 145.332,
+     "end": 183.768,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 145.332,
+       "end": 156.948
+      },
+      {
+       "captura": 1,
+       "start": 157.368,
+       "end": 164.496
+      },
+      {
+       "captura": 2,
+       "start": 164.916,
+       "end": 172.908
+      },
+      {
+       "captura": 3,
+       "start": 173.328,
+       "end": 183.768
+      }
+     ]
+    }
+   ],
+   "nombre": "Alejandro Fernández",
+   "voz": "es-AR-TomasNeural",
+   "bloque": "Bloque 1 · Sistema, modelo e índices",
+   "comision": "Comisión 2 · Grupo 3",
+   "codigo": "C2-3"
+  },
+  "gabriel": {
+   "archivo": "audio/gabriel.mp3",
+   "total": 145.595,
+   "intro": {
+    "start": 0.0,
+    "end": 7.752
+   },
+   "escenas": [
+    {
+     "id": "g1",
+     "start": 8.652,
+     "end": 73.836,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 8.652,
+       "end": 22.86
+      },
+      {
+       "captura": 1,
+       "start": 23.28,
+       "end": 53.808
+      },
+      {
+       "captura": 2,
+       "start": 54.228,
+       "end": 73.836
+      }
+     ]
+    },
+    {
+     "id": "g2",
+     "start": 74.736,
+     "end": 114.732,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 74.736,
+       "end": 84.384
+      },
+      {
+       "captura": 1,
+       "start": 84.804,
+       "end": 93.756
+      },
+      {
+       "captura": 2,
+       "start": 94.176,
+       "end": 103.656
+      },
+      {
+       "captura": 3,
+       "start": 104.076,
+       "end": 114.732
+      }
+     ]
+    },
+    {
+     "id": "g3",
+     "start": 115.632,
+     "end": 145.596,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 115.632,
+       "end": 129.84
+      },
+      {
+       "captura": 1,
+       "start": 130.26,
+       "end": 145.596
+      }
+     ]
+    }
+   ],
+   "nombre": "Gabriel Di Lorenzo",
+   "voz": "es-CO-GonzaloNeural",
+   "bloque": "Bloque 2 · Carga masiva, consultas y roles",
+   "comision": "Comisión 2 · Grupo 3",
+   "codigo": "C2-3"
+  },
+  "josue": {
+   "archivo": "audio/josue.mp3",
+   "total": 172.859,
+   "intro": {
+    "start": 0.0,
+    "end": 7.44
+   },
+   "escenas": [
+    {
+     "id": "j1",
+     "start": 8.34,
+     "end": 52.872,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 8.34,
+       "end": 24.204
+      },
+      {
+       "captura": 1,
+       "start": 24.624,
+       "end": 52.872
+      }
+     ]
+    },
+    {
+     "id": "j2",
+     "start": 53.772,
+     "end": 101.136,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 53.772,
+       "end": 76.284
+      },
+      {
+       "captura": 1,
+       "start": 76.704,
+       "end": 101.136
+      }
+     ]
+    },
+    {
+     "id": "j3",
+     "start": 102.036,
+     "end": 172.86,
+     "partes": [
+      {
+       "captura": 0,
+       "start": 102.036,
+       "end": 116.676
+      },
+      {
+       "captura": 1,
+       "start": 117.096,
+       "end": 133.584
+      },
+      {
+       "captura": 2,
+       "start": 134.004,
+       "end": 172.86
+      }
+     ]
+    }
+   ],
+   "nombre": "Josue Gallardo",
+   "voz": "es-MX-JorgeNeural",
+   "bloque": "Bloque 3 · Seguridad, transacciones y concurrencia",
+   "comision": "Comisión 2 · Grupo 12",
+   "codigo": "C2-12"
+  }
+ }
+}
