@@ -294,16 +294,15 @@ button{font-family:inherit}
     </select>
   </label>
   <label class="ajuste">
-    <span>Pitch <output id="outTono">Original</output></span>
-    <select id="tono" aria-label="Pitch del audio">
-      <option value="-100">−100 cents</option><option value="-75">−75 cents</option><option value="-50">−50 cents</option><option value="-25">−25 cents</option><option value="0" selected>Original</option><option value="25">+25 cents</option><option value="50">+50 cents</option><option value="75">+75 cents</option><option value="100">+100 cents</option>
+    <span>Pitch <output id="outTono">Conservado</output></span>
+    <select aria-label="Conservación del pitch" disabled>
+      <option>Se conserva al cambiar la velocidad</option>
     </select>
   </label>
   <button id="reset" type="button">Restablecer</button>
-  <div class="panel-nota" id="notaTono"></div>
+  <div class="panel-nota on" id="notaTono">El pitch original se conserva automáticamente al modificar la velocidad.</div>
 </div>
 
-<script src="audio/audio_data.js"></script>
 <script>window.PRESENTACION = {"alumnos":{"alejandro":{"nombre":"Alejandro Fernández","bloque":"Bloque 1 · Sistema, modelo e índices","comision":"Comisión 2 · Grupo 3","codigo":"C2-3","total":183.767,"intro":{"start":0.0,"end":6.936},"escenas":[{"id":"a1","start":7.836,"end":66.48,"kicker":"Bloque 1 · Sistema y modelo","titulo":"Comercio electrónico: cinco entidades","subtitulo":"Cliente, pedido, detalle de pedido, producto y categoría","partes":[{"captura":0,"start":7.836,"end":23.412},{"captura":1,"start":23.832,"end":66.48}],"capturas":[{"archivo":"00_der.png","epigrafe":"DER final: cinco entidades y sus relaciones."},{"archivo":"06_estado_etapa1.png","epigrafe":"Estado de las tablas al cierre de la Etapa 1."}]},{"id":"a2","start":67.38,"end":144.432,"kicker":"Bloque 1 · Esquema y constraints","titulo":"Restricciones que sostienen la integridad","subtitulo":"PK, FK, UNIQUE y CHECK con nombres explícitos","partes":[{"captura":0,"start":67.38,"end":89.796},{"captura":1,"start":90.216,"end":100.224},{"captura":2,"start":100.644,"end":119.7},{"captura":3,"start":120.12,"end":144.432}],"capturas":[{"archivo":"01_ok_insert_1.png","epigrafe":"Inserción válida sobre cliente."},{"archivo":"03_err_unique.png","epigrafe":"Rechazo por UNIQUE: categoría duplicada."},{"archivo":"04_err_check.png","epigrafe":"Rechazo por CHECK: stock negativo."},{"archivo":"05_err_fk.png","epigrafe":"Rechazo por clave foránea: cliente inexistente."}]},{"id":"a3","start":145.332,"end":183.768,"kicker":"Bloque 1 · Índices","titulo":"Consultas medidas con y sin índice","subtitulo":"Igualdad, rango y JOIN sobre 80.000 pedidos","partes":[{"captura":0,"start":145.332,"end":156.948},{"captura":1,"start":157.368,"end":164.496},{"captura":2,"start":164.916,"end":172.908},{"captura":3,"start":173.328,"end":183.768}],"capturas":[{"archivo":"13_indices.png","epigrafe":"Definición de los cinco índices."},{"archivo":"29_tiempos_indices.png","epigrafe":"Comparación de tiempos con y sin índice."},{"archivo":"20_explain_e1_con.png","epigrafe":"EXPLAIN con índice: acceso por índice."},{"archivo":"22_analyze_e1_sin.png","epigrafe":"EXPLAIN ANALYZE sin índice: recorrido completo."}]}]},"gabriel":{"nombre":"Gabriel Di Lorenzo","bloque":"Bloque 2 · Carga masiva, consultas y roles","comision":"Comisión 2 · Grupo 3","codigo":"C2-3","total":145.595,"intro":{"start":0.0,"end":7.752},"escenas":[{"id":"g1","start":8.652,"end":73.836,"kicker":"Bloque 2 · Carga masiva","titulo":"345.010 filas generadas con SQL","subtitulo":"CTE recursiva y producto cartesiano controlado","partes":[{"captura":0,"start":8.652,"end":22.86},{"captura":1,"start":23.28,"end":53.808},{"captura":2,"start":54.228,"end":73.836}],"capturas":[{"archivo":"07_catalogos.png","epigrafe":"Catálogos semilla cargados."},{"archivo":"08_verif_conteos.png","epigrafe":"Conteos por tabla tras la carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g2","start":74.736,"end":114.732,"kicker":"Bloque 2 · Consultas y vistas","titulo":"Seis consultas y cuatro vistas","subtitulo":"JOIN, GROUP BY con HAVING, subconsultas y enmascaramiento","partes":[{"captura":0,"start":74.736,"end":84.384},{"captura":1,"start":84.804,"end":93.756},{"captura":2,"start":94.176,"end":103.656},{"captura":3,"start":104.076,"end":114.732}],"capturas":[{"archivo":"14_q1_join_top_pedidos.png","epigrafe":"Top de pedidos por monto."},{"archivo":"16_q3_having_clientes_vip.png","epigrafe":"Clientes VIP con HAVING."},{"archivo":"15_q2_join_ventas_categoria.png","epigrafe":"Ventas agregadas por categoría."},{"archivo":"32_vista_cliente_publico.png","epigrafe":"Vista de cliente público con datos enmascarados."}]},{"id":"g3","start":115.632,"end":145.596,"kicker":"Bloque 2 · Roles y acceso","titulo":"Privilegios mínimos por rol","subtitulo":"Analista sobre vistas, vendedor sobre pedidos","partes":[{"captura":0,"start":115.632,"end":129.84},{"captura":1,"start":130.26,"end":145.596}],"capturas":[{"archivo":"42_grants_analista.png","epigrafe":"Privilegios del rol analista."},{"archivo":"45_acceso_restringido.png","epigrafe":"Acceso denegado a la tabla base."}]}]},"josue":{"nombre":"Josue Gallardo","bloque":"Bloque 3 · Seguridad, transacciones y concurrencia","comision":"Comisión 2 · Grupo 12","codigo":"C2-12","total":172.859,"intro":{"start":0.0,"end":7.44},"escenas":[{"id":"j1","start":8.34,"end":52.872,"kicker":"Bloque 3 · Seguridad","titulo":"Integridad y anti-inyección","subtitulo":"Procedimiento parametrizado y restricciones activas","partes":[{"captura":0,"start":8.34,"end":24.204},{"captura":1,"start":24.624,"end":52.872}],"capturas":[{"archivo":"39_inyeccion_bloqueada.png","epigrafe":"Intento de inyección tratado como dato literal."},{"archivo":"37_integr_check.png","epigrafe":"CHECK rechazando un estado inválido."}]},{"id":"j2","start":53.772,"end":101.136,"kicker":"Bloque 3 · Transacciones","titulo":"COMMIT y ROLLBACK sobre el stock","subtitulo":"SELECT FOR UPDATE y validaciones de negocio","partes":[{"captura":0,"start":53.772,"end":76.284},{"captura":1,"start":76.704,"end":101.136}],"capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT: stock actualizado."},{"archivo":"48_tx_stock_insuficiente.png","epigrafe":"ROLLBACK por stock insuficiente."}]},{"id":"j3","start":102.036,"end":172.86,"kicker":"Bloque 3 · Concurrencia","titulo":"Deadlock, reintentos y aislamiento","subtitulo":"Dos sesiones, error 1213 y niveles de aislamiento","partes":[{"captura":0,"start":102.036,"end":116.676},{"captura":1,"start":117.096,"end":133.584},{"captura":2,"start":134.004,"end":172.86}],"capturas":[{"archivo":"53_deadlock.png","epigrafe":"Deadlock entre dos sesiones."},{"archivo":"54_deadlock_innodb.png","epigrafe":"Error 1213 detectado por InnoDB."},{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ frente a READ COMMITTED."}]}]}}};</script>
 <script>
 (() => {
@@ -349,35 +348,44 @@ button{font-family:inherit}
     }
   }
 
-  /* ---------- ajustes de voz ---------- */
+  /* ---------- reproductor HTML5 ---------- */
+  const audio = new Audio();
+  audio.preload = 'auto';
+  audio.preservesPitch = true;
+  audio.webkitPreservesPitch = true;
+  audio.mozPreservesPitch = true;
+
   const guardado = (() => {
     try { return JSON.parse(localStorage.getItem('tfi-voz') || '{}'); } catch { return {}; }
   })();
   let velocidad = Number(guardado.velocidad) || 1;
-  let tono = Number(guardado.tono) || 0;
+  const outVel = $('#outVel');
+  const inVel = $('#vel');
 
-  const outVel = $('#outVel'), outTono = $('#outTono');
-  const inVel = $('#vel'), inTono = $('#tono');
   function pintarAjustes() {
     outVel.textContent = velocidad.toFixed(2).replace('.', ',') + '×';
-    outTono.textContent = tono === 0 ? 'Original' : (tono > 0 ? '+' : '') + tono + ' cents';
-    inVel.value = String(velocidad); inTono.value = String(tono);
+    inVel.value = String(velocidad);
   }
   function guardarAjustes() {
-    try { localStorage.setItem('tfi-voz', JSON.stringify({ velocidad, tono })); } catch {}
+    try { localStorage.setItem('tfi-voz', JSON.stringify({ velocidad })); } catch {}
+  }
+  function aplicarVelocidad() {
+    audio.playbackRate = velocidad;
+    audio.preservesPitch = true;
+    audio.webkitPreservesPitch = true;
+    audio.mozPreservesPitch = true;
   }
   inVel.addEventListener('change', e => {
-    velocidad = Number(e.target.value); if (motor) motor.velocidad(velocidad);
-    pintarAjustes(); guardarAjustes();
-  });
-  inTono.addEventListener('change', e => {
-    tono = Number(e.target.value); if (motor) motor.tono(tono);
-    pintarAjustes(); guardarAjustes();
+    velocidad = Number(e.target.value) || 1;
+    aplicarVelocidad();
+    pintarAjustes();
+    guardarAjustes();
   });
   $('#reset').addEventListener('click', () => {
-    velocidad = 1; tono = 0;
-    if (motor) { motor.velocidad(1); motor.tono(0); }
-    pintarAjustes(); guardarAjustes();
+    velocidad = 1;
+    aplicarVelocidad();
+    pintarAjustes();
+    guardarAjustes();
   });
   pintarAjustes();
 
@@ -393,89 +401,11 @@ button{font-family:inherit}
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); alternarPanel(); }
   });
 
-  /* ---------- audio ---------- */
-  const AudioCtx = window.AudioContext || window.webkitAudioContext;
-  let ctx = null;
-  const buffers = {};
-  let motor = null;
   let reproduciendo = false;
   let pausado = false;
   let total = 0;
   let raf = 0;
   let deckActual = null;
-
-  function decodificar(clave) {
-    const b64 = window.AUDIO_B64 && window.AUDIO_B64[clave];
-    if (!b64) return Promise.reject(new Error('sin audio embebido'));
-    const bin = atob(b64);
-    const bytes = new Uint8Array(bin.length);
-    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-    return new Promise((res, rej) => {
-      ctx.decodeAudioData(bytes.buffer, res, rej);
-    });
-  }
-
-  function motorWebAudio(buffer) {
-    let src=null, offsetStart=0, rate=1, startTime=0, pausedAt=0, isPaused=true;
-    function stopSource(){if(!src)return;const old=src;src=null;old.onended=null;try{old.stop()}catch{}try{old.disconnect()}catch{}}
-    function clamp(p){return Math.max(0,Math.min(Number(p)||0,buffer.duration))}
-    function create(offset){
-      const node=ctx.createBufferSource();node.buffer=buffer;node.playbackRate.value=rate;
-      node.detune.value=tono-1200*Math.log2(rate);node.connect(ctx.destination);
-      offsetStart=offset;startTime=ctx.currentTime;src=node;
-      node.onended=()=>{if(src===node&&!isPaused){src=null;pausedAt=buffer.duration}};
-      node.start(0,offset);
-    }
-    function position(){return isPaused?pausedAt:(!src?buffer.duration:clamp(offsetStart+(ctx.currentTime-startTime)*rate))}
-    function seek(p){const wasPaused=isPaused;stopSource();pausedAt=clamp(p);if(!wasPaused)create(pausedAt)}
-    return {
-      tipo:'webaudio',
-      iniciar(offset=0){stopSource();pausedAt=clamp(offset);isPaused=false;create(pausedAt)},
-      posicion:position,posicionar:seek,
-      velocidad(v){const p=position();rate=v;if(!isPaused){stopSource();create(p)}},
-      tono(c){if(src&&!isPaused)src.detune.setTargetAtTime(c-1200*Math.log2(rate),ctx.currentTime,.04)},
-      detener(){if(isPaused)return;pausedAt=position();isPaused=true;stopSource()},
-      reanudar(){if(!isPaused)return;if(pausedAt>=buffer.duration)pausedAt=0;isPaused=false;create(pausedAt)}
-    };
-  }
-
-  async function motorElemento(clave) {
-    const el = new Audio(`audio/${clave}.mp3`);
-    el.preload = 'auto';
-    el.preservesPitch = true;
-    await new Promise((res, rej) => {
-      el.addEventListener('loadedmetadata', res, { once: true });
-      el.addEventListener('error', () => rej(new Error('no se pudo cargar el audio')), { once: true });
-    });
-    return {
-      tipo: 'elemento',
-      iniciar(offset) {
-        el.currentTime = offset;
-        el.playbackRate = velocidad;
-        el.play().catch(() => {});
-      },
-      posicion() { return el.currentTime; },
-      posicionar(p) { el.currentTime = Math.max(0, Math.min(p, el.duration || p)); },
-      velocidad(v) { el.playbackRate = v; },
-      tono() { /* no disponible */ },
-      detener() { el.pause(); },
-      reanudar() { el.play().catch(() => {}); }
-    };
-  }
-
-  async function prepararMotor(clave) {
-    try {
-      if (!ctx) ctx = new AudioCtx();
-      if (ctx.state === 'suspended') await ctx.resume();
-      if (!buffers[clave]) buffers[clave] = await decodificar(clave);
-      motor = motorWebAudio(buffers[clave]);
-    } catch (e) {
-      console.warn('Web Audio no disponible; se usa el elemento de audio.', e);
-      motor = await motorElemento(clave);
-      $('#notaTono').textContent = 'El ajuste de tono no está disponible en este navegador.';
-      $('#notaTono').classList.add('on');
-    }
-  }
 
   /* ---------- deck ---------- */
   function setCaptura(slide, i, instantaneo) {
@@ -608,83 +538,129 @@ button{font-family:inherit}
     }
   }
 
-  /* ---------- reproducción ---------- */
+  /* ---------- reproducción HTML5 ---------- */
+  function cancelarBucle() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
+  }
+
+  function iniciarBucle() {
+    cancelarBucle();
+    raf = requestAnimationFrame(bucle);
+  }
+
   function bucle() {
-    if (!reproduciendo || pausado || !motor) return;
-    const t=motor.posicion(); if(t>=total-.04){finalizar();return}
-    sincronizar(t); raf=requestAnimationFrame(bucle);
+    raf = 0;
+    if (!reproduciendo || audio.paused || !deckActual) return;
+    const t = audio.currentTime;
+    if (t >= total - .04) { finalizar(); return; }
+    sincronizar(t);
+    raf = requestAnimationFrame(bucle);
   }
-  function alternarReproduccion(){
-    if(!motor||!deckActual)return;
-    if(reproduciendo){motor.detener();reproduciendo=false;pausado=true;cancelAnimationFrame(raf)}
-    else if(pausado){motor.reanudar();pausado=false;reproduciendo=true;sincronizar(motor.posicion());raf=requestAnimationFrame(bucle)}
+
+  function alternarReproduccion() {
+    if (!deckActual) return;
+    if (audio.paused) {
+      audio.play().catch(error => console.error('No se pudo reanudar el audio:', error));
+    } else {
+      audio.pause();
+    }
   }
-  function buscar(delta){
-    if(!motor||!deckActual)return;
-    const p=Math.max(0,Math.min(total,motor.posicion()+delta));
-    motor.posicionar(p);sincronizar(p);if(p>=total-.04&&reproduciendo)finalizar();
+
+  function buscar(delta) {
+    if (!deckActual || !Number.isFinite(audio.duration)) return;
+    const limite = Math.min(total, audio.duration);
+    const p = Math.max(0, Math.min(limite, audio.currentTime + delta));
+    audio.currentTime = p;
+    sincronizar(p);
+    if (p >= limite - .04 && !audio.paused) finalizar();
   }
+
+  audio.addEventListener('play', () => {
+    reproduciendo = true;
+    pausado = false;
+    iniciarBucle();
+  });
+  audio.addEventListener('pause', () => {
+    if (reproduciendo) {
+      reproduciendo = false;
+      pausado = !!deckActual && !audio.ended;
+    }
+    cancelarBucle();
+    if (deckActual) sincronizar(audio.currentTime || 0);
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (deckActual) sincronizar(audio.currentTime);
+  });
+  audio.addEventListener('seeked', () => {
+    if (deckActual) sincronizar(audio.currentTime);
+  });
+  audio.addEventListener('ended', () => {
+    if (deckActual) finalizar();
+  });
 
   async function arrancar(clave) {
     if (reproduciendo) return;
-    
-    // Liberar motor y state anterior si existe
-    if (deckActual) {
-      deckActual = null;
-      deck.innerHTML = '';
-      inicio.classList.remove('oculto');
-    }
-    
+
+    audio.pause();
+    audio.removeAttribute('src');
+    audio.load();
+    deckActual = null;
+    deck.innerHTML = '';
+    inicio.classList.remove('oculto');
+
     const a = D.alumnos[clave];
     total = a.total;
     montarDeck(clave);
     activar(0);
     inicio.classList.add('oculto');
 
-    try {
-      await prepararMotor(clave);
-    } catch (e) {
-      console.error(e);
-      volver();
-      return;
-    }
-
-    motor.velocidad(velocidad);
-    motor.tono(tono);
-    motor.iniciar(0);
+    reproduciendo = false;
     pausado = false;
-    reproduciendo = true;
-    sincronizar(0);
-    raf = requestAnimationFrame(bucle);
+    audio.src = `audio/${clave}.mp3`;
+    aplicarVelocidad();
+    audio.load();
+
+    try {
+      await new Promise((resolve, reject) => {
+        if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) return resolve();
+        const ok = () => { cleanup(); resolve(); };
+        const fail = () => { cleanup(); reject(new Error('No se pudo cargar audio/' + clave + '.mp3')); };
+        const cleanup = () => {
+          audio.removeEventListener('loadedmetadata', ok);
+          audio.removeEventListener('error', fail);
+        };
+        audio.addEventListener('loadedmetadata', ok, { once: true });
+        audio.addEventListener('error', fail, { once: true });
+      });
+      audio.currentTime = 0;
+      sincronizar(0);
+      await audio.play();
+    } catch (e) {
+      console.error('Error al iniciar la reproducción:', e);
+      volver();
+    }
   }
 
   function finalizar() {
     reproduciendo = false;
     pausado = false;
-    cancelAnimationFrame(raf);
-    if (motor) motor.detener();
+    cancelarBucle();
+    audio.pause();
     const d = deckActual;
     if (!d) return;
-    
-    // Mostrar diapositiva de fin
-    d.slides.forEach(s => s.el.classList.toggle('active', s.tipo === 'fin'));
+    d.slides.forEach(slide => slide.el.classList.toggle('active', slide.tipo === 'fin'));
     d.idx = d.slides.length - 1;
-    
-    // Limpiar el deck después de mostrar el final para permitir reiniciar
     deckActual = null;
-    setTimeout(() => {
-      if (deck && deck.innerHTML && !deck.querySelector('.fin')) {
-        deck.innerHTML = '';
-        deck.className = '';
-      }
-    }, 100);
   }
 
   function volver() {
     reproduciendo = false;
     pausado = false;
-    cancelAnimationFrame(raf);
-    if (motor) { motor.detener(); motor = null; }
+    cancelarBucle();
+    audio.pause();
+    audio.removeAttribute('src');
+    audio.load();
     deckActual = null;
     deck.innerHTML = '';
     deck.className = '';
@@ -714,11 +690,13 @@ button{font-family:inherit}
     estado: () => ({
       reproduciendo,
       pausado,
-      t: motor ? motor.posicion() : 0,
+      t: Number.isFinite(audio.currentTime) ? audio.currentTime : 0,
       total,
       idx: deckActual ? deckActual.idx : -1,
       tipo: deckActual && deckActual.idx >= 0 ? deckActual.slides[deckActual.idx].tipo : null,
-      motor: motor ? motor.tipo : null
+      motor: audio.src ? "html5-audio" : null,
+      playbackRate: audio.playbackRate,
+      preservesPitch: audio.preservesPitch
     })
   };
 })();
