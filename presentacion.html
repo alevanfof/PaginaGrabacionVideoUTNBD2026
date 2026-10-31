@@ -251,17 +251,9 @@ button{font-family:inherit}
   font-size:12px;color:#c8cde0;margin-bottom:7px;
 }
 .ajuste output{font-size:11px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
-.ajuste input[type=range]{
-  width:100%;height:16px;appearance:none;background:transparent;cursor:pointer;
-}
-.ajuste input[type=range]::-webkit-slider-runnable-track{
-  height:3px;border-radius:3px;background:rgba(255,255,255,.18);
-}
-.ajuste input[type=range]::-webkit-slider-thumb{
-  appearance:none;width:12px;height:12px;border-radius:50%;background:#a5a9ff;
-  margin-top:-4.5px;box-shadow:0 0 0 4px rgba(165,169,255,.14);
-}
-.ajuste small{display:flex;justify-content:space-between;font-size:9.5px;color:#6f7799;margin-top:5px}
+.ajuste select{width:100%;height:34px;padding:0 10px;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:#242941;color:#eef0fa;font:inherit;font-size:12px;cursor:pointer;outline:none}
+.ajuste select:focus-visible{border-color:#a5a9ff;box-shadow:0 0 0 2px rgba(165,169,255,.18)}
+.ajuste select option{background:#171b2d;color:#eef0fa}
 #reset{
   width:100%;margin-top:4px;background:rgba(255,255,255,.07);border:0;border-radius:8px;
   padding:8px;color:#c8cde0;font-size:11.5px;cursor:pointer;transition:background .2s ease;
@@ -297,13 +289,15 @@ button{font-family:inherit}
   <div class="panel-titulo">Ajustes de voz</div>
   <label class="ajuste">
     <span>Velocidad <output id="outVel">1,00×</output></span>
-    <input id="vel" type="range" min="0.75" max="1.25" step="0.05" value="1">
-    <small><span>más lento</span><span>más rápido</span></small>
+    <select id="vel" aria-label="Velocidad de reproducción">
+      <option value="0.75">0,75×</option><option value="0.80">0,80×</option><option value="0.85">0,85×</option><option value="0.90">0,90×</option><option value="0.95">0,95×</option><option value="1" selected>1,00×</option><option value="1.05">1,05×</option><option value="1.10">1,10×</option><option value="1.15">1,15×</option><option value="1.20">1,20×</option><option value="1.25">1,25×</option>
+    </select>
   </label>
   <label class="ajuste">
-    <span>Tono <output id="outTono">0</output></span>
-    <input id="tono" type="range" min="-100" max="100" step="5" value="0">
-    <small><span>más grave</span><span>más agudo</span></small>
+    <span>Pitch <output id="outTono">Original</output></span>
+    <select id="tono" aria-label="Pitch del audio">
+      <option value="-100">−100 cents</option><option value="-75">−75 cents</option><option value="-50">−50 cents</option><option value="-25">−25 cents</option><option value="0" selected>Original</option><option value="25">+25 cents</option><option value="50">+50 cents</option><option value="75">+75 cents</option><option value="100">+100 cents</option>
+    </select>
   </label>
   <button id="reset" type="button">Restablecer</button>
   <div class="panel-nota" id="notaTono"></div>
@@ -364,26 +358,20 @@ button{font-family:inherit}
 
   const outVel = $('#outVel'), outTono = $('#outTono');
   const inVel = $('#vel'), inTono = $('#tono');
-
   function pintarAjustes() {
     outVel.textContent = velocidad.toFixed(2).replace('.', ',') + '×';
-    outTono.textContent = (tono > 0 ? '+' : '') + tono;
-    inVel.value = velocidad;
-    inTono.value = tono;
+    outTono.textContent = tono === 0 ? 'Original' : (tono > 0 ? '+' : '') + tono + ' cents';
+    inVel.value = String(velocidad); inTono.value = String(tono);
   }
   function guardarAjustes() {
-    try {
-      localStorage.setItem('tfi-voz', JSON.stringify({ velocidad, tono }));
-    } catch { /* modo privado */ }
+    try { localStorage.setItem('tfi-voz', JSON.stringify({ velocidad, tono })); } catch {}
   }
-  inVel.addEventListener('input', e => {
-    velocidad = Number(e.target.value);
-    if (motor) motor.velocidad(velocidad);
+  inVel.addEventListener('change', e => {
+    velocidad = Number(e.target.value); if (motor) motor.velocidad(velocidad);
     pintarAjustes(); guardarAjustes();
   });
-  inTono.addEventListener('input', e => {
-    tono = Number(e.target.value);
-    if (motor) motor.tono(tono);
+  inTono.addEventListener('change', e => {
+    tono = Number(e.target.value); if (motor) motor.tono(tono);
     pintarAjustes(); guardarAjustes();
   });
   $('#reset').addEventListener('click', () => {
@@ -411,6 +399,7 @@ button{font-family:inherit}
   const buffers = {};
   let motor = null;
   let reproduciendo = false;
+  let pausado = false;
   let total = 0;
   let raf = 0;
   let deckActual = null;
@@ -427,88 +416,26 @@ button{font-family:inherit}
   }
 
   function motorWebAudio(buffer) {
-    let src = null, offsetStart = 0, rate = 1;
-    let startTime = 0, pausedAt = 0, isPaused = false;
-    
+    let src=null, offsetStart=0, rate=1, startTime=0, pausedAt=0, isPaused=true;
+    function stopSource(){if(!src)return;const old=src;src=null;old.onended=null;try{old.stop()}catch{}try{old.disconnect()}catch{}}
+    function clamp(p){return Math.max(0,Math.min(Number(p)||0,buffer.duration))}
+    function create(offset){
+      const node=ctx.createBufferSource();node.buffer=buffer;node.playbackRate.value=rate;
+      node.detune.value=tono-1200*Math.log2(rate);node.connect(ctx.destination);
+      offsetStart=offset;startTime=ctx.currentTime;src=node;
+      node.onended=()=>{if(src===node&&!isPaused){src=null;pausedAt=buffer.duration}};
+      node.start(0,offset);
+    }
+    function position(){return isPaused?pausedAt:(!src?buffer.duration:clamp(offsetStart+(ctx.currentTime-startTime)*rate))}
+    function seek(p){const wasPaused=isPaused;stopSource();pausedAt=clamp(p);if(!wasPaused)create(pausedAt)}
     return {
-      tipo: 'webaudio',
-      iniciar(offset) {
-        // Detener cualquier fuente anterior si está activa (no pausada)
-        if (src && !isPaused) {
-          try { src.stop(); } catch(e) {}
-        }
-        
-        isPaused = false;
-        offsetStart = offset || 0;
-        startTime = 0; // Reiniciar tiempo desde cero
-        
-        src = ctx.createBufferSource();
-        src.buffer = buffer;
-        src.playbackRate.value = rate;
-        src.detune.value = tono - 1200 * Math.log2(rate);
-        src.connect(ctx.destination);
-        
-        startTime = ctx.currentTime;
-        src.start(0, offsetStart);
-        
-        // Auto-detener al final del audio (con margen de seguridad)
-        const duracionRestante = buffer.duration - offsetStart;
-        setTimeout(() => {
-          if (!isPaused && src) {
-            try { src.stop(); } catch(e) {}
-            src = null;
-          }
-        }, Math.max(0, duracionRestante * 1000));
-      },
-      posicion() {
-        if (isPaused) return pausedAt;
-        if (!src) return offsetStart || 0;
-        const tiempoTranscurrido = ctx.currentTime - startTime;
-        const posActual = offsetStart + tiempoTranscurrido * rate;
-        return Math.min(posActual, buffer.duration);
-      },
-      velocidad(v) {
-        rate = v;
-        if (src && !isPaused) {
-          src.playbackRate.setTargetAtTime ? src.playbackRate.setTargetAtTime(v, ctx.currentTime, 0.1) : (src.playbackRate.value = v);
-          src.detune.setTargetAtTime(tono - 1200 * Math.log2(v), ctx.currentTime, 0.1);
-        }
-      },
-      tono(c) {
-        if (src && !isPaused) {
-          src.detune.setTargetAtTime(c - 1200 * Math.log2(rate), ctx.currentTime, 0.1);
-        }
-      },
-      detener() {
-        if (!src || isPaused) return;
-        pausedAt = this.posicion();
-        try { src.stop(); } catch(e) {}
-        src = null;
-        isPaused = true;
-      },
-      reanudar() {
-        if (!isPaused) return;
-        offsetStart = pausedAt;
-        startTime = 0;
-        
-        src = ctx.createBufferSource();
-        src.buffer = buffer;
-        src.playbackRate.value = rate;
-        src.detune.value = tono - 1200 * Math.log2(rate);
-        src.connect(ctx.destination);
-        
-        const duracionRestante = buffer.duration - offsetStart;
-        setTimeout(() => {
-          if (!isPaused && src) {
-            try { src.stop(); } catch(e) {}
-            src = null;
-          }
-        }, Math.max(0, duracionRestante * 1000));
-        
-        startTime = ctx.currentTime;
-        src.start(0, offsetStart);
-        isPaused = false;
-      }
+      tipo:'webaudio',
+      iniciar(offset=0){stopSource();pausedAt=clamp(offset);isPaused=false;create(pausedAt)},
+      posicion:position,posicionar:seek,
+      velocidad(v){const p=position();rate=v;if(!isPaused){stopSource();create(p)}},
+      tono(c){if(src&&!isPaused)src.detune.setTargetAtTime(c-1200*Math.log2(rate),ctx.currentTime,.04)},
+      detener(){if(isPaused)return;pausedAt=position();isPaused=true;stopSource()},
+      reanudar(){if(!isPaused)return;if(pausedAt>=buffer.duration)pausedAt=0;isPaused=false;create(pausedAt)}
     };
   }
 
@@ -528,6 +455,7 @@ button{font-family:inherit}
         el.play().catch(() => {});
       },
       posicion() { return el.currentTime; },
+      posicionar(p) { el.currentTime = Math.max(0, Math.min(p, el.duration || p)); },
       velocidad(v) { el.playbackRate = v; },
       tono() { /* no disponible */ },
       detener() { el.pause(); },
@@ -682,11 +610,19 @@ button{font-family:inherit}
 
   /* ---------- reproducción ---------- */
   function bucle() {
-    if (!reproduciendo) return;
-    const t = motor.posicion();
-    if (t >= total - 0.04) { finalizar(); return; }
-    sincronizar(t);
-    raf = requestAnimationFrame(bucle);
+    if (!reproduciendo || pausado || !motor) return;
+    const t=motor.posicion(); if(t>=total-.04){finalizar();return}
+    sincronizar(t); raf=requestAnimationFrame(bucle);
+  }
+  function alternarReproduccion(){
+    if(!motor||!deckActual)return;
+    if(reproduciendo){motor.detener();reproduciendo=false;pausado=true;cancelAnimationFrame(raf)}
+    else if(pausado){motor.reanudar();pausado=false;reproduciendo=true;sincronizar(motor.posicion());raf=requestAnimationFrame(bucle)}
+  }
+  function buscar(delta){
+    if(!motor||!deckActual)return;
+    const p=Math.max(0,Math.min(total,motor.posicion()+delta));
+    motor.posicionar(p);sincronizar(p);if(p>=total-.04&&reproduciendo)finalizar();
   }
 
   async function arrancar(clave) {
@@ -716,6 +652,7 @@ button{font-family:inherit}
     motor.velocidad(velocidad);
     motor.tono(tono);
     motor.iniciar(0);
+    pausado = false;
     reproduciendo = true;
     sincronizar(0);
     raf = requestAnimationFrame(bucle);
@@ -723,6 +660,7 @@ button{font-family:inherit}
 
   function finalizar() {
     reproduciendo = false;
+    pausado = false;
     cancelAnimationFrame(raf);
     if (motor) motor.detener();
     const d = deckActual;
@@ -744,6 +682,7 @@ button{font-family:inherit}
 
   function volver() {
     reproduciendo = false;
+    pausado = false;
     cancelAnimationFrame(raf);
     if (motor) { motor.detener(); motor = null; }
     deckActual = null;
@@ -753,48 +692,15 @@ button{font-family:inherit}
   }
 
   document.addEventListener('keydown', e => {
-    // ESC: cerrar panel o detener presentación
-    if (e.key === 'Escape') {
-      if (panel.classList.contains('abierto')) alternarPanel(false);
-      else if (reproduciendo) volver();
-      return;
-    }
-
-    // Solo manejar controles si la presentación está reproduciéndose
-    if (!reproduciendo) return;
-
-    // Flecha izquierda: retroceder 5 segundos
-    if (e.key === 'ArrowLeft') {
-      const nuevaPosicion = Math.max(0, motor.posicion() - 5);
-      motor.iniciar(nuevaPosicion);
-      e.preventDefault();
-      return;
-    }
-
-    // Flecha derecha: avanzar 5 segundos
-    if (e.key === 'ArrowRight') {
-      const nuevaPosicion = Math.min(total, motor.posicion() + 5);
-      motor.iniciar(nuevaPosicion);
-      e.preventDefault();
-      return;
-    }
-
-    // Barra espaciadora: pausar/reproducir
-    if (e.key === ' ') {
-      e.preventDefault();
-      const pos = motor.posicion();
-      if (reproduciendo) {
-        motor.detener();
-      } else {
-        // Usar reanudar() para evitar múltiples fuentes (WebAudio) o múltiples reproducciones (HTML5)
-        if (motor.tipo === 'webaudio') {
-          motor.reanudar();
-        } else {
-          motor.iniciar(pos);
-        }
-      }
-      return;
-    }
+    if(e.key==='Escape'){if(panel.classList.contains('abierto'))alternarPanel(false);else if(deckActual)volver();return}
+    const t=e.target,typing=t&&(t.isContentEditable||['INPUT','SELECT','TEXTAREA','BUTTON'].includes(t.tagName));
+    if(typing||!deckActual)return;
+    if(e.key===' '){e.preventDefault();alternarReproduccion()}
+    else if(e.key==='ArrowLeft'){buscar(-5);e.preventDefault()}
+    else if(e.key==='ArrowRight'){buscar(5);e.preventDefault()}
+  });
+  document.addEventListener('pointerdown',e=>{
+    if(panel.classList.contains('abierto')&&!panel.contains(e.target)&&!engranaje.contains(e.target))alternarPanel(false);
   });
 
   pintarSelector();
@@ -807,6 +713,7 @@ button{font-family:inherit}
     finalizar,
     estado: () => ({
       reproduciendo,
+      pausado,
       t: motor ? motor.posicion() : 0,
       total,
       idx: deckActual ? deckActual.idx : -1,
