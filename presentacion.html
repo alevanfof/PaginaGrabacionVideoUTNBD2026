@@ -427,40 +427,87 @@ button{font-family:inherit}
   }
 
   function motorWebAudio(buffer) {
-    let src = null, anchorCtx = 0, anchorMedia = 0, rate = 1;
+    let src = null, offsetStart = 0, rate = 1;
+    let startTime = 0, pausedAt = 0, isPaused = false;
+    
     return {
       tipo: 'webaudio',
       iniciar(offset) {
+        // Detener cualquier fuente anterior si está activa (no pausada)
+        if (src && !isPaused) {
+          try { src.stop(); } catch(e) {}
+        }
+        
+        isPaused = false;
+        offsetStart = offset || 0;
+        startTime = 0; // Reiniciar tiempo desde cero
+        
         src = ctx.createBufferSource();
         src.buffer = buffer;
         src.playbackRate.value = rate;
         src.detune.value = tono - 1200 * Math.log2(rate);
         src.connect(ctx.destination);
-        anchorCtx = ctx.currentTime;
-        anchorMedia = offset;
-        src.start(0, offset);
+        
+        startTime = ctx.currentTime;
+        src.start(0, offsetStart);
+        
+        // Auto-detener al final del audio (con margen de seguridad)
+        const duracionRestante = buffer.duration - offsetStart;
+        setTimeout(() => {
+          if (!isPaused && src) {
+            try { src.stop(); } catch(e) {}
+            src = null;
+          }
+        }, Math.max(0, duracionRestante * 1000));
       },
       posicion() {
-        return src ? anchorMedia + (ctx.currentTime - anchorCtx) * src.playbackRate.value : 0;
+        if (isPaused) return pausedAt;
+        if (!src) return offsetStart || 0;
+        const tiempoTranscurrido = ctx.currentTime - startTime;
+        const posActual = offsetStart + tiempoTranscurrido * rate;
+        return Math.min(posActual, buffer.duration);
       },
       velocidad(v) {
-        if (src) {
-          anchorMedia = this.posicion();
-          anchorCtx = ctx.currentTime;
-          src.playbackRate.value = v;
-          src.detune.setTargetAtTime(tono - 1200 * Math.log2(v), ctx.currentTime, 0.02);
-        }
         rate = v;
+        if (src && !isPaused) {
+          src.playbackRate.setTargetAtTime ? src.playbackRate.setTargetAtTime(v, ctx.currentTime, 0.1) : (src.playbackRate.value = v);
+          src.detune.setTargetAtTime(tono - 1200 * Math.log2(v), ctx.currentTime, 0.1);
+        }
       },
       tono(c) {
-        if (src) src.detune.setTargetAtTime(c - 1200 * Math.log2(rate), ctx.currentTime, 0.02);
+        if (src && !isPaused) {
+          src.detune.setTargetAtTime(c - 1200 * Math.log2(rate), ctx.currentTime, 0.1);
+        }
       },
       detener() {
-        if (src) {
-          try { src.stop(); } catch { /* ya detenido */ }
-          try { src.disconnect(); } catch { /* ignorar */ }
-          src = null;
-        }
+        if (!src || isPaused) return;
+        pausedAt = this.posicion();
+        try { src.stop(); } catch(e) {}
+        src = null;
+        isPaused = true;
+      },
+      reanudar() {
+        if (!isPaused) return;
+        offsetStart = pausedAt;
+        startTime = 0;
+        
+        src = ctx.createBufferSource();
+        src.buffer = buffer;
+        src.playbackRate.value = rate;
+        src.detune.value = tono - 1200 * Math.log2(rate);
+        src.connect(ctx.destination);
+        
+        const duracionRestante = buffer.duration - offsetStart;
+        setTimeout(() => {
+          if (!isPaused && src) {
+            try { src.stop(); } catch(e) {}
+            src = null;
+          }
+        }, Math.max(0, duracionRestante * 1000));
+        
+        startTime = ctx.currentTime;
+        src.start(0, offsetStart);
+        isPaused = false;
       }
     };
   }
@@ -483,7 +530,8 @@ button{font-family:inherit}
       posicion() { return el.currentTime; },
       velocidad(v) { el.playbackRate = v; },
       tono() { /* no disponible */ },
-      detener() { el.pause(); }
+      detener() { el.pause(); },
+      reanudar() { el.play().catch(() => {}); }
     };
   }
 
@@ -643,6 +691,14 @@ button{font-family:inherit}
 
   async function arrancar(clave) {
     if (reproduciendo) return;
+    
+    // Liberar motor y state anterior si existe
+    if (deckActual) {
+      deckActual = null;
+      deck.innerHTML = '';
+      inicio.classList.remove('oculto');
+    }
+    
     const a = D.alumnos[clave];
     total = a.total;
     montarDeck(clave);
@@ -671,8 +727,19 @@ button{font-family:inherit}
     if (motor) motor.detener();
     const d = deckActual;
     if (!d) return;
+    
+    // Mostrar diapositiva de fin
     d.slides.forEach(s => s.el.classList.toggle('active', s.tipo === 'fin'));
     d.idx = d.slides.length - 1;
+    
+    // Limpiar el deck después de mostrar el final para permitir reiniciar
+    deckActual = null;
+    setTimeout(() => {
+      if (deck && deck.innerHTML && !deck.querySelector('.fin')) {
+        deck.innerHTML = '';
+        deck.className = '';
+      }
+    }, 100);
   }
 
   function volver() {
@@ -686,9 +753,48 @@ button{font-family:inherit}
   }
 
   document.addEventListener('keydown', e => {
-    if (e.key !== 'Escape') return;
-    if (panel.classList.contains('abierto')) alternarPanel(false);
-    else if (reproduciendo) volver();
+    // ESC: cerrar panel o detener presentación
+    if (e.key === 'Escape') {
+      if (panel.classList.contains('abierto')) alternarPanel(false);
+      else if (reproduciendo) volver();
+      return;
+    }
+
+    // Solo manejar controles si la presentación está reproduciéndose
+    if (!reproduciendo) return;
+
+    // Flecha izquierda: retroceder 5 segundos
+    if (e.key === 'ArrowLeft') {
+      const nuevaPosicion = Math.max(0, motor.posicion() - 5);
+      motor.iniciar(nuevaPosicion);
+      e.preventDefault();
+      return;
+    }
+
+    // Flecha derecha: avanzar 5 segundos
+    if (e.key === 'ArrowRight') {
+      const nuevaPosicion = Math.min(total, motor.posicion() + 5);
+      motor.iniciar(nuevaPosicion);
+      e.preventDefault();
+      return;
+    }
+
+    // Barra espaciadora: pausar/reproducir
+    if (e.key === ' ') {
+      e.preventDefault();
+      const pos = motor.posicion();
+      if (reproduciendo) {
+        motor.detener();
+      } else {
+        // Usar reanudar() para evitar múltiples fuentes (WebAudio) o múltiples reproducciones (HTML5)
+        if (motor.tipo === 'webaudio') {
+          motor.reanudar();
+        } else {
+          motor.iniciar(pos);
+        }
+      }
+      return;
+    }
   });
 
   pintarSelector();
