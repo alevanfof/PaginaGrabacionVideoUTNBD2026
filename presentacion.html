@@ -491,7 +491,7 @@ button{font-family:inherit}
     const cover = document.createElement('section');
     cover.className = 'slide cover';
     cover.innerHTML = `
-      <div class="topbar"><span>TFI · Bases de Datos I</span><span>${a.bloque}</span></div>
+      <div class="topbar"><span>TFI · Bases de Datos I</span><span>${a.nombre} · ${a.comision}</span></div>
       <div class="cover-grid">
         <div class="cover-main">
           <div class="eyebrow">${a.comision} · ${a.codigo}</div>
@@ -514,7 +514,7 @@ button{font-family:inherit}
       const s = document.createElement('section');
       s.className = 'slide scene';
       s.innerHTML = `
-        <div class="topbar"><span>TFI · Bases de Datos I</span><span>${a.bloque} · ${a.codigo}</span></div>
+        <div class="topbar"><span>TFI · Bases de Datos I</span><span>${a.nombre} · ${a.comision}</span></div>
         <div class="scene-grid">
           <header class="scene-head">
             <div class="izq">
