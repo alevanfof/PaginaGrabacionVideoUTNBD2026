@@ -1,243 +1,1066 @@
 {
- "rate": "-5%",
- "alumnos": {
-  "alejandro": {
-   "archivo": "audio/alejandro.mp3",
-   "total": 183.767,
-   "intro": {
-    "start": 0.0,
-    "end": 6.936
-   },
-   "escenas": [
-    {
-     "id": "a1",
-     "start": 7.836,
-     "end": 66.48,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 7.836,
-       "end": 23.412
+  "rate": "-5%",
+  "alumnos": {
+    "alejandro": {
+      "principal": {
+        "archivo": "audio\\alejandro.mp3",
+        "total": 220.48,
+        "intro": {
+          "start": 0.0,
+          "end": 6.94
+        },
+        "escenas": [
+          {
+            "id": "a1",
+            "start": 7.84,
+            "end": 56.72,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 7.84,
+                "end": 21.5
+              },
+              {
+                "captura": 1,
+                "start": 21.92,
+                "end": 56.72
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "a2",
+            "start": 57.62,
+            "end": 115.68,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 57.62,
+                "end": 75.62
+              },
+              {
+                "captura": 1,
+                "start": 76.04,
+                "end": 85.23
+              },
+              {
+                "captura": 2,
+                "start": 85.65,
+                "end": 97.36
+              },
+              {
+                "captura": 3,
+                "start": 97.78,
+                "end": 115.68
+              }
+            ],
+            "pausas": [
+              {
+                "start": 115.68,
+                "end": 150.68,
+                "mensaje": "Ejecutar SHOW CREATE TABLE y probar inserción válida, UNIQUE, CHECK y clave foránea."
+              }
+            ]
+          },
+          {
+            "id": "a3",
+            "start": 150.68,
+            "end": 195.48,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 150.68,
+                "end": 166.04
+              },
+              {
+                "captura": 1,
+                "start": 166.46,
+                "end": 172.89
+              },
+              {
+                "captura": 2,
+                "start": 173.31,
+                "end": 179.48
+              },
+              {
+                "captura": 3,
+                "start": 179.9,
+                "end": 195.48
+              }
+            ],
+            "pausas": [
+              {
+                "start": 195.48,
+                "end": 220.48,
+                "mensaje": "Ejecutar EXPLAIN y EXPLAIN ANALYZE con y sin índice; comparar el plan y las mediciones."
+              }
+            ]
+          }
+        ]
       },
-      {
-       "captura": 1,
-       "start": 23.832,
-       "end": 66.48
+      "voces_disponibles": [
+        "principal",
+        "agudo",
+        "grave"
+      ],
+      "agudo": {
+        "archivo": "audio\\alejandro_v2.mp3",
+        "total": 217.32,
+        "intro": {
+          "start": 0.0,
+          "end": 6.79
+        },
+        "escenas": [
+          {
+            "id": "a1",
+            "start": 7.69,
+            "end": 55.58,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 7.69,
+                "end": 21.08
+              },
+              {
+                "captura": 1,
+                "start": 21.5,
+                "end": 55.58
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "a2",
+            "start": 56.48,
+            "end": 113.39,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 56.48,
+                "end": 74.12
+              },
+              {
+                "captura": 1,
+                "start": 74.54,
+                "end": 83.54
+              },
+              {
+                "captura": 2,
+                "start": 83.96,
+                "end": 95.43
+              },
+              {
+                "captura": 3,
+                "start": 95.85,
+                "end": 113.39
+              }
+            ],
+            "pausas": [
+              {
+                "start": 113.39,
+                "end": 148.39,
+                "mensaje": "Ejecutar SHOW CREATE TABLE y probar inserción válida, UNIQUE, CHECK y clave foránea."
+              }
+            ]
+          },
+          {
+            "id": "a3",
+            "start": 148.39,
+            "end": 192.32,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 148.39,
+                "end": 163.44
+              },
+              {
+                "captura": 1,
+                "start": 163.86,
+                "end": 170.17
+              },
+              {
+                "captura": 2,
+                "start": 170.59,
+                "end": 176.64
+              },
+              {
+                "captura": 3,
+                "start": 177.06,
+                "end": 192.32
+              }
+            ],
+            "pausas": [
+              {
+                "start": 192.32,
+                "end": 217.32,
+                "mensaje": "Ejecutar EXPLAIN y EXPLAIN ANALYZE con y sin índice; comparar el plan y las mediciones."
+              }
+            ]
+          }
+        ]
+      },
+      "grave": {
+        "archivo": "audio\\alejandro_v3.mp3",
+        "total": 223.84,
+        "intro": {
+          "start": 0.0,
+          "end": 7.08
+        },
+        "escenas": [
+          {
+            "id": "a1",
+            "start": 7.98,
+            "end": 57.94,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 7.98,
+                "end": 21.95
+              },
+              {
+                "captura": 1,
+                "start": 22.37,
+                "end": 57.94
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "a2",
+            "start": 58.84,
+            "end": 118.1,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 58.84,
+                "end": 77.22
+              },
+              {
+                "captura": 1,
+                "start": 77.64,
+                "end": 87.02
+              },
+              {
+                "captura": 2,
+                "start": 87.44,
+                "end": 99.39
+              },
+              {
+                "captura": 3,
+                "start": 99.81,
+                "end": 118.1
+              }
+            ],
+            "pausas": [
+              {
+                "start": 118.1,
+                "end": 153.1,
+                "mensaje": "Ejecutar SHOW CREATE TABLE y probar inserción válida, UNIQUE, CHECK y clave foránea."
+              }
+            ]
+          },
+          {
+            "id": "a3",
+            "start": 153.1,
+            "end": 198.84,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 153.1,
+                "end": 168.8
+              },
+              {
+                "captura": 1,
+                "start": 169.22,
+                "end": 175.8
+              },
+              {
+                "captura": 2,
+                "start": 176.22,
+                "end": 182.51
+              },
+              {
+                "captura": 3,
+                "start": 182.93,
+                "end": 198.84
+              }
+            ],
+            "pausas": [
+              {
+                "start": 198.84,
+                "end": 223.84,
+                "mensaje": "Ejecutar EXPLAIN y EXPLAIN ANALYZE con y sin índice; comparar el plan y las mediciones."
+              }
+            ]
+          }
+        ]
       }
-     ]
     },
-    {
-     "id": "a2",
-     "start": 67.38,
-     "end": 144.432,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 67.38,
-       "end": 89.796
+    "gabriel": {
+      "principal": {
+        "archivo": "audio\\gabriel.mp3",
+        "total": 230.92,
+        "intro": {
+          "start": 0.0,
+          "end": 7.75
+        },
+        "escenas": [
+          {
+            "id": "g1",
+            "start": 8.65,
+            "end": 66.79,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 8.65,
+                "end": 19.55
+              },
+              {
+                "captura": 1,
+                "start": 19.97,
+                "end": 35.43
+              },
+              {
+                "captura": 2,
+                "start": 35.85,
+                "end": 66.79
+              }
+            ],
+            "pausas": [
+              {
+                "start": 66.79,
+                "end": 86.79,
+                "mensaje": "Ejecutar los conteos por tabla y las consultas de coherencia de claves y pedidos."
+              }
+            ]
+          },
+          {
+            "id": "g4",
+            "start": 86.79,
+            "end": 109.01,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 86.79,
+                "end": 97.93
+              },
+              {
+                "captura": 1,
+                "start": 98.35,
+                "end": 109.01
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "g2",
+            "start": 109.91,
+            "end": 154.47,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 109.91,
+                "end": 119.39
+              },
+              {
+                "captura": 1,
+                "start": 119.81,
+                "end": 127.59
+              },
+              {
+                "captura": 2,
+                "start": 128.01,
+                "end": 135.79
+              },
+              {
+                "captura": 3,
+                "start": 136.21,
+                "end": 154.47
+              }
+            ],
+            "pausas": [
+              {
+                "start": 154.47,
+                "end": 179.47,
+                "mensaje": "Ejecutar las consultas de pedidos y ventas; consultar la vista pública y verificar el enmascaramiento."
+              }
+            ]
+          },
+          {
+            "id": "g3",
+            "start": 179.47,
+            "end": 210.92,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 179.47,
+                "end": 194.76
+              },
+              {
+                "captura": 1,
+                "start": 195.18,
+                "end": 210.92
+              }
+            ],
+            "pausas": [
+              {
+                "start": 210.92,
+                "end": 230.92,
+                "mensaje": "Ejecutar una consulta directa a cliente y la misma consulta mediante la vista pública; revisar los permisos."
+              }
+            ]
+          }
+        ]
       },
-      {
-       "captura": 1,
-       "start": 90.216,
-       "end": 100.224
+      "voces_disponibles": [
+        "principal",
+        "agudo",
+        "grave"
+      ],
+      "agudo": {
+        "archivo": "audio\\gabriel_v2.mp3",
+        "total": 229.2,
+        "intro": {
+          "start": 0.0,
+          "end": 7.68
+        },
+        "escenas": [
+          {
+            "id": "g1",
+            "start": 8.58,
+            "end": 66.09,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 8.58,
+                "end": 19.36
+              },
+              {
+                "captura": 1,
+                "start": 19.78,
+                "end": 35.07
+              },
+              {
+                "captura": 2,
+                "start": 35.49,
+                "end": 66.09
+              }
+            ],
+            "pausas": [
+              {
+                "start": 66.09,
+                "end": 86.09,
+                "mensaje": "Ejecutar los conteos por tabla y las consultas de coherencia de claves y pedidos."
+              }
+            ]
+          },
+          {
+            "id": "g4",
+            "start": 86.09,
+            "end": 108.09,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 86.09,
+                "end": 97.11
+              },
+              {
+                "captura": 1,
+                "start": 97.53,
+                "end": 108.09
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "g2",
+            "start": 108.99,
+            "end": 153.06,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 108.99,
+                "end": 118.35
+              },
+              {
+                "captura": 1,
+                "start": 118.77,
+                "end": 126.47
+              },
+              {
+                "captura": 2,
+                "start": 126.89,
+                "end": 134.57
+              },
+              {
+                "captura": 3,
+                "start": 134.99,
+                "end": 153.06
+              }
+            ],
+            "pausas": [
+              {
+                "start": 153.06,
+                "end": 178.06,
+                "mensaje": "Ejecutar las consultas de pedidos y ventas; consultar la vista pública y verificar el enmascaramiento."
+              }
+            ]
+          },
+          {
+            "id": "g3",
+            "start": 178.06,
+            "end": 209.2,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 178.06,
+                "end": 193.2
+              },
+              {
+                "captura": 1,
+                "start": 193.62,
+                "end": 209.2
+              }
+            ],
+            "pausas": [
+              {
+                "start": 209.2,
+                "end": 229.2,
+                "mensaje": "Ejecutar una consulta directa a cliente y la misma consulta mediante la vista pública; revisar los permisos."
+              }
+            ]
+          }
+        ]
       },
-      {
-       "captura": 2,
-       "start": 100.644,
-       "end": 119.7
-      },
-      {
-       "captura": 3,
-       "start": 120.12,
-       "end": 144.432
+      "grave": {
+        "archivo": "audio\\gabriel_v3.mp3",
+        "total": 232.6,
+        "intro": {
+          "start": 0.0,
+          "end": 7.85
+        },
+        "escenas": [
+          {
+            "id": "g1",
+            "start": 8.75,
+            "end": 67.45,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 8.75,
+                "end": 19.74
+              },
+              {
+                "captura": 1,
+                "start": 20.16,
+                "end": 35.78
+              },
+              {
+                "captura": 2,
+                "start": 36.2,
+                "end": 67.45
+              }
+            ],
+            "pausas": [
+              {
+                "start": 67.45,
+                "end": 87.45,
+                "mensaje": "Ejecutar los conteos por tabla y las consultas de coherencia de claves y pedidos."
+              }
+            ]
+          },
+          {
+            "id": "g4",
+            "start": 87.45,
+            "end": 109.91,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 87.45,
+                "end": 98.71
+              },
+              {
+                "captura": 1,
+                "start": 99.13,
+                "end": 109.91
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "g2",
+            "start": 110.81,
+            "end": 155.83,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 110.81,
+                "end": 120.39
+              },
+              {
+                "captura": 1,
+                "start": 120.81,
+                "end": 128.68
+              },
+              {
+                "captura": 2,
+                "start": 129.1,
+                "end": 136.95
+              },
+              {
+                "captura": 3,
+                "start": 137.37,
+                "end": 155.83
+              }
+            ],
+            "pausas": [
+              {
+                "start": 155.83,
+                "end": 180.83,
+                "mensaje": "Ejecutar las consultas de pedidos y ventas; consultar la vista pública y verificar el enmascaramiento."
+              }
+            ]
+          },
+          {
+            "id": "g3",
+            "start": 180.83,
+            "end": 212.6,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 180.83,
+                "end": 196.29
+              },
+              {
+                "captura": 1,
+                "start": 196.71,
+                "end": 212.6
+              }
+            ],
+            "pausas": [
+              {
+                "start": 212.6,
+                "end": 232.6,
+                "mensaje": "Ejecutar una consulta directa a cliente y la misma consulta mediante la vista pública; revisar los permisos."
+              }
+            ]
+          }
+        ]
       }
-     ]
     },
-    {
-     "id": "a3",
-     "start": 145.332,
-     "end": 183.768,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 145.332,
-       "end": 156.948
+    "josue": {
+      "principal": {
+        "archivo": "audio\\josue.mp3",
+        "total": 237.58,
+        "intro": {
+          "start": 0.0,
+          "end": 7.49
+        },
+        "escenas": [
+          {
+            "id": "j1",
+            "start": 8.39,
+            "end": 42.53,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 8.39,
+                "end": 29.53
+              },
+              {
+                "captura": 1,
+                "start": 29.95,
+                "end": 42.53
+              }
+            ],
+            "pausas": [
+              {
+                "start": 42.53,
+                "end": 57.53,
+                "mensaje": "Ejecutar la búsqueda con un DNI válido y con la entrada de prueba para confirmar que no se interpreta como SQL."
+              }
+            ]
+          },
+          {
+            "id": "j2_1",
+            "start": 57.53,
+            "end": 106.56,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 57.53,
+                "end": 79.42
+              },
+              {
+                "captura": 1,
+                "start": 94.42,
+                "end": 106.56
+              }
+            ],
+            "pausas": [
+              {
+                "start": 79.42,
+                "end": 94.42,
+                "mensaje": "Ejecutar la venta válida y comparar el stock antes y después del COMMIT."
+              },
+              {
+                "start": 106.56,
+                "end": 121.56,
+                "mensaje": "Ejecutar la venta sin stock y verificar que el ROLLBACK no deje cambios."
+              }
+            ]
+          },
+          {
+            "id": "j2_2",
+            "start": 121.56,
+            "end": 153.18,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 121.56,
+                "end": 139.92
+              },
+              {
+                "captura": 1,
+                "start": 140.34,
+                "end": 153.18
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "j2_3",
+            "start": 154.08,
+            "end": 170.79,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 154.08,
+                "end": 157.75
+              },
+              {
+                "captura": 1,
+                "start": 158.17,
+                "end": 170.79
+              }
+            ],
+            "pausas": [
+              {
+                "start": 170.79,
+                "end": 185.79,
+                "mensaje": "Comparar la segunda lectura en dos sesiones con REPEATABLE READ y READ COMMITTED."
+              }
+            ]
+          },
+          {
+            "id": "j3",
+            "start": 185.79,
+            "end": 237.58,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 185.79,
+                "end": 198.46
+              },
+              {
+                "captura": 1,
+                "start": 218.46,
+                "end": 229.19
+              },
+              {
+                "captura": 2,
+                "start": 229.61,
+                "end": 237.58
+              }
+            ],
+            "pausas": [
+              {
+                "start": 198.46,
+                "end": 218.46,
+                "mensaje": "Ejecutar las dos sesiones en orden para provocar el deadlock y observar el error 1213."
+              }
+            ]
+          }
+        ]
       },
-      {
-       "captura": 1,
-       "start": 157.368,
-       "end": 164.496
+      "voces_disponibles": [
+        "principal",
+        "agudo",
+        "grave"
+      ],
+      "agudo": {
+        "archivo": "audio\\josue_v2.mp3",
+        "total": 234.4,
+        "intro": {
+          "start": 0.0,
+          "end": 7.34
+        },
+        "escenas": [
+          {
+            "id": "j1",
+            "start": 8.24,
+            "end": 41.71,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 8.24,
+                "end": 28.95
+              },
+              {
+                "captura": 1,
+                "start": 29.37,
+                "end": 41.71
+              }
+            ],
+            "pausas": [
+              {
+                "start": 41.71,
+                "end": 56.71,
+                "mensaje": "Ejecutar la búsqueda con un DNI válido y con la entrada de prueba para confirmar que no se interpreta como SQL."
+              }
+            ]
+          },
+          {
+            "id": "j2_1",
+            "start": 56.71,
+            "end": 105.02,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 56.71,
+                "end": 78.14
+              },
+              {
+                "captura": 1,
+                "start": 93.14,
+                "end": 105.02
+              }
+            ],
+            "pausas": [
+              {
+                "start": 78.14,
+                "end": 93.14,
+                "mensaje": "Ejecutar la venta válida y comparar el stock antes y después del COMMIT."
+              },
+              {
+                "start": 105.02,
+                "end": 120.02,
+                "mensaje": "Ejecutar la venta sin stock y verificar que el ROLLBACK no deje cambios."
+              }
+            ]
+          },
+          {
+            "id": "j2_2",
+            "start": 120.02,
+            "end": 151.0,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 120.02,
+                "end": 138.0
+              },
+              {
+                "captura": 1,
+                "start": 138.42,
+                "end": 151.0
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "j2_3",
+            "start": 151.9,
+            "end": 168.28,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 151.9,
+                "end": 155.5
+              },
+              {
+                "captura": 1,
+                "start": 155.92,
+                "end": 168.28
+              }
+            ],
+            "pausas": [
+              {
+                "start": 168.28,
+                "end": 183.28,
+                "mensaje": "Comparar la segunda lectura en dos sesiones con REPEATABLE READ y READ COMMITTED."
+              }
+            ]
+          },
+          {
+            "id": "j3",
+            "start": 183.28,
+            "end": 234.4,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 183.28,
+                "end": 195.69
+              },
+              {
+                "captura": 1,
+                "start": 215.69,
+                "end": 226.18
+              },
+              {
+                "captura": 2,
+                "start": 226.6,
+                "end": 234.4
+              }
+            ],
+            "pausas": [
+              {
+                "start": 195.69,
+                "end": 215.69,
+                "mensaje": "Ejecutar las dos sesiones en orden para provocar el deadlock y observar el error 1213."
+              }
+            ]
+          }
+        ]
       },
-      {
-       "captura": 2,
-       "start": 164.916,
-       "end": 172.908
-      },
-      {
-       "captura": 3,
-       "start": 173.328,
-       "end": 183.768
+      "grave": {
+        "archivo": "audio\\josue_v3.mp3",
+        "total": 242.52,
+        "intro": {
+          "start": 0.0,
+          "end": 7.73
+        },
+        "escenas": [
+          {
+            "id": "j1",
+            "start": 8.63,
+            "end": 43.85,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 8.63,
+                "end": 30.45
+              },
+              {
+                "captura": 1,
+                "start": 30.87,
+                "end": 43.85
+              }
+            ],
+            "pausas": [
+              {
+                "start": 43.85,
+                "end": 58.85,
+                "mensaje": "Ejecutar la búsqueda con un DNI válido y con la entrada de prueba para confirmar que no se interpreta como SQL."
+              }
+            ]
+          },
+          {
+            "id": "j2_1",
+            "start": 58.85,
+            "end": 108.96,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 58.85,
+                "end": 81.43
+              },
+              {
+                "captura": 1,
+                "start": 96.43,
+                "end": 108.96
+              }
+            ],
+            "pausas": [
+              {
+                "start": 81.43,
+                "end": 96.43,
+                "mensaje": "Ejecutar la venta válida y comparar el stock antes y después del COMMIT."
+              },
+              {
+                "start": 108.96,
+                "end": 123.96,
+                "mensaje": "Ejecutar la venta sin stock y verificar que el ROLLBACK no deje cambios."
+              }
+            ]
+          },
+          {
+            "id": "j2_2",
+            "start": 123.96,
+            "end": 156.59,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 123.96,
+                "end": 142.92
+              },
+              {
+                "captura": 1,
+                "start": 143.34,
+                "end": 156.59
+              }
+            ],
+            "pausas": []
+          },
+          {
+            "id": "j2_3",
+            "start": 157.49,
+            "end": 174.73,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 157.49,
+                "end": 161.28
+              },
+              {
+                "captura": 1,
+                "start": 161.7,
+                "end": 174.73
+              }
+            ],
+            "pausas": [
+              {
+                "start": 174.73,
+                "end": 189.73,
+                "mensaje": "Comparar la segunda lectura en dos sesiones con REPEATABLE READ y READ COMMITTED."
+              }
+            ]
+          },
+          {
+            "id": "j3",
+            "start": 189.73,
+            "end": 242.52,
+            "partes": [
+              {
+                "captura": 0,
+                "start": 189.73,
+                "end": 202.81
+              },
+              {
+                "captura": 1,
+                "start": 222.81,
+                "end": 233.87
+              },
+              {
+                "captura": 2,
+                "start": 234.29,
+                "end": 242.52
+              }
+            ],
+            "pausas": [
+              {
+                "start": 202.81,
+                "end": 222.81,
+                "mensaje": "Ejecutar las dos sesiones en orden para provocar el deadlock y observar el error 1213."
+              }
+            ]
+          }
+        ]
       }
-     ]
     }
-   ],
-   "nombre": "Alejandro Fernández",
-   "voz": "es-AR-TomasNeural",
-   "bloque": "Bloque 1 · Sistema, modelo e índices",
-   "comision": "Comisión 2 · Grupo 3",
-   "codigo": "C2-3"
   },
-  "gabriel": {
-   "archivo": "audio/gabriel.mp3",
-   "total": 145.595,
-   "intro": {
-    "start": 0.0,
-    "end": 7.752
-   },
-   "escenas": [
-    {
-     "id": "g1",
-     "start": 8.652,
-     "end": 73.836,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 8.652,
-       "end": 22.86
-      },
-      {
-       "captura": 1,
-       "start": 23.28,
-       "end": 53.808
-      },
-      {
-       "captura": 2,
-       "start": 54.228,
-       "end": 73.836
-      }
-     ]
-    },
-    {
-     "id": "g2",
-     "start": 74.736,
-     "end": 114.732,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 74.736,
-       "end": 84.384
-      },
-      {
-       "captura": 1,
-       "start": 84.804,
-       "end": 93.756
-      },
-      {
-       "captura": 2,
-       "start": 94.176,
-       "end": 103.656
-      },
-      {
-       "captura": 3,
-       "start": 104.076,
-       "end": 114.732
-      }
-     ]
-    },
-    {
-     "id": "g3",
-     "start": 115.632,
-     "end": 145.596,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 115.632,
-       "end": 129.84
-      },
-      {
-       "captura": 1,
-       "start": 130.26,
-       "end": 145.596
-      }
-     ]
-    }
-   ],
-   "nombre": "Gabriel Di Lorenzo",
-   "voz": "es-CO-GonzaloNeural",
-   "bloque": "Bloque 2 · Carga masiva, consultas y roles",
-   "comision": "Comisión 2 · Grupo 3",
-   "codigo": "C2-3"
-  },
-  "josue": {
-   "archivo": "audio/josue.mp3",
-   "total": 172.859,
-   "intro": {
-    "start": 0.0,
-    "end": 7.44
-   },
-   "escenas": [
-    {
-     "id": "j1",
-     "start": 8.34,
-     "end": 52.872,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 8.34,
-       "end": 24.204
-      },
-      {
-       "captura": 1,
-       "start": 24.624,
-       "end": 52.872
-      }
-     ]
-    },
-    {
-     "id": "j2",
-     "start": 53.772,
-     "end": 101.136,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 53.772,
-       "end": 76.284
-      },
-      {
-       "captura": 1,
-       "start": 76.704,
-       "end": 101.136
-      }
-     ]
-    },
-    {
-     "id": "j3",
-     "start": 102.036,
-     "end": 172.86,
-     "partes": [
-      {
-       "captura": 0,
-       "start": 102.036,
-       "end": 116.676
-      },
-      {
-       "captura": 1,
-       "start": 117.096,
-       "end": 133.584
-      },
-      {
-       "captura": 2,
-       "start": 134.004,
-       "end": 172.86
-      }
-     ]
-    }
-   ],
-   "nombre": "Josue Gallardo",
-   "voz": "es-MX-JorgeNeural",
-   "bloque": "Bloque 3 · Seguridad, transacciones y concurrencia",
-   "comision": "Comisión 2 · Grupo 12",
-   "codigo": "C2-12"
-  }
- }
+  "voces_disponibles": [
+    "principal",
+    "agudo",
+    "grave"
+  ]
 }
