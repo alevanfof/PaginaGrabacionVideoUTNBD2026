@@ -16,6 +16,7 @@
   --sans:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
+#audio-track{display:none}
 html,body{margin:0;height:100%;overflow:hidden;background:#080a12;font-family:var(--sans);color:var(--ink)}
 button{font-family:inherit}
 
@@ -264,17 +265,9 @@ button{font-family:inherit}
   font-size:12px;color:#c8cde0;margin-bottom:7px;
 }
 .ajuste output{font-size:11px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
-.ajuste input[type=range]{
-  width:100%;height:16px;appearance:none;background:transparent;cursor:pointer;
-}
-.ajuste input[type=range]::-webkit-slider-runnable-track{
-  height:3px;border-radius:3px;background:rgba(255,255,255,.18);
-}
-.ajuste input[type=range]::-webkit-slider-thumb{
-  appearance:none;width:12px;height:12px;border-radius:50%;background:#a5a9ff;
-  margin-top:-4.5px;box-shadow:0 0 0 4px rgba(165,169,255,.14);
-}
-.ajuste small{display:flex;justify-content:space-between;font-size:9.5px;color:#6f7799;margin-top:5px}
+.ajuste select{width:100%;height:34px;padding:0 10px;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:#242941;color:#eef0fa;font:inherit;font-size:12px;cursor:pointer;outline:none}
+.ajuste select:focus-visible{border-color:#a5a9ff;box-shadow:0 0 0 2px rgba(165,169,255,.18)}
+.ajuste select option{background:#171b2d;color:#eef0fa}
 #reset{
   width:100%;margin-top:4px;background:rgba(255,255,255,.07);border:0;border-radius:8px;
   padding:8px;color:#c8cde0;font-size:11.5px;cursor:pointer;transition:background .2s ease;
@@ -287,6 +280,7 @@ button{font-family:inherit}
 </head>
 <body>
 
+<audio id="audio-track" preload="auto"></audio>
 <div id="stage">
   <div id="inicio">
     <div class="inicio-inner">
@@ -298,9 +292,6 @@ button{font-family:inherit}
     </div>
   </div>
   <div id="deck"></div>
-
-  <!-- Elemento de audio oculto: único e inmutable por presentación -->
-  <audio id="presentation-track" preload="auto" style="display:none;"></audio>
 </div>
 
 <div id="engranaje" role="button" tabindex="0" aria-label="Ajustes de voz" title="Ajustes de voz">
@@ -314,20 +305,21 @@ button{font-family:inherit}
   <div class="panel-titulo">Ajustes de voz</div>
   <label class="ajuste">
     <span>Velocidad <output id="outVel">1,00×</output></span>
-    <input id="vel" type="range" min="0.80" max="1.10" step="0.05" value="1">
-    <small><span>0,80×</span><span>1,10×</span></small>
-  </label>
-  <label class="ajuste">
-    <span>Pitch del audio</span>
-    <select id="versiones">
-      <option value="principal">Principal</option>
-      <option value="agudo">Agudo (+pitch)</option>
-      <option value="grave">Grave (-pitch)</option>
+    <select id="vel" aria-label="Velocidad de reproducción">
+        <option value="0.80">0,80×</option><option value="0.85">0,85×</option><option value="0.90">0,90×</option><option value="0.95">0,95×</option><option value="1" selected>1,00×</option><option value="1.05">1,05×</option><option value="1.10">1,10×</option>
     </select>
   </label>
-  <button id="reset" type="button">Restablecer</button>
-  <div class="panel-nota on" id="duracion-total" aria-live="polite"></div>
-  <div class="panel-nota on">El pitch se selecciona con las versiones pregrabadas.</div>
+  <label class="ajuste">
+      <span>Pitch del audio</span>
+      <select id="versiones" aria-label="Versión del pitch">
+        <option value="principal">Principal</option>
+        <option value="agudo">Agudo (+pitch)</option>
+        <option value="grave">Grave (-pitch)</option>
+      </select>
+    </label>
+    <button id="reset" type="button">Restablecer</button>
+    <div class="panel-nota on" id="duracion-total" aria-live="polite"></div>
+    <div class="panel-nota on">El pitch se selecciona con las versiones pregrabadas; la velocidad lo conserva.</div>
 </div>
 
 <script>window.PRESENTACION = {"alumnos":{"alejandro":{"nombre":"Alejandro Fernández","bloque":"Bloque 1 · Sistema, modelo e índices","comision":"Comisión 2 · Grupo 3","codigo":"C2-3","total":220.48,"versiones":{"principal":{"archivo":"audio\\alejandro.mp3","total":220.48,"intro":{"start":0.0,"end":6.94},"escenas":[{"id":"a1","start":7.84,"end":56.72,"partes":[{"captura":0,"start":7.84,"end":21.5},{"captura":1,"start":21.92,"end":56.72}],"pausas":[],"kicker":"Bloque 1 · Sistema y modelo","titulo":"Comercio electrónico: cinco entidades","subtitulo":"Cliente, pedido, detalle de pedido, producto y categoría","capturas":[{"archivo":"00_der.png","epigrafe":"DER final: cinco entidades y sus relaciones."},{"archivo":"06_estado_etapa1.png","epigrafe":"Estado de las tablas al cierre de la Etapa 1."}]},{"id":"a2","start":57.62,"end":115.68,"partes":[{"captura":0,"start":57.62,"end":75.62},{"captura":1,"start":76.04,"end":85.23},{"captura":2,"start":85.65,"end":97.36},{"captura":3,"start":97.78,"end":115.68}],"pausas":[{"start":115.68,"end":150.68,"mensaje":"Ejecutar SHOW CREATE TABLE y probar inserción válida, UNIQUE, CHECK y clave foránea."}],"kicker":"Bloque 1 · Esquema y constraints","titulo":"Restricciones que sostienen la integridad","subtitulo":"PK, FK, UNIQUE y CHECK con nombres explícitos","capturas":[{"archivo":"01_ok_insert_1.png","epigrafe":"Inserción válida sobre cliente."},{"archivo":"03_err_unique.png","epigrafe":"Rechazo por UNIQUE: categoría duplicada."},{"archivo":"04_err_check.png","epigrafe":"Rechazo por CHECK: stock negativo."},{"archivo":"05_err_fk.png","epigrafe":"Rechazo por clave foránea: cliente inexistente."}]},{"id":"a3","start":150.68,"end":195.48,"partes":[{"captura":0,"start":150.68,"end":166.04},{"captura":1,"start":166.46,"end":172.89},{"captura":2,"start":173.31,"end":179.48},{"captura":3,"start":179.9,"end":195.48}],"pausas":[{"start":195.48,"end":220.48,"mensaje":"Ejecutar EXPLAIN y EXPLAIN ANALYZE con y sin índice; comparar el plan y las mediciones."}],"kicker":"Bloque 1 · Índices","titulo":"Consultas medidas con y sin índice","subtitulo":"Igualdad, rango y JOIN sobre 80.000 pedidos","capturas":[{"archivo":"13_indices.png","epigrafe":"Definición de los cinco índices."},{"archivo":"29_tiempos_indices.png","epigrafe":"Comparación de tiempos con y sin índice."},{"archivo":"20_explain_e1_con.png","epigrafe":"EXPLAIN con índice: acceso por índice."},{"archivo":"22_analyze_e1_sin.png","epigrafe":"EXPLAIN ANALYZE sin índice: recorrido completo."}]}]},"agudo":{"archivo":"audio\\alejandro_v2.mp3","total":217.32,"intro":{"start":0.0,"end":6.79},"escenas":[{"id":"a1","start":7.69,"end":55.58,"partes":[{"captura":0,"start":7.69,"end":21.08},{"captura":1,"start":21.5,"end":55.58}],"pausas":[],"kicker":"Bloque 1 · Sistema y modelo","titulo":"Comercio electrónico: cinco entidades","subtitulo":"Cliente, pedido, detalle de pedido, producto y categoría","capturas":[{"archivo":"00_der.png","epigrafe":"DER final: cinco entidades y sus relaciones."},{"archivo":"06_estado_etapa1.png","epigrafe":"Estado de las tablas al cierre de la Etapa 1."}]},{"id":"a2","start":56.48,"end":113.39,"partes":[{"captura":0,"start":56.48,"end":74.12},{"captura":1,"start":74.54,"end":83.54},{"captura":2,"start":83.96,"end":95.43},{"captura":3,"start":95.85,"end":113.39}],"pausas":[{"start":113.39,"end":148.39,"mensaje":"Ejecutar SHOW CREATE TABLE y probar inserción válida, UNIQUE, CHECK y clave foránea."}],"kicker":"Bloque 1 · Esquema y constraints","titulo":"Restricciones que sostienen la integridad","subtitulo":"PK, FK, UNIQUE y CHECK con nombres explícitos","capturas":[{"archivo":"01_ok_insert_1.png","epigrafe":"Inserción válida sobre cliente."},{"archivo":"03_err_unique.png","epigrafe":"Rechazo por UNIQUE: categoría duplicada."},{"archivo":"04_err_check.png","epigrafe":"Rechazo por CHECK: stock negativo."},{"archivo":"05_err_fk.png","epigrafe":"Rechazo por clave foránea: cliente inexistente."}]},{"id":"a3","start":148.39,"end":192.32,"partes":[{"captura":0,"start":148.39,"end":163.44},{"captura":1,"start":163.86,"end":170.17},{"captura":2,"start":170.59,"end":176.64},{"captura":3,"start":177.06,"end":192.32}],"pausas":[{"start":192.32,"end":217.32,"mensaje":"Ejecutar EXPLAIN y EXPLAIN ANALYZE con y sin índice; comparar el plan y las mediciones."}],"kicker":"Bloque 1 · Índices","titulo":"Consultas medidas con y sin índice","subtitulo":"Igualdad, rango y JOIN sobre 80.000 pedidos","capturas":[{"archivo":"13_indices.png","epigrafe":"Definición de los cinco índices."},{"archivo":"29_tiempos_indices.png","epigrafe":"Comparación de tiempos con y sin índice."},{"archivo":"20_explain_e1_con.png","epigrafe":"EXPLAIN con índice: acceso por índice."},{"archivo":"22_analyze_e1_sin.png","epigrafe":"EXPLAIN ANALYZE sin índice: recorrido completo."}]}]},"grave":{"archivo":"audio\\alejandro_v3.mp3","total":223.84,"intro":{"start":0.0,"end":7.08},"escenas":[{"id":"a1","start":7.98,"end":57.94,"partes":[{"captura":0,"start":7.98,"end":21.95},{"captura":1,"start":22.37,"end":57.94}],"pausas":[],"kicker":"Bloque 1 · Sistema y modelo","titulo":"Comercio electrónico: cinco entidades","subtitulo":"Cliente, pedido, detalle de pedido, producto y categoría","capturas":[{"archivo":"00_der.png","epigrafe":"DER final: cinco entidades y sus relaciones."},{"archivo":"06_estado_etapa1.png","epigrafe":"Estado de las tablas al cierre de la Etapa 1."}]},{"id":"a2","start":58.84,"end":118.1,"partes":[{"captura":0,"start":58.84,"end":77.22},{"captura":1,"start":77.64,"end":87.02},{"captura":2,"start":87.44,"end":99.39},{"captura":3,"start":99.81,"end":118.1}],"pausas":[{"start":118.1,"end":153.1,"mensaje":"Ejecutar SHOW CREATE TABLE y probar inserción válida, UNIQUE, CHECK y clave foránea."}],"kicker":"Bloque 1 · Esquema y constraints","titulo":"Restricciones que sostienen la integridad","subtitulo":"PK, FK, UNIQUE y CHECK con nombres explícitos","capturas":[{"archivo":"01_ok_insert_1.png","epigrafe":"Inserción válida sobre cliente."},{"archivo":"03_err_unique.png","epigrafe":"Rechazo por UNIQUE: categoría duplicada."},{"archivo":"04_err_check.png","epigrafe":"Rechazo por CHECK: stock negativo."},{"archivo":"05_err_fk.png","epigrafe":"Rechazo por clave foránea: cliente inexistente."}]},{"id":"a3","start":153.1,"end":198.84,"partes":[{"captura":0,"start":153.1,"end":168.8},{"captura":1,"start":169.22,"end":175.8},{"captura":2,"start":176.22,"end":182.51},{"captura":3,"start":182.93,"end":198.84}],"pausas":[{"start":198.84,"end":223.84,"mensaje":"Ejecutar EXPLAIN y EXPLAIN ANALYZE con y sin índice; comparar el plan y las mediciones."}],"kicker":"Bloque 1 · Índices","titulo":"Consultas medidas con y sin índice","subtitulo":"Igualdad, rango y JOIN sobre 80.000 pedidos","capturas":[{"archivo":"13_indices.png","epigrafe":"Definición de los cinco índices."},{"archivo":"29_tiempos_indices.png","epigrafe":"Comparación de tiempos con y sin índice."},{"archivo":"20_explain_e1_con.png","epigrafe":"EXPLAIN con índice: acceso por índice."},{"archivo":"22_analyze_e1_sin.png","epigrafe":"EXPLAIN ANALYZE sin índice: recorrido completo."}]}]}}},"gabriel":{"nombre":"Gabriel Di Lorenzo","bloque":"Bloque 2 · Carga masiva, consultas y roles","comision":"Comisión 2 · Grupo 3","codigo":"C2-3","total":230.92,"versiones":{"principal":{"archivo":"audio\\gabriel.mp3","total":230.92,"intro":{"start":0.0,"end":7.75},"escenas":[{"id":"g1","start":8.65,"end":66.79,"partes":[{"captura":0,"start":8.65,"end":19.55},{"captura":1,"start":19.97,"end":35.43},{"captura":2,"start":35.85,"end":66.79}],"pausas":[{"start":66.79,"end":86.79,"mensaje":"Ejecutar los conteos por tabla y las consultas de coherencia de claves y pedidos."}],"kicker":"Bloque 2 · Carga masiva","titulo":"345.010 filas generadas con SQL","subtitulo":"CTE recursiva y producto cartesiano controlado","capturas":[{"archivo":"07_catalogos.png","epigrafe":"Catálogos semilla cargados."},{"archivo":"08_verif_conteos.png","epigrafe":"Conteos por tabla tras la carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g4","start":86.79,"end":109.01,"partes":[{"captura":0,"start":86.79,"end":97.93},{"captura":1,"start":98.35,"end":109.01}],"pausas":[],"kicker":"Bloque 2 · Análisis de rendimiento","titulo":"Commits grupales para carga masiva","subtitulo":"Estrategia de escalabilidad y optimización","capturas":[{"archivo":"08_verif_conteos.png","epigrafe":"Verificación de conteos tras carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g2","start":109.91,"end":154.47,"partes":[{"captura":0,"start":109.91,"end":119.39},{"captura":1,"start":119.81,"end":127.59},{"captura":2,"start":128.01,"end":135.79},{"captura":3,"start":136.21,"end":154.47}],"pausas":[{"start":154.47,"end":179.47,"mensaje":"Ejecutar las consultas de pedidos y ventas; consultar la vista pública y verificar el enmascaramiento."}],"kicker":"Bloque 2 · Consultas y vistas","titulo":"Seis consultas y cuatro vistas","subtitulo":"JOIN, GROUP BY con HAVING, subconsultas y enmascaramiento","capturas":[{"archivo":"14_q1_join_top_pedidos.png","epigrafe":"Top de pedidos por monto."},{"archivo":"16_q3_having_clientes_vip.png","epigrafe":"Clientes VIP con HAVING."},{"archivo":"15_q2_join_ventas_categoria.png","epigrafe":"Ventas agregadas por categoría."},{"archivo":"32_vista_cliente_publico.png","epigrafe":"Vista de cliente público con datos enmascarados."}]},{"id":"g3","start":179.47,"end":210.92,"partes":[{"captura":0,"start":179.47,"end":194.76},{"captura":1,"start":195.18,"end":210.92}],"pausas":[{"start":210.92,"end":230.92,"mensaje":"Ejecutar una consulta directa a cliente y la misma consulta mediante la vista pública; revisar los permisos."}],"kicker":"Bloque 2 · Roles y acceso","titulo":"Privilegios mínimos por rol","subtitulo":"Analista sobre vistas, vendedor sobre pedidos","capturas":[{"archivo":"42_grants_analista.png","epigrafe":"Privilegios del rol analista."},{"archivo":"45_acceso_restringido.png","epigrafe":"Acceso denegado a la tabla base."}]}]},"agudo":{"archivo":"audio\\gabriel_v2.mp3","total":229.2,"intro":{"start":0.0,"end":7.68},"escenas":[{"id":"g1","start":8.58,"end":66.09,"partes":[{"captura":0,"start":8.58,"end":19.36},{"captura":1,"start":19.78,"end":35.07},{"captura":2,"start":35.49,"end":66.09}],"pausas":[{"start":66.09,"end":86.09,"mensaje":"Ejecutar los conteos por tabla y las consultas de coherencia de claves y pedidos."}],"kicker":"Bloque 2 · Carga masiva","titulo":"345.010 filas generadas con SQL","subtitulo":"CTE recursiva y producto cartesiano controlado","capturas":[{"archivo":"07_catalogos.png","epigrafe":"Catálogos semilla cargados."},{"archivo":"08_verif_conteos.png","epigrafe":"Conteos por tabla tras la carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g4","start":86.09,"end":108.09,"partes":[{"captura":0,"start":86.09,"end":97.11},{"captura":1,"start":97.53,"end":108.09}],"pausas":[],"kicker":"Bloque 2 · Análisis de rendimiento","titulo":"Commits grupales para carga masiva","subtitulo":"Estrategia de escalabilidad y optimización","capturas":[{"archivo":"08_verif_conteos.png","epigrafe":"Verificación de conteos tras carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g2","start":108.99,"end":153.06,"partes":[{"captura":0,"start":108.99,"end":118.35},{"captura":1,"start":118.77,"end":126.47},{"captura":2,"start":126.89,"end":134.57},{"captura":3,"start":134.99,"end":153.06}],"pausas":[{"start":153.06,"end":178.06,"mensaje":"Ejecutar las consultas de pedidos y ventas; consultar la vista pública y verificar el enmascaramiento."}],"kicker":"Bloque 2 · Consultas y vistas","titulo":"Seis consultas y cuatro vistas","subtitulo":"JOIN, GROUP BY con HAVING, subconsultas y enmascaramiento","capturas":[{"archivo":"14_q1_join_top_pedidos.png","epigrafe":"Top de pedidos por monto."},{"archivo":"16_q3_having_clientes_vip.png","epigrafe":"Clientes VIP con HAVING."},{"archivo":"15_q2_join_ventas_categoria.png","epigrafe":"Ventas agregadas por categoría."},{"archivo":"32_vista_cliente_publico.png","epigrafe":"Vista de cliente público con datos enmascarados."}]},{"id":"g3","start":178.06,"end":209.2,"partes":[{"captura":0,"start":178.06,"end":193.2},{"captura":1,"start":193.62,"end":209.2}],"pausas":[{"start":209.2,"end":229.2,"mensaje":"Ejecutar una consulta directa a cliente y la misma consulta mediante la vista pública; revisar los permisos."}],"kicker":"Bloque 2 · Roles y acceso","titulo":"Privilegios mínimos por rol","subtitulo":"Analista sobre vistas, vendedor sobre pedidos","capturas":[{"archivo":"42_grants_analista.png","epigrafe":"Privilegios del rol analista."},{"archivo":"45_acceso_restringido.png","epigrafe":"Acceso denegado a la tabla base."}]}]},"grave":{"archivo":"audio\\gabriel_v3.mp3","total":232.6,"intro":{"start":0.0,"end":7.85},"escenas":[{"id":"g1","start":8.75,"end":67.45,"partes":[{"captura":0,"start":8.75,"end":19.74},{"captura":1,"start":20.16,"end":35.78},{"captura":2,"start":36.2,"end":67.45}],"pausas":[{"start":67.45,"end":87.45,"mensaje":"Ejecutar los conteos por tabla y las consultas de coherencia de claves y pedidos."}],"kicker":"Bloque 2 · Carga masiva","titulo":"345.010 filas generadas con SQL","subtitulo":"CTE recursiva y producto cartesiano controlado","capturas":[{"archivo":"07_catalogos.png","epigrafe":"Catálogos semilla cargados."},{"archivo":"08_verif_conteos.png","epigrafe":"Conteos por tabla tras la carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g4","start":87.45,"end":109.91,"partes":[{"captura":0,"start":87.45,"end":98.71},{"captura":1,"start":99.13,"end":109.91}],"pausas":[],"kicker":"Bloque 2 · Análisis de rendimiento","titulo":"Commits grupales para carga masiva","subtitulo":"Estrategia de escalabilidad y optimización","capturas":[{"archivo":"08_verif_conteos.png","epigrafe":"Verificación de conteos tras carga masiva."},{"archivo":"12_verif_coherencia.png","epigrafe":"Coherencia entre pedidos y detalles."}]},{"id":"g2","start":110.81,"end":155.83,"partes":[{"captura":0,"start":110.81,"end":120.39},{"captura":1,"start":120.81,"end":128.68},{"captura":2,"start":129.1,"end":136.95},{"captura":3,"start":137.37,"end":155.83}],"pausas":[{"start":155.83,"end":180.83,"mensaje":"Ejecutar las consultas de pedidos y ventas; consultar la vista pública y verificar el enmascaramiento."}],"kicker":"Bloque 2 · Consultas y vistas","titulo":"Seis consultas y cuatro vistas","subtitulo":"JOIN, GROUP BY con HAVING, subconsultas y enmascaramiento","capturas":[{"archivo":"14_q1_join_top_pedidos.png","epigrafe":"Top de pedidos por monto."},{"archivo":"16_q3_having_clientes_vip.png","epigrafe":"Clientes VIP con HAVING."},{"archivo":"15_q2_join_ventas_categoria.png","epigrafe":"Ventas agregadas por categoría."},{"archivo":"32_vista_cliente_publico.png","epigrafe":"Vista de cliente público con datos enmascarados."}]},{"id":"g3","start":180.83,"end":212.6,"partes":[{"captura":0,"start":180.83,"end":196.29},{"captura":1,"start":196.71,"end":212.6}],"pausas":[{"start":212.6,"end":232.6,"mensaje":"Ejecutar una consulta directa a cliente y la misma consulta mediante la vista pública; revisar los permisos."}],"kicker":"Bloque 2 · Roles y acceso","titulo":"Privilegios mínimos por rol","subtitulo":"Analista sobre vistas, vendedor sobre pedidos","capturas":[{"archivo":"42_grants_analista.png","epigrafe":"Privilegios del rol analista."},{"archivo":"45_acceso_restringido.png","epigrafe":"Acceso denegado a la tabla base."}]}]}}},"josue":{"nombre":"Josue Gallardo","bloque":"Bloque 3 · Seguridad, transacciones y concurrencia","comision":"Comisión 2 · Grupo 12","codigo":"C2-12","total":237.58,"versiones":{"principal":{"archivo":"audio\\josue.mp3","total":237.58,"intro":{"start":0.0,"end":7.49},"escenas":[{"id":"j1","start":8.39,"end":42.53,"partes":[{"captura":0,"start":8.39,"end":29.53},{"captura":1,"start":29.95,"end":42.53}],"pausas":[{"start":42.53,"end":57.53,"mensaje":"Ejecutar la búsqueda con un DNI válido y con la entrada de prueba para confirmar que no se interpreta como SQL."}],"kicker":"Bloque 3 · Seguridad","titulo":"Integridad y anti-inyección","subtitulo":"Procedimiento parametrizado y restricciones activas","capturas":[{"archivo":"39_inyeccion_bloqueada.png","epigrafe":"Intento de inyección tratado como dato literal."},{"archivo":"37_integr_check.png","epigrafe":"CHECK rechazando un estado inválido."}]},{"id":"j2_1","start":57.53,"end":106.56,"partes":[{"captura":0,"start":57.53,"end":79.42},{"captura":1,"start":94.42,"end":106.56}],"pausas":[{"start":79.42,"end":94.42,"mensaje":"Ejecutar la venta válida y comparar el stock antes y después del COMMIT."},{"start":106.56,"end":121.56,"mensaje":"Ejecutar la venta sin stock y verificar que el ROLLBACK no deje cambios."}],"kicker":"Bloque 3 · Transacciones","titulo":"COMMIT y ROLLBACK sobre el stock","subtitulo":"SELECT FOR UPDATE y validaciones de negocio","capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT: stock actualizado."},{"archivo":"48_tx_stock_insuficiente.png","epigrafe":"ROLLBACK por stock insuficiente."}]},{"id":"j2_2","start":121.56,"end":153.18,"partes":[{"captura":0,"start":121.56,"end":139.92},{"captura":1,"start":140.34,"end":153.18}],"pausas":[],"kicker":"Bloque 3 · Propiedades ACID","titulo":"Las cuatro propiedades ACID explicadas","subtitulo":"Atomicidad, Consistencia, Aislamiento y Durabilidad","capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT garantiza persistencia ACID."},{"archivo":"50_tx_cliente_inexistente.png","epigrafe":"Rollback por cliente inexistente."}]},{"id":"j2_3","start":154.08,"end":170.79,"partes":[{"captura":0,"start":154.08,"end":157.75},{"captura":1,"start":158.17,"end":170.79}],"pausas":[{"start":170.79,"end":185.79,"mensaje":"Comparar la segunda lectura en dos sesiones con REPEATABLE READ y READ COMMITTED."}],"kicker":"Bloque 3 · Nivel de aislamiento","titulo":"Niveles de aislamiento: REPEATABLE READ vs READ COMMITTED","subtitulo":"Comparación y efectos prácticos","capturas":[{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ vs READ COMMITTED."},{"archivo":"47_tx_commit.png","epigrafe":"Snapshot de InnoDB bajo REPEATABLE READ."}]},{"id":"j3","start":185.79,"end":237.58,"partes":[{"captura":0,"start":185.79,"end":198.46},{"captura":1,"start":218.46,"end":229.19},{"captura":2,"start":229.61,"end":237.58}],"pausas":[{"start":198.46,"end":218.46,"mensaje":"Ejecutar las dos sesiones en orden para provocar el deadlock y observar el error 1213."}],"kicker":"Bloque 3 · Concurrencia","titulo":"Deadlock, reintentos y aislamiento","subtitulo":"Dos sesiones, error mil doscientos trece y recuperación","capturas":[{"archivo":"53_deadlock.png","epigrafe":"Deadlock entre dos sesiones."},{"archivo":"54_deadlock_innodb.png","epigrafe":"Error mil doscientos trece detectado por InnoDB."},{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ frente a READ COMMITTED."}]}]},"agudo":{"archivo":"audio\\josue_v2.mp3","total":234.4,"intro":{"start":0.0,"end":7.34},"escenas":[{"id":"j1","start":8.24,"end":41.71,"partes":[{"captura":0,"start":8.24,"end":28.95},{"captura":1,"start":29.37,"end":41.71}],"pausas":[{"start":41.71,"end":56.71,"mensaje":"Ejecutar la búsqueda con un DNI válido y con la entrada de prueba para confirmar que no se interpreta como SQL."}],"kicker":"Bloque 3 · Seguridad","titulo":"Integridad y anti-inyección","subtitulo":"Procedimiento parametrizado y restricciones activas","capturas":[{"archivo":"39_inyeccion_bloqueada.png","epigrafe":"Intento de inyección tratado como dato literal."},{"archivo":"37_integr_check.png","epigrafe":"CHECK rechazando un estado inválido."}]},{"id":"j2_1","start":56.71,"end":105.02,"partes":[{"captura":0,"start":56.71,"end":78.14},{"captura":1,"start":93.14,"end":105.02}],"pausas":[{"start":78.14,"end":93.14,"mensaje":"Ejecutar la venta válida y comparar el stock antes y después del COMMIT."},{"start":105.02,"end":120.02,"mensaje":"Ejecutar la venta sin stock y verificar que el ROLLBACK no deje cambios."}],"kicker":"Bloque 3 · Transacciones","titulo":"COMMIT y ROLLBACK sobre el stock","subtitulo":"SELECT FOR UPDATE y validaciones de negocio","capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT: stock actualizado."},{"archivo":"48_tx_stock_insuficiente.png","epigrafe":"ROLLBACK por stock insuficiente."}]},{"id":"j2_2","start":120.02,"end":151.0,"partes":[{"captura":0,"start":120.02,"end":138.0},{"captura":1,"start":138.42,"end":151.0}],"pausas":[],"kicker":"Bloque 3 · Propiedades ACID","titulo":"Las cuatro propiedades ACID explicadas","subtitulo":"Atomicidad, Consistencia, Aislamiento y Durabilidad","capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT garantiza persistencia ACID."},{"archivo":"50_tx_cliente_inexistente.png","epigrafe":"Rollback por cliente inexistente."}]},{"id":"j2_3","start":151.9,"end":168.28,"partes":[{"captura":0,"start":151.9,"end":155.5},{"captura":1,"start":155.92,"end":168.28}],"pausas":[{"start":168.28,"end":183.28,"mensaje":"Comparar la segunda lectura en dos sesiones con REPEATABLE READ y READ COMMITTED."}],"kicker":"Bloque 3 · Nivel de aislamiento","titulo":"Niveles de aislamiento: REPEATABLE READ vs READ COMMITTED","subtitulo":"Comparación y efectos prácticos","capturas":[{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ vs READ COMMITTED."},{"archivo":"47_tx_commit.png","epigrafe":"Snapshot de InnoDB bajo REPEATABLE READ."}]},{"id":"j3","start":183.28,"end":234.4,"partes":[{"captura":0,"start":183.28,"end":195.69},{"captura":1,"start":215.69,"end":226.18},{"captura":2,"start":226.6,"end":234.4}],"pausas":[{"start":195.69,"end":215.69,"mensaje":"Ejecutar las dos sesiones en orden para provocar el deadlock y observar el error 1213."}],"kicker":"Bloque 3 · Concurrencia","titulo":"Deadlock, reintentos y aislamiento","subtitulo":"Dos sesiones, error mil doscientos trece y recuperación","capturas":[{"archivo":"53_deadlock.png","epigrafe":"Deadlock entre dos sesiones."},{"archivo":"54_deadlock_innodb.png","epigrafe":"Error mil doscientos trece detectado por InnoDB."},{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ frente a READ COMMITTED."}]}]},"grave":{"archivo":"audio\\josue_v3.mp3","total":242.52,"intro":{"start":0.0,"end":7.73},"escenas":[{"id":"j1","start":8.63,"end":43.85,"partes":[{"captura":0,"start":8.63,"end":30.45},{"captura":1,"start":30.87,"end":43.85}],"pausas":[{"start":43.85,"end":58.85,"mensaje":"Ejecutar la búsqueda con un DNI válido y con la entrada de prueba para confirmar que no se interpreta como SQL."}],"kicker":"Bloque 3 · Seguridad","titulo":"Integridad y anti-inyección","subtitulo":"Procedimiento parametrizado y restricciones activas","capturas":[{"archivo":"39_inyeccion_bloqueada.png","epigrafe":"Intento de inyección tratado como dato literal."},{"archivo":"37_integr_check.png","epigrafe":"CHECK rechazando un estado inválido."}]},{"id":"j2_1","start":58.85,"end":108.96,"partes":[{"captura":0,"start":58.85,"end":81.43},{"captura":1,"start":96.43,"end":108.96}],"pausas":[{"start":81.43,"end":96.43,"mensaje":"Ejecutar la venta válida y comparar el stock antes y después del COMMIT."},{"start":108.96,"end":123.96,"mensaje":"Ejecutar la venta sin stock y verificar que el ROLLBACK no deje cambios."}],"kicker":"Bloque 3 · Transacciones","titulo":"COMMIT y ROLLBACK sobre el stock","subtitulo":"SELECT FOR UPDATE y validaciones de negocio","capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT: stock actualizado."},{"archivo":"48_tx_stock_insuficiente.png","epigrafe":"ROLLBACK por stock insuficiente."}]},{"id":"j2_2","start":123.96,"end":156.59,"partes":[{"captura":0,"start":123.96,"end":142.92},{"captura":1,"start":143.34,"end":156.59}],"pausas":[],"kicker":"Bloque 3 · Propiedades ACID","titulo":"Las cuatro propiedades ACID explicadas","subtitulo":"Atomicidad, Consistencia, Aislamiento y Durabilidad","capturas":[{"archivo":"47_tx_commit.png","epigrafe":"COMMIT garantiza persistencia ACID."},{"archivo":"50_tx_cliente_inexistente.png","epigrafe":"Rollback por cliente inexistente."}]},{"id":"j2_3","start":157.49,"end":174.73,"partes":[{"captura":0,"start":157.49,"end":161.28},{"captura":1,"start":161.7,"end":174.73}],"pausas":[{"start":174.73,"end":189.73,"mensaje":"Comparar la segunda lectura en dos sesiones con REPEATABLE READ y READ COMMITTED."}],"kicker":"Bloque 3 · Nivel de aislamiento","titulo":"Niveles de aislamiento: REPEATABLE READ vs READ COMMITTED","subtitulo":"Comparación y efectos prácticos","capturas":[{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ vs READ COMMITTED."},{"archivo":"47_tx_commit.png","epigrafe":"Snapshot de InnoDB bajo REPEATABLE READ."}]},{"id":"j3","start":189.73,"end":242.52,"partes":[{"captura":0,"start":189.73,"end":202.81},{"captura":1,"start":222.81,"end":233.87},{"captura":2,"start":234.29,"end":242.52}],"pausas":[{"start":202.81,"end":222.81,"mensaje":"Ejecutar las dos sesiones en orden para provocar el deadlock y observar el error 1213."}],"kicker":"Bloque 3 · Concurrencia","titulo":"Deadlock, reintentos y aislamiento","subtitulo":"Dos sesiones, error mil doscientos trece y recuperación","capturas":[{"archivo":"53_deadlock.png","epigrafe":"Deadlock entre dos sesiones."},{"archivo":"54_deadlock_innodb.png","epigrafe":"Error mil doscientos trece detectado por InnoDB."},{"archivo":"55_isolation.png","epigrafe":"REPEATABLE READ frente a READ COMMITTED."}]}]}}}}};</script>
@@ -351,12 +343,12 @@ button{font-family:inherit}
 
   /* ---------- utilidades ---------- */
   const mmss = s => {
-    const total = Math.round(s);
-    return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}`;
+    const m = Math.floor(s / 60), r = Math.round(s % 60);
+    return `${m}:${String(r).padStart(2, '0')}`;
   };
   const orden = Object.keys(D.alumnos);
   const versionControl = $('#versiones');
-  let versionActual = versionControl.value || 'principal';
+  const duracionTotal = $('#duracion-total');
 
   /* ---------- selector ---------- */
   function pintarSelector() {
@@ -372,38 +364,40 @@ button{font-family:inherit}
         <span class="persona-nombre">${a.nombre}</span>
         <span class="persona-grupo">${a.comision} · ${a.codigo}</span>
         <span class="persona-bloque">${a.bloque}</span>
-        <span class="persona-dur">${mmss((a.versiones?.[versionActual]?.total || a.total) / velocidad)}</span>`;
+        <span class="persona-dur">${mmss((a.versiones[versionActual]?.total || a.total) / velocidad)}</span>`;
       card.addEventListener('click', () => arrancar(clave));
       cont.appendChild(card);
     }
   }
 
-  /* ---------- ajustes de voz ---------- */
+  /* ---------- reproductor HTML5 ---------- */
+  const audio = $('#audio-track');
+  audio.preload = 'auto';
+  audio.preservesPitch = true;
+  audio.webkitPreservesPitch = true;
+  audio.mozPreservesPitch = true;
+
   const guardado = (() => {
     try { return JSON.parse(localStorage.getItem('tfi-voz') || '{}'); } catch { return {}; }
   })();
-  let velocidad = Number(guardado.velocidad) || 1;
-  velocidad = Math.min(1.1, Math.max(0.8, velocidad));
-  versionActual = guardado.version || versionActual;
-  if (!Array.from(versionControl.options).some(opcion => opcion.value === versionActual)) {
-    versionActual = 'principal';
-  }
-  versionControl.value = versionActual;
+  let velocidad = Math.min(1.10, Math.max(0.80, Number(guardado.velocidad) || 1));
+  versionControl.value = guardado.version || 'principal';
+  if (!versionControl.value) versionControl.value = 'principal';
+  let versionActual = versionControl.value || 'principal';
   const outVel = $('#outVel');
   const inVel = $('#vel');
-  const duracionTotal = $('#duracion-total');
 
   function pintarAjustes() {
     outVel.textContent = velocidad.toFixed(2).replace('.', ',') + '×';
-    inVel.value = velocidad;
+    inVel.value = String(velocidad);
     for (const card of document.querySelectorAll('.persona[data-alumno]')) {
       const alumno = D.alumnos[card.dataset.alumno];
-      const duracion = alumno.versiones?.[versionActual]?.total || alumno.total;
+      const duracion = alumno.versiones[versionActual]?.total || alumno.total;
       card.querySelector('.persona-dur').textContent = mmss(duracion / velocidad);
     }
     const segundosTotales = orden.reduce((suma, clave) => {
       const alumno = D.alumnos[clave];
-      return suma + (alumno.versiones?.[versionActual]?.total || alumno.total);
+      return suma + (alumno.versiones[versionActual]?.total || alumno.total);
     }, 0) / velocidad;
     duracionTotal.textContent = `Duración estimada de los tres bloques: ${mmss(segundosTotales)}${
       segundosTotales < 600 ? ' · No llega a los 10 minutos mínimos.' :
@@ -413,30 +407,31 @@ button{font-family:inherit}
     duracionTotal.classList.toggle('alerta', segundosTotales < 600 || segundosTotales > 900);
   }
   function guardarAjustes() {
-    try {
-      localStorage.setItem('tfi-voz', JSON.stringify({ velocidad, version: versionActual }));
-    } catch { /* modo privado */ }
+    try { localStorage.setItem('tfi-voz', JSON.stringify({ velocidad, version: versionActual })); } catch {}
   }
-  inVel.addEventListener('input', e => {
-    velocidad = Number(e.target.value);
-    // Aplicar velocidad al audio element HTML5
-    const el = $('#presentation-track');
-    if (el) el.playbackRate = velocidad;
-    pintarAjustes(); guardarAjustes();
+  function aplicarVelocidad() {
+    audio.playbackRate = velocidad;
+    audio.preservesPitch = true;
+    audio.webkitPreservesPitch = true;
+    audio.mozPreservesPitch = true;
+  }
+  inVel.addEventListener('change', e => {
+    velocidad = Number(e.target.value) || 1;
+    aplicarVelocidad();
+    pintarAjustes();
+    guardarAjustes();
   });
   versionControl.addEventListener('change', () => {
     versionActual = versionControl.value;
-    pintarAjustes(); guardarAjustes();
+    pintarAjustes();
+    guardarAjustes();
   });
   $('#reset').addEventListener('click', () => {
     velocidad = 1;
-    versionActual = 'principal';
-    versionControl.value = versionActual;
-    const el = $('#presentation-track');
-    if (el) el.playbackRate = 1;
-    pintarAjustes(); guardarAjustes();
+    aplicarVelocidad();
+    pintarAjustes();
+    guardarAjustes();
   });
-
   pintarAjustes();
 
   const panel = $('#panel');
@@ -451,31 +446,11 @@ button{font-family:inherit}
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); alternarPanel(); }
   });
 
-  /* ---------- audio: HTML5 Audio element (único e inmutable) ---------- */
   let reproduciendo = false;
+  let pausado = false;
   let total = 0;
   let raf = 0;
   let deckActual = null;
-  function prepararAudio(clave, version='principal') {
-    return new Promise((res, rej) => {
-      const el = $('#presentation-track');
-      el.preload = 'auto';
-      el.preservesPitch = true;
-
-      const archivo = D.alumnos[clave].versiones?.[version]?.archivo;
-      if (!archivo) {
-        rej(new Error(`No hay archivo para la versión ${version} de ${clave}`));
-        return;
-      }
-      el.src = archivo.replace(/\\/g, '/');
-
-      el.addEventListener('canplaythrough', () => {
-        total = el.duration;
-        res();
-      }, { once: true });
-      el.addEventListener('error', (e) => rej(new Error(`No se cargó el audio: ${clave} (${version})`)), { once: true });
-    });
-  }
 
   /* ---------- deck ---------- */
   function setCaptura(slide, i, instantaneo) {
@@ -617,123 +592,157 @@ button{font-family:inherit}
       aviso.setAttribute('aria-hidden', pausa ? 'false' : 'true');
       if (pausa) {
         aviso.querySelector('.ejecucion-mensaje').textContent = pausa.mensaje;
-        const restante = Math.ceil((pausa.end - t) / (audioElement?.playbackRate || 1));
+        const restante = Math.ceil((pausa.end - t) / audio.playbackRate);
         aviso.querySelector('.ejecucion-ayuda').textContent =
           `Pausa guía: ${mmss(restante)} restantes · Espacio para extender la ejecución`;
       }
     }
   }
 
-  /* ---------- reproducción: bucle basado en audioElement.currentTime ---------- */
-  let audioElement = null;
+  /* ---------- reproducción HTML5 ---------- */
+  function cancelarBucle() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
+  }
+
+  function iniciarBucle() {
+    cancelarBucle();
+    raf = requestAnimationFrame(bucle);
+  }
 
   function bucle() {
-    if (!reproduciendo) return;
-    const el = $('#presentation-track');
-    const t = el ? el.currentTime : 0;
-    if (t >= total - 0.04) { finalizar(); return; }
+    raf = 0;
+    if (!reproduciendo || audio.paused || !deckActual) return;
+    const t = audio.currentTime;
+    if (t >= total - .04) { finalizar(); return; }
     sincronizar(t);
     raf = requestAnimationFrame(bucle);
   }
 
+  function alternarReproduccion() {
+    if (!deckActual) return;
+    if (audio.paused) {
+      audio.play().catch(error => console.error('No se pudo reanudar el audio:', error));
+    } else {
+      audio.pause();
+    }
+  }
+
+  function buscar(delta) {
+    if (!deckActual || !Number.isFinite(audio.duration)) return;
+    const limite = Math.min(total, audio.duration);
+    const p = Math.max(0, Math.min(limite, audio.currentTime + delta));
+    audio.currentTime = p;
+    sincronizar(p);
+    if (p >= limite - .04 && !audio.paused) finalizar();
+  }
+
+  audio.addEventListener('play', () => {
+    reproduciendo = true;
+    pausado = false;
+    iniciarBucle();
+  });
+  audio.addEventListener('pause', () => {
+    if (reproduciendo) {
+      reproduciendo = false;
+      pausado = !!deckActual && !audio.ended;
+    }
+    cancelarBucle();
+    if (deckActual) sincronizar(audio.currentTime || 0);
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (deckActual) sincronizar(audio.currentTime);
+  });
+  audio.addEventListener('seeked', () => {
+    if (deckActual) sincronizar(audio.currentTime);
+  });
+  audio.addEventListener('ended', () => {
+    if (deckActual) finalizar();
+  });
+
   async function arrancar(clave) {
     if (reproduciendo) return;
 
-    // Obtener versión seleccionada
-    versionActual = $('#versiones')?.value || 'principal';
+    audio.pause();
+    audio.removeAttribute('src');
+    audio.load();
+    deckActual = null;
+    deck.innerHTML = '';
+    inicio.classList.remove('oculto');
 
     const base = D.alumnos[clave];
-    const variante = base.versiones?.[versionActual];
-    const a = variante ? { ...base, ...variante } : base;
+    const variante = base.versiones[versionActual];
+    const a = { ...base, ...variante };
+    total = a.total;
     montarDeck(clave, a);
     activar(0);
     inicio.classList.add('oculto');
     versionControl.disabled = true;
 
-    try {
-      audioElement = $('#presentation-track');
-      await prepararAudio(clave, versionActual);
-      audioElement.playbackRate = velocidad;
-      audioElement.currentTime = 0;
-      audioElement.play();
-    } catch (e) {
-      console.error(e);
-      volver();
-      return;
-    }
+    reproduciendo = false;
+    pausado = false;
+    audio.src = variante.archivo.replace(/\\/g, '/');
+    aplicarVelocidad();
 
-    reproduciendo = true;
-    sincronizar(0);
-    raf = requestAnimationFrame(bucle);
+    try {
+      await new Promise((resolve, reject) => {
+        if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) return resolve();
+        const ok = () => { cleanup(); resolve(); };
+        const fail = () => { cleanup(); reject(new Error('No se pudo cargar ' + variante.archivo)); };
+        const cleanup = () => {
+          audio.removeEventListener('loadedmetadata', ok);
+          audio.removeEventListener('error', fail);
+        };
+        audio.addEventListener('loadedmetadata', ok, { once: true });
+        audio.addEventListener('error', fail, { once: true });
+        audio.load();
+      });
+      audio.currentTime = 0;
+      sincronizar(0);
+      await audio.play();
+    } catch (e) {
+      console.error('Error al iniciar la reproducción:', e);
+      volver();
+    }
   }
 
   function finalizar() {
     reproduciendo = false;
+    pausado = false;
     versionControl.disabled = false;
-    cancelAnimationFrame(raf);
-    const el = $('#presentation-track');
-    if (el) {
-      el.pause();
-      el.currentTime = el.duration;
-    }
+    cancelarBucle();
+    audio.pause();
     const d = deckActual;
     if (!d) return;
-    d.slides.forEach(s => s.el.classList.toggle('active', s.tipo === 'fin'));
+    d.slides.forEach(slide => slide.el.classList.toggle('active', slide.tipo === 'fin'));
     d.idx = d.slides.length - 1;
+    deckActual = null;
   }
 
   function volver() {
     reproduciendo = false;
+    pausado = false;
     versionControl.disabled = false;
-    cancelAnimationFrame(raf);
-    const el = $('#presentation-track');
-    if (el) {
-      el.pause();
-      el.currentTime = 0;
-    }
+    cancelarBucle();
+    audio.pause();
+    audio.removeAttribute('src');
+    audio.load();
     deckActual = null;
     deck.innerHTML = '';
     deck.className = '';
     inicio.classList.remove('oculto');
   }
 
-  /* ---------- controles de teclado: flechas y espacio ---------- */
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      if (panel.classList.contains('abierto')) {
-        alternarPanel(false);
-      } else if (reproduciendo) {
-        volver();
-      }
-      return;
-    }
-
-    const el = $('#presentation-track');
-    if (!el) return;
-
-    // Flecha derecha: adelantar +5s
-    if (e.key === 'ArrowRight' && reproduciendo) {
-      e.preventDefault();
-      el.currentTime = Math.min(el.currentTime + 5, total);
-      sincronizar(el.currentTime);
-    }
-
-    // Flecha izquierda: retroceder -5s
-    if (e.key === 'ArrowLeft' && reproduciendo) {
-      e.preventDefault();
-      el.currentTime = Math.max(el.currentTime - 5, 0);
-      sincronizar(el.currentTime);
-    }
-
-    // Espacio: pausa/reanudar
-    if (e.key === ' ') {
-      e.preventDefault();
-      if (el.paused) {
-        el.play().catch(() => {});
-      } else {
-        el.pause();
-      }
-    }
+    if(e.key==='Escape'){if(panel.classList.contains('abierto'))alternarPanel(false);else if(deckActual)volver();return}
+    const t=e.target,typing=t&&(t.isContentEditable||['INPUT','SELECT','TEXTAREA','BUTTON'].includes(t.tagName));
+    if(typing||!deckActual)return;
+    if(e.key===' '){e.preventDefault();alternarReproduccion()}
+    else if(e.key==='ArrowLeft'){buscar(-5);e.preventDefault()}
+    else if(e.key==='ArrowRight'){buscar(5);e.preventDefault()}
+  });
+  document.addEventListener('pointerdown',e=>{
+    if(panel.classList.contains('abierto')&&!panel.contains(e.target)&&!engranaje.contains(e.target))alternarPanel(false);
   });
 
   pintarSelector();
@@ -746,11 +755,14 @@ button{font-family:inherit}
     finalizar,
     estado: () => ({
       reproduciendo,
-      t: audioElement ? audioElement.currentTime : 0,
+      pausado,
+      t: Number.isFinite(audio.currentTime) ? audio.currentTime : 0,
       total,
       idx: deckActual ? deckActual.idx : -1,
       tipo: deckActual && deckActual.idx >= 0 ? deckActual.slides[deckActual.idx].tipo : null,
-      velocidadActual: audioElement ? audioElement.playbackRate : null
+      motor: audio.src ? "html5-audio" : null,
+      playbackRate: audio.playbackRate,
+      preservesPitch: audio.preservesPitch
     })
   };
 })();
