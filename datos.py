@@ -17,8 +17,8 @@ VOCES = {
         "comision": "Comisión 2 · Grupo 3",
         "codigo": "C2-3",
         "intro_principal": (
-            "Hola, soy Alejandro Fernández, y en este bloque presento el sistema y el modelo de datos "
-            "del trabajo final."
+            "Hola, soy Alejandro Fernández, de comisión dos, grupo tres. En este bloque presento el "
+            "sistema, el modelo de datos y los índices."
         ),
     },
     "gabriel": {
@@ -32,8 +32,8 @@ VOCES = {
         "comision": "Comisión 2 · Grupo 3",
         "codigo": "C2-3",
         "intro_principal": (
-            "Hola, soy Gabriel Di Lorenzo, y en este bloque presento la carga masiva de datos, "
-            "las consultas y los roles de acceso."
+            "Hola, soy Gabriel Di Lorenzo, de comisión dos, grupo tres. En este bloque presento la carga "
+            "masiva, las consultas y los roles."
         ),
     },
     "josue": {
@@ -47,8 +47,8 @@ VOCES = {
         "comision": "Comisión 2 · Grupo 12",
         "codigo": "C2-12",
         "intro_principal": (
-            "Hola, soy Josué Gallardo, y en este bloque presento la seguridad, las transacciones "
-            "y la concurrencia."
+            "Hola, soy Josue Gallardo, de comisión dos, grupo doce. En este bloque presento la seguridad, "
+            "las transacciones y la concurrencia."
         ),
     },
 }

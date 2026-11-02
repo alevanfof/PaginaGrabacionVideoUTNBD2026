@@ -2,7 +2,7 @@ Alejandro Fernández
 ===================
 
 [Presentación]
-Hola, soy Alejandro Fernández, y en este bloque presento el sistema y el modelo de datos del trabajo final.
+Hola, soy Alejandro Fernández, de comisión dos, grupo tres. En este bloque presento el sistema, el modelo de datos y los índices.
 
 [a1 · captura 1]
 El sistema representa un comercio electrónico con cinco entidades principales: cliente, pedido, detalle de pedido, producto y categoría. El recorrido principal conecta esas entidades en ese orden.
@@ -38,7 +38,7 @@ Gabriel Di Lorenzo
 ==================
 
 [Presentación]
-Hola, soy Gabriel Di Lorenzo, y en este bloque presento la carga masiva de datos, las consultas y los roles de acceso.
+Hola, soy Gabriel Di Lorenzo, de comisión dos, grupo tres. En este bloque presento la carga masiva, las consultas y los roles.
 
 [g1 · captura 1]
 Para la carga masiva usamos ese cu ele, sin procedimientos. Una ce te e recursiva genera los dígitos del cero al nueve y cros yoin produce hasta diez mil combinaciones.
@@ -77,7 +77,7 @@ Josue Gallardo
 ==============
 
 [Presentación]
-Hola, soy Josué Gallardo, y en este bloque presento la seguridad, las transacciones y la concurrencia.
+Hola, soy Josue Gallardo, de comisión dos, grupo doce. En este bloque presento la seguridad, las transacciones y la concurrencia.
 
 [j1 · captura 1]
 Para evitar inyección ese cu ele usamos un procedimiento almacenado parametrizado: el valor varcar no se concatena ni se ejecuta como ese cu ele dinámico. La entrada de prueba comilla, OR, comilla, uno, comilla, igual, comilla, uno se trata como dato literal y devuelve cero filas.

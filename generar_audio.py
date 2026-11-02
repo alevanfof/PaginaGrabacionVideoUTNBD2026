@@ -307,10 +307,11 @@ def concat_with_ffmpeg(propio, t_current):
                 if i < len(files) - 1
                 else int(pausa["ms"])
             )
-            silence_file = BASE / f"_gap_{i:03}.wav"
+            silence_file = BASE / f"_gap_{i:03}.mp3"
             result = subprocess.run([
                 FFMPEG, "-y", "-f", "lavfi", "-i", f"aevalsrc=0:d={gap/1000}",
-                "-ar", "24000", "-ac", "1", "-c:a", "pcm_s16le", str(silence_file)
+                "-ar", "24000", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "48k",
+                str(silence_file)
             ], capture_output=True, text=True)
             if result.returncode != 0:
                 raise RuntimeError(f"No se pudo crear una pausa de {gap} ms: {result.stderr[-1000:]}")

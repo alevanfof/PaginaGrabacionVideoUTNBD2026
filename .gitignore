@@ -9,3 +9,5 @@ temporal.html
 _verificar.py
 _metricas.py
 _capturas.py
+.vercel
+.env*

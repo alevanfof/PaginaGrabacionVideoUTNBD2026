@@ -27,13 +27,14 @@ tiempo para ejecutar las consultas y demostraciones en vivo.
 
 | Integrante | Comisión | Duración | Contenido |
 |---|---|---|---|
-| Alejandro Fernández | C2-3 | 3:40 | Sistema, modelo de datos e índices |
-| Gabriel Di Lorenzo | C2-3 | 3:51 | Carga masiva, consultas y roles |
-| Josue Gallardo | C2-12 | 3:58 | Seguridad, transacciones y concurrencia |
+| Alejandro Fernández | C2-3 | 3:44 | Sistema, modelo de datos e índices |
+| Gabriel Di Lorenzo | C2-3 | 3:53 | Carga masiva, consultas y roles |
+| Josue Gallardo | C2-12 | 4:00 | Seguridad, transacciones y concurrencia |
 
-Las tres guías principales suman 11:29, incluidas 205 segundos de pausas de
+Las tres guías principales suman 11:37, incluidas 205 segundos de pausas de
 ejecución repartidas entre los integrantes. Las variantes aguda y grave suman
-11:21 y 11:39, respectivamente.
+11:29 y 11:48, respectivamente. Cada bloque abre con una presentación breve e
+individual del expositor y del tema que le corresponde.
 
 ## Estructura
 
