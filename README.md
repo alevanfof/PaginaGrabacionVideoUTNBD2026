@@ -18,6 +18,8 @@ la barra espaciadora para extenderla.
 La ruedita de la esquina inferior derecha permite elegir el pitch pregrabado y
 ajustar la velocidad. La duración estimada de cada bloque y la suma de los tres
 se actualizan con esos ajustes. `Esc` vuelve al selector.
+El botón discreto bajo el nombre del expositor abre una ventana independiente
+con el guion de la parte actual y resalta cada palabra a medida que se reproduce.
 
 Los audios de Edge TTS son guías para grabar y no deben incluirse en el video
 final: el checklist del guion pide voces reales. Las pausas silenciosas dejan
@@ -61,18 +63,23 @@ Requisitos: Python 3.12, `edge-tts`, `pydub`, `faster-whisper` y FFmpeg en
 
 ```bash
 python generar_audio.py       # sintetiza las tres variantes y actualiza audio_timing.json
-python adaptar_presentacion.py
+python generar_palabras.py    # crea marcas de tiempo palabra a palabra (faster-whisper)
+python adaptar_presentacion.py # actualiza guion, palabras y diapositivas
 python check_duracion.py      # comprueba objetivo de 11–12 min y velocidades
 ```
 
 `generar_audio.py` reutiliza los fragmentos cuyo texto y configuración no
 cambiaron. Para forzar una nueva síntesis completa: `python generar_audio.py --forzar`.
+`generar_palabras.py` transcribe cada pista para iluminar la palabra pronunciada
+en el panel de guion.
 
 ## Cómo funciona la sincronización
 
 El audio se sintetiza en fragmentos: uno por captura. `audio_timing.json`
 registra los tiempos de cada variante, incluidas las pausas de ejecución.
 `adaptar_presentacion.py` actualiza las diapositivas para que sigan esos tiempos.
+También incorpora timestamps por palabra para el seguimiento sincronizado del
+guion en pantalla.
 
 ## Publicar en Vercel
 
